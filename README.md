@@ -19,7 +19,7 @@ With the addon activated, add a new node and select the `InputIcon` or `InputIco
 ![Creating a new Action icon or InputIconTextureRect](readme_media/create_new_node_screen.png)
 
 Once you added them, you will notice that they are the same nodes you know, except for these:
-![Showing the export properties of InputIcon Classes ](readme_media/InputIconClassPropertyShowcase.png)
+![Showing the export properties of InputIcon Classes ](readme_media/ActionIconClassPropertyShowcase.png)
 
 You put the action name in `Action`, the event you want to show in `event_index` and since the asset pack contains outlined icon, you can choose their style as well with `Outline`
 <details>
