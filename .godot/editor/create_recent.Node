@@ -1,9 +1,10 @@
-InputIcon
-VBoxContainer
+ActionIconTextureRect
 HBoxContainer
+VBoxContainer
+MarginContainer
+ActionIcon
 GridContainer
 Control
-InputIconTextureRect
 Label
 Sprite2D
 RichTextLabel

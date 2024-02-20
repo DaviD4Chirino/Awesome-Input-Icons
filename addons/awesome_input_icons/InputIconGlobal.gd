@@ -1,5 +1,6 @@
-class_name ActionIconGlobal
+class_name InputIconGlobal
 const asset_path: StringName = &"res://addons/awesome_input_icons/assets/inputs prompts keyboard and mouse default/"
+const file_extension: String = ".png"
 
 
 ## it construct the path to the image
@@ -7,8 +8,8 @@ static func get_event_name_path(event_name: String, outline: bool = false) -> St
 	## We build the path, if you wanted an outline, it gets appended as a suffix
 	var path_with_name: String = asset_path + event_name
 	if outline:
-		return path_with_name + "_outline" + ".png"
-	return path_with_name + ".png"
+		return path_with_name + "_outline" + file_extension
+	return path_with_name + file_extension
 
 
 ## It checks if the file exists
@@ -19,6 +20,7 @@ static func event_has_icon(event_name: String, outline: bool = false) -> bool:
 ## Performs a check if theres an icon image, if there is, it returns the path to be loaded
 static func event_get_icon(event_name: String, outline: bool = false) -> String:
 	if !event_has_icon(event_name, outline):
+		push_warning("Event %s doesn't have an icon in %s" % [event_name, asset_path])
 		return ""
 	return get_event_name_path(event_name, outline)
 
@@ -28,13 +30,13 @@ static func get_icon(
 	## The inputEvent to get the icon
 	action: StringName,
 	## The index of the event
-	action_index: int,
+	event_index: int,
 	## If the icon should be outlined
 	outline: bool = false
 ) -> Texture2D:
 	## We get the event
 	var events = InputMap.action_get_events(action)
-	var event = events[action_index] if action_index < events.size() else null
+	var event = events[event_index] if event_index < events.size() else null
 
 	if !event:
 		printerr("Event not found")
