@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy85h4q4xmckn"]
+
+[ext_resource type="Script" path="res://addons/awesome_input_icons/InputIconTextureRect.gd" id="1_og4vi"]
+
+[node name="InputIconTextureRect" type="TextureRect"]
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_og4vi")
+action = &"action_one"
+action_index = 3
