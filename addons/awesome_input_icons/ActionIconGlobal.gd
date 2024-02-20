@@ -40,12 +40,7 @@ static func get_icon(
 		printerr("Event not found")
 		return null
 
-	## We perform a string conversion,
-	## first converting it into snake_case,
-	## then making sure is lowercase
-	## and finally removing the (physical) in case it's there
-	var event_name = event.as_text().to_lower().trim_suffix(" (physical)")
-	event_name = event_name.replace(" ", "_")
+	var event_name = _format_event_name(event.as_text())
 
 	## We check if the event even has an icon
 	var icon_path: String = event_get_icon(event_name, outline)
@@ -54,3 +49,21 @@ static func get_icon(
 	## We delete the image if thats not the case
 	else:
 		return null
+
+
+static func get_icon_by_event(event: InputEvent) -> Texture2D:
+	var event_name = _format_event_name(event.as_text())
+	var icon_path: String = event_get_icon(event_name)
+	if icon_path:
+		return load(icon_path)
+	else:
+		return null
+
+
+## We perform a string conversion,
+## first converting it into snake_case,
+## then making sure is lowercase
+## and finally removing the (physical) in case it's there
+static func _format_event_name(event_name: String) -> String:
+	var new_name: String = event_name.to_lower().trim_suffix(" (physical)").replace(" ", "_")
+	return new_name

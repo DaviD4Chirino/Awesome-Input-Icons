@@ -10,6 +10,13 @@ func _ready():
 	get_action_icon()
 
 
+##Uncomment for debug
+
+# func _input(event):
+# 	if (event is InputEventKey or event is InputEventMouseButton) and event.is_released():
+# 		texture = ActionIconGlobal.get_icon(action, action_index, outline)
+
+
 func get_action_icon() -> void:
 	if !action:
 		return

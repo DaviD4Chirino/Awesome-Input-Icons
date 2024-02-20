@@ -1,15 +1,18 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708400254
+::res://::1708402207
 icon.svg::CompressedTexture2D::6066175643991696602::1708326126::1708326133::1::::<><>::
-::res://addons/::1708382726
-ActionIcon.gd::GDScript::-1::1708400243::0::1::::ActionIconGlobal<>RefCounted<>::
-::res://addons/awesome_input_icons/::1708400379
+README.md::TextFile::-1::1708400898::0::1::::<><>::
+::res://addons/::1708402186
+::res://addons/awesome_input_icons/::1708402207
+ActionIcon.gd::GDScript::-1::1708400965::0::1::::InputIcon<>Sprite2D<>::
+ActionIconGlobal.gd::GDScript::-1::1708402152::0::1::::ActionIconGlobal<>RefCounted<>::
 awesome_input_icons.gd::GDScript::-1::1708382434::0::1::::<>EditorPlugin<>::
-InputIcon.gd::GDScript::-1::1708399975::0::1::::InputIcon<>Sprite2D<>::
-InputIconTextureRect.gd::GDScript::-1::1708399990::0::1::::InputIconTextureRect<>TextureRect<>::
-input_action_icon.tscn::PackedScene::6644887290618525887::1708400378::0::1::::<><>::res://addons/awesome_input_icons/InputIcon.gd
-plugin.cfg::TextFile::-1::1708382451::0::1::::<><>::
-input_icon_texture_rect.tscn::PackedScene::8913754323859243353::1708400379::0::1::::<><>::res://addons/awesome_input_icons/InputIconTextureRect.gd
+InputIconTextureRect.gd::GDScript::-1::1708400968::0::1::::InputIconTextureRect<>TextureRect<>::
+input_action_icon.tscn::PackedScene::6644887290618525887::1708402207::0::1::::<><>::res://addons/awesome_input_icons/ActionIcon.gd
+input_icon_texture_rect.tscn::PackedScene::8913754323859243353::1708402217::0::1::::<><>::res://addons/awesome_input_icons/InputIconTextureRect.gd
+plugin.cfg::TextFile::-1::1708400847::0::1::::<><>::
+test_scene.gd::GDScript::-1::1708401911::0::1::::<>Control<>::
+test_scene.tscn::PackedScene::5188695176795339076::1708402154::0::1::::<><>::res://addons/awesome_input_icons/test_scene.gd
 ::res://addons/awesome_input_icons/assets/::1708382726
 ::res://addons/awesome_input_icons/assets/inputs prompts keyboard and mouse default/::1708382143
 0.png::CompressedTexture2D::7448851147155613486::1708380703::1708382143::1::::<><>::
