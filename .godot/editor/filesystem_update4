@@ -1,2 +1,4 @@
-res://action_icon.tscn
-res://control.tscn
+res://addons/awesome_input_icons/InputIcon.gd
+res://addons/awesome_input_icons/awesome_input_icons.gd
+res://addons/awesome_input_icons/InputIconGlobal.gd
+res://addons/awesome_input_icons/InputIconTextureRect.gd

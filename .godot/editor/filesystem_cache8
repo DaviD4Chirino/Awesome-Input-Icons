@@ -1,9 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708463585
-action_icon.tscn::PackedScene::2956133602010750894::1708463448::0::1::::<><>::res://addons/awesome_input_icons/InputIcon.gd
-control.tscn::PackedScene::59506666541769465::1708463448::0::1::::<><>::res://addons/awesome_input_icons/InputIconTextureRect.gd
+::res://::1708633159
 icon.svg::CompressedTexture2D::6066175643991696602::1708326126::1708326133::1::::<><>::
-README.md::TextFile::-1::1708463432::0::1::::<><>::
+README.md::TextFile::-1::1708464129::0::1::::<><>::
 ::res://addons/::1708402186
 ::res://addons/awesome_input_icons/::1708463500
 awesome_input_icons.gd::GDScript::-1::1708382434::0::1::::<>EditorPlugin<>::

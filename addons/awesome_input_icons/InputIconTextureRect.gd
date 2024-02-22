@@ -5,6 +5,7 @@ class_name InputIconTextureRect extends TextureRect
 	set(value):
 		action = value
 		if !action:
+			texture = null
 			return
 		_update()
 

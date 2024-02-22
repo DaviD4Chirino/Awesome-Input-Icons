@@ -8,6 +8,7 @@ class_name ActionIcon
 	set(value):
 		action = value
 		if !action:
+			texture = null
 			return
 		_update()
 
