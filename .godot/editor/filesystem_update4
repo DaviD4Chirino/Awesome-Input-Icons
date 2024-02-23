@@ -1,4 +1,6 @@
-res://addons/awesome_input_icons/InputIcon.gd
-res://addons/awesome_input_icons/awesome_input_icons.gd
+res://node_2d.gd
 res://addons/awesome_input_icons/InputIconGlobal.gd
-res://addons/awesome_input_icons/InputIconTextureRect.gd
+res://node_2d.tscn
+res://addons/awesome_input_icons/new_resource.tres
+res://addons/awesome_input_icons/InputIcon.gd
+res://addons/awesome_input_icons/input_dictionary.gd

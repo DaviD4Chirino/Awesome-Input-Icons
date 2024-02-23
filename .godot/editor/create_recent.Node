@@ -1,10 +1,9 @@
-ActionIconTextureRect
+ActionIcon
+Sprite2D
 HBoxContainer
 VBoxContainer
 MarginContainer
-ActionIcon
 GridContainer
 Control
 Label
-Sprite2D
 RichTextLabel

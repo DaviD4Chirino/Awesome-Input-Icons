@@ -11,5 +11,6 @@ export_presets.cfg
 data_*/
 
 *.7z
+*.zip
 
 **/.vscode/*

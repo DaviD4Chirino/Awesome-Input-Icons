@@ -2,7 +2,7 @@
 extends Sprite2D
 
 ##TODO: Add support for joysticks, steam deck, switch, etc.
-class_name ActionIcon
+class_name InputIcon
 ## The name of the action, it has to exist in the InputMap
 @export var action: StringName = "":
 	set(value):
@@ -28,3 +28,8 @@ class_name ActionIcon
 ## It updates the texture, this way all 3 properties gets updated at the same time
 func _update():
 	texture = InputIconGlobal.get_icon(action, event_index, outline)
+
+
+func _input(event):
+	if event is InputEventKey or event is InputEventMouseButton:
+		texture = InputIconGlobal.get_icon_by_event(event, outline)

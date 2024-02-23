@@ -1,6 +1,6 @@
 class_name InputIconGlobal
-const asset_path: StringName = &"res://addons/awesome_input_icons/assets/inputs prompts keyboard and mouse default/"
-const file_extension: String = ".png"
+const asset_path: StringName = &"res://addons/awesome_input_icons/assets/inputs prompts keyboard and mouse default/vector/"
+const file_extension: String = ".svg"
 
 
 ## it construct the path to the image
@@ -37,7 +37,6 @@ static func get_icon(
 	## We get the event
 	var events = InputMap.action_get_events(action)
 	var event = events[event_index] if event_index < events.size() else null
-
 	if !event:
 		printerr("Event not found")
 		return null
@@ -46,6 +45,8 @@ static func get_icon(
 
 	## We check if the event even has an icon
 	var icon_path: String = event_get_icon(event_name, outline)
+	print_debug("Icon path: %s" % icon_path)
+
 	if icon_path:
 		return load(icon_path)
 	## We delete the image if thats not the case
@@ -53,9 +54,9 @@ static func get_icon(
 		return null
 
 
-static func get_icon_by_event(event: InputEvent) -> Texture2D:
+static func get_icon_by_event(event: InputEvent, outline: bool = false) -> Texture2D:
 	var event_name = _format_event_name(event.as_text())
-	var icon_path: String = event_get_icon(event_name)
+	var icon_path: String = event_get_icon(event_name, outline)
 	if icon_path:
 		return load(icon_path)
 	else:
