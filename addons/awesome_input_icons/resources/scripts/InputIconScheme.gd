@@ -3,7 +3,7 @@ extends Resource
 class_name InputIconScheme
 # We have a copy of the keys as an array for two reasons:
 # 1. We cannot iterate over the [param @GlobalScope.Key] enumerator, just reference it.
-# 2. In order to NOT add the 193 keyboards keys mannualy, we can populate them in code.
+# 2. In order to NOT add the 193 keyboards keys manualy, we can populate them in code.
 static var keys: Array[int] = [
 	KEY_NONE,
 	KEY_SPECIAL,
@@ -237,17 +237,7 @@ static var joy_buttons: Array[int] = [
 	JOY_BUTTON_SDL_MAX,
 	JOY_BUTTON_MAX
 ]
-static var joy_axes: Array[int] = [
-	JOY_AXIS_INVALID,
-	JOY_AXIS_LEFT_X,
-	JOY_AXIS_LEFT_Y,
-	JOY_AXIS_RIGHT_X,
-	JOY_AXIS_RIGHT_Y,
-	JOY_AXIS_TRIGGER_LEFT,
-	JOY_AXIS_TRIGGER_RIGHT,
-	JOY_AXIS_SDL_MAX,
-	JOY_AXIS_MAX
-]
+
 ## [b]DESTRUCTIVE[/b] it will fill arrays below with empty [class KeyIcons]
 @export var generate_presets: bool = false:
 	set = set_generate_preset

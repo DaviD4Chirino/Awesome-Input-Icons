@@ -48,16 +48,3 @@ static func get_icon_by_event(event: InputEvent) -> Texture2D:
 			printerr("Input Icon: Unsupported event type: " + str(event))
 
 	return icon
-
-
-#getters
-
-
-static func get_configuration() -> InputIconConfiguration:
-	return load("res://addons/awesome_input_icons/input_icon_configuration.tres")
-
-
-## I want to get the scheme from the configuration, and i do not want to rewrite the [param load] code,
-static func get_scheme() -> InputIconScheme:
-	var config: Resource = get_configuration()
-	return config.scheme

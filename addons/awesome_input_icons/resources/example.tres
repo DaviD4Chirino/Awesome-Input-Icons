@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InputIconScheme" load_steps=2 format=3 uid="uid://dgvd84fxdwwa2"]
+
+[ext_resource type="Script" path="res://addons/awesome_input_icons/resources/scripts/InputIconScheme.gd" id="1_o60va"]
+
+[resource]
+script = ExtResource("1_o60va")
+generate_presets = false
+keyboard = Array[Resource("res://addons/awesome_input_icons/resources/scripts/KeyIcon.gd")]([])
+mouse = Array[Resource("res://addons/awesome_input_icons/resources/scripts/KeyIcon.gd")]([])
+joy = Array[Resource("res://addons/awesome_input_icons/resources/scripts/KeyIcon.gd")]([])
