@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="InputIconConfiguration" load_steps=3 format=3 uid="uid://ddx7px66sakv2"]
+
+[ext_resource type="Script" path="res://addons/awesome_input_icons/resources/scripts/configuration.gd" id="1_26n3a"]
+[ext_resource type="Resource" uid="uid://dkg6xyw5665bs" path="res://addons/awesome_input_icons/resources/keyboard.tres" id="1_brqp0"]
+
+[resource]
+script = ExtResource("1_26n3a")
+scheme = ExtResource("1_brqp0")

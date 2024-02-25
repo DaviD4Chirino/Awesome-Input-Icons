@@ -1,21 +1,18 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708720457
+::res://::1708832259
 icon.svg::CompressedTexture2D::6066175643991696602::1708326126::1708326133::1::::<><>::
-node_2d.gd::GDScript::-1::1708720319::0::1::::<>Node2D<>::
-node_2d.tscn::PackedScene::2919397531389963383::1708720457::0::1::::<><>::res://node_2d.gd<>uid://2icycovxm3py::::res://addons/awesome_input_icons/new_resource.tres<>res://addons/awesome_input_icons/InputIcon.gd
 README.md::TextFile::-1::1708464129::0::1::::<><>::
-::res://addons/::1708402186
-::res://addons/awesome_input_icons/::1708719835
+::res://addons/::1708812072
+::res://addons/awesome_input_icons/::1708832259
 awesome_input_icons.gd::GDScript::-1::1708382434::0::1::::<>EditorPlugin<>::
-InputIcon.gd::GDScript::-1::1708720408::0::1::::InputIcon<>Sprite2D<>::
-InputIconGlobal.gd::GDScript::-1::1708720274::0::1::::InputIconGlobal<>RefCounted<>::
-InputIconTextureRect.gd::GDScript::-1::1708633203::0::1::::InputIconTextureRect<>TextureRect<>::
-input_dictionary.gd::GDScript::-1::1708718204::0::1::::InputDictionary<>Resource<>::
-new_resource.tres::Resource/InputDictionary::1911778220957949302::1708719835::0::1::::<><>::uid://deejqwtaef6lu::::res://addons/awesome_input_icons/assets/inputs prompts keyboard and mouse default/0.png<>res://addons/awesome_input_icons/input_dictionary.gd<>uid://d38d4q8rbh6ch::::res://addons/awesome_input_icons/assets/inputs prompts keyboard and mouse default/1.png<>uid://gmpoq8h8ftnj::::res://addons/awesome_input_icons/assets/inputs prompts keyboard and mouse default/2.png<>uid://cely33tyy03ie::::res://addons/awesome_input_icons/assets/inputs prompts keyboard and mouse default/3.png
+InputIcon.gd::GDScript::-1::1708832202::0::1::::InputIcon<>RefCounted<>::
+InputIconScheme.gd::GDScript::-1::1708832050::0::1::::InputIconScheme<>Resource<>::
+input_icon_configuration.tres::Resource/Resource::7419280258372430157::1708832146::0::1::::<><>::res://addons/awesome_input_icons/resources/scripts/configuration.gd
+KeyIcon.gd::GDScript::-1::1708830667::0::1::::KeyIcon<>Resource<>::
 plugin.cfg::TextFile::-1::1708633849::0::1::::<><>::
 plugin_icon.png::CompressedTexture2D::3813358252211122597::1708463452::1708463500::1::::<><>::
-::res://addons/awesome_input_icons/assets/::1708382726
-::res://addons/awesome_input_icons/assets/inputs prompts keyboard and mouse default/::1708720954
+::res://addons/awesome_input_icons/assets/::1708811579
+::res://addons/awesome_input_icons/assets/inputs prompts keyboard and mouse default/::1708811626
 0.png::CompressedTexture2D::7448851147155613486::1708380703::1708382143::1::::<><>::
 0_outline.png::CompressedTexture2D::2072271664254053209::1708380703::1708382143::1::::<><>::
 1.png::CompressedTexture2D::9192908969955921519::1708380703::1708382143::1::::<><>::
@@ -277,7 +274,7 @@ y.png::CompressedTexture2D::6269412607688514161::1708380703::1708382142::1::::<>
 y_outline.png::CompressedTexture2D::4588463616908015348::1708380703::1708382142::1::::<><>::
 z.png::CompressedTexture2D::3923588147107406340::1708380703::1708382142::1::::<><>::
 z_outline.png::CompressedTexture2D::7314322001088217294::1708380703::1708382142::1::::<><>::
-::res://addons/awesome_input_icons/assets/inputs prompts keyboard and mouse default/vector/::1708720954
+::res://addons/awesome_input_icons/assets/inputs prompts keyboard and mouse default/vector/::1708720956
 0.svg::CompressedTexture2D::1525040760167269844::1708720954::1708720956::1::::<><>::
 0_outline.svg::CompressedTexture2D::8545827500607180056::1708720954::1708720956::1::::<><>::
 1.svg::CompressedTexture2D::8347646143039240420::1708720954::1708720956::1::::<><>::
@@ -534,6 +531,13 @@ y.svg::CompressedTexture2D::414172454105162895::1708720954::1708720955::1::::<><
 y_outline.svg::CompressedTexture2D::5868220120588007093::1708720954::1708720955::1::::<><>::
 z.svg::CompressedTexture2D::3818497642828865605::1708720954::1708720955::1::::<><>::
 z_outline.svg::CompressedTexture2D::8936467972361193357::1708720954::1708720955::1::::<><>::
+::res://addons/awesome_input_icons/classes/::1708832242
+InputIconSprite2D.gd::GDScript::-1::1708831918::0::1::::InputIconSprite2D<>Sprite2D<>::
+InputIconTextureRect.gd::GDScript::-1::1708633203::0::1::::InputIconTextureRect<>TextureRect<>::
+::res://addons/awesome_input_icons/resources/::1708832259
+keyboard.tres::Resource/KeyIconList::7875461349971401556::1708832259::0::1::::<><>::res://addons/awesome_input_icons/KeyIcon.gd<>res://addons/awesome_input_icons/InputIconScheme.gd
+::res://addons/awesome_input_icons/resources/scripts/::1708831969
+configuration.gd::GDScript::-1::1708832053::0::1::::InputIconConfiguration<>Resource<>::
 ::res://readme_media/::1708461974
 ActionIconClassPropertyShowcase.png::CompressedTexture2D::8917220394794853130::1708458638::1708458955::1::::<><>::
 create_new_node_screen.png::CompressedTexture2D::3355110623630276551::1708458142::1708458532::1::::<><>::
