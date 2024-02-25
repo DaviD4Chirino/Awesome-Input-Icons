@@ -1,7 +1,9 @@
 @tool
 extends Resource
 class_name InputIconScheme
-# We define the keys here because we need to access them in the editor
+# We have a copy of the keys as an array for two reasons:
+# 1. We cannot iterate over the [param @GlobalScope.Key] enumerator, just reference it.
+# 2. In order to NOT add the 193 keyboards keys mannualy, we can populate them in code.
 static var keys: Array[int] = [
 	KEY_NONE,
 	KEY_SPECIAL,
@@ -253,17 +255,20 @@ static var joy_axes: Array[int] = [
 @export var keyboard: Array[KeyIcon] = []
 @export var mouse: Array[KeyIcon] = []
 
-@export var joy: Array[KeyIcon] = []  ## @tutorial(Guidance):  https://docs.godotengine.org/en/stable/classes/class_%40globalscope.html#enum-globalscope-joybutton
+## @tutorial(Guidance):  https://docs.godotengine.org/en/stable/classes/class_%40globalscope.html#enum-globalscope-joybutton
+@export var joy: Array[KeyIcon] = []
 
 
+# i wish i had a button
 func set_generate_preset(value: bool) -> void:
 	generate_presets = value
+	if not Engine.is_editor_hint():
+		return
 
 	if generate_presets:
 		keyboard = populate_key_icons(keys, KeyIcon.InputTypes.KEYBOARD)
 		mouse = populate_key_icons(mouse_buttons, KeyIcon.InputTypes.MOUSE)
 		joy = populate_key_icons(joy_buttons, KeyIcon.InputTypes.JOY_BUTTON)
-		joy.append_array(populate_key_icons(joy_axes, KeyIcon.InputTypes.JOY_AXIS))
 
 	generate_presets = false
 
@@ -276,3 +281,26 @@ func populate_key_icons(array: Array, type: KeyIcon.InputTypes) -> Array[KeyIcon
 		key_icon.keycode = code
 		arr.append(key_icon)
 	return arr
+
+
+## We gram the KeyIcon Resource by its keycode and type
+func get_key_icon(keycode: int, type: KeyIcon.InputTypes) -> KeyIcon:
+	match type:
+		KeyIcon.InputTypes.KEYBOARD:
+			return get_key_icon_by_keycode(keycode, keyboard)
+		KeyIcon.InputTypes.MOUSE:
+			return get_key_icon_by_keycode(keycode, mouse)
+		KeyIcon.InputTypes.JOY_BUTTON:
+			return get_key_icon_by_keycode(keycode, joy)
+	# for key_icon in keyboard:
+	# 	if key_icon.keycode == keycode:
+	# 		return key_icon
+	return null
+
+
+## We grab the KeyIcon Resource by its keycode in an array, its more of a helper function
+func get_key_icon_by_keycode(keycode: int, array: Array[KeyIcon]) -> KeyIcon:
+	for key_icon in array:
+		if key_icon.keycode == keycode:
+			return key_icon
+	return null

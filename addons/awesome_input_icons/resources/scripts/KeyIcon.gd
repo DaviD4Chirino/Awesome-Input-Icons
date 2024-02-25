@@ -1,7 +1,7 @@
 @tool
 extends Resource
 class_name KeyIcon
-enum InputTypes { KEYBOARD, MOUSE, JOY_BUTTON, JOY_AXIS }
+enum InputTypes { KEYBOARD, MOUSE, JOY_BUTTON }
 @export var input_type: InputTypes = InputTypes.KEYBOARD
 
 ## The keycode, its value depends on its type
@@ -12,9 +12,14 @@ enum InputTypes { KEYBOARD, MOUSE, JOY_BUTTON, JOY_AXIS }
 @export var icon: Texture2D
 
 
+## For better readability in the editor, we change the resource name to the name of the key.
+## The only easy one is to use the [param OS.get_keycode_string], the rest we have to do manually.
+## Luckily apart from Keyboard, theres not a lot of them.
 func update_name(value: int) -> void:
 	keycode = value
-	pass
+	if not Engine.is_editor_hint():
+		return
+
 	match input_type:
 		InputTypes.KEYBOARD:
 			if keycode == KEY_SPECIAL:
@@ -27,9 +32,6 @@ func update_name(value: int) -> void:
 
 		InputTypes.JOY_BUTTON:
 			_update_name_joy(keycode)
-
-		InputTypes.JOY_AXIS:
-			_update_name_joy_axis(keycode)
 
 
 func _update_name_mouse(value: int) -> void:
@@ -134,33 +136,3 @@ func _update_name_joy(value: int) -> void:
 
 		JOY_BUTTON_MAX:
 			resource_name = "JOY Max"
-
-
-func _update_name_joy_axis(value: int) -> void:
-	match value:
-		JOY_AXIS_INVALID:
-			resource_name = "J-AXIS Invalid"
-
-		JOY_AXIS_LEFT_X:
-			resource_name = "J-AXIS Left X"
-
-		JOY_AXIS_LEFT_Y:
-			resource_name = "J-AXIS Left Y"
-
-		JOY_AXIS_RIGHT_X:
-			resource_name = "J-AXIS Right X"
-
-		JOY_AXIS_RIGHT_Y:
-			resource_name = "J-AXIS Right Y"
-
-		JOY_AXIS_TRIGGER_LEFT:
-			resource_name = "J-AXIS Trigger Left"
-
-		JOY_AXIS_TRIGGER_RIGHT:
-			resource_name = "J-AXIS Trigger Right"
-
-		JOY_AXIS_SDL_MAX:
-			resource_name = "J-AXIS SDL Max"
-
-		JOY_AXIS_MAX:
-			resource_name = "J-AXIS Max"

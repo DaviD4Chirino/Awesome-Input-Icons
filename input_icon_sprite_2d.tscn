@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://o3domr5n6a2g"]
+
+[ext_resource type="Script" path="res://addons/awesome_input_icons/classes/InputIconSprite2D.gd" id="1_hi7k3"]
+
+[node name="InputIconSprite2D" type="Sprite2D"]
+centered = false
+script = ExtResource("1_hi7k3")
+action_name = &"action"

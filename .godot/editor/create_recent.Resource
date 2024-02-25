@@ -1,3 +1,3 @@
-InputIconScheme
 InputIconConfiguration
+InputIconScheme
 KeyIcon
