@@ -195,6 +195,55 @@ static var keys: Array[Key] = [
 	KEY_YEN,
 	KEY_SECTION
 ]
+static var mouse_buttons = [
+	MOUSE_BUTTON_NONE,
+	MOUSE_BUTTON_LEFT,
+	MOUSE_BUTTON_RIGHT,
+	MOUSE_BUTTON_MIDDLE,
+	MOUSE_BUTTON_WHEEL_UP,
+	MOUSE_BUTTON_WHEEL_DOWN,
+	MOUSE_BUTTON_WHEEL_LEFT,
+	MOUSE_BUTTON_WHEEL_RIGHT,
+	MOUSE_BUTTON_XBUTTON1,
+	MOUSE_BUTTON_XBUTTON2
+]
+static var joy_buttons = [
+	JOY_BUTTON_INVALID,
+	JOY_BUTTON_A,
+	JOY_BUTTON_B,
+	JOY_BUTTON_X,
+	JOY_BUTTON_Y,
+	JOY_BUTTON_BACK,
+	JOY_BUTTON_GUIDE,
+	JOY_BUTTON_START,
+	JOY_BUTTON_LEFT_STICK,
+	JOY_BUTTON_RIGHT_STICK,
+	JOY_BUTTON_LEFT_SHOULDER,
+	JOY_BUTTON_RIGHT_SHOULDER,
+	JOY_BUTTON_DPAD_UP,
+	JOY_BUTTON_DPAD_DOWN,
+	JOY_BUTTON_DPAD_LEFT,
+	JOY_BUTTON_DPAD_RIGHT,
+	JOY_BUTTON_MISC1,
+	JOY_BUTTON_PADDLE1,
+	JOY_BUTTON_PADDLE2,
+	JOY_BUTTON_PADDLE3,
+	JOY_BUTTON_PADDLE4,
+	JOY_BUTTON_TOUCHPAD,
+	JOY_BUTTON_SDL_MAX,
+	JOY_BUTTON_MAX
+]
+static var joy_axes = [
+	JOY_AXIS_INVALID,
+	JOY_AXIS_LEFT_X,
+	JOY_AXIS_LEFT_Y,
+	JOY_AXIS_RIGHT_X,
+	JOY_AXIS_RIGHT_Y,
+	JOY_AXIS_TRIGGER_LEFT,
+	JOY_AXIS_TRIGGER_RIGHT,
+	JOY_AXIS_SDL_MAX,
+	JOY_AXIS_MAX
+]
 
 static var scheme = null:
 	get = get_scheme
@@ -204,8 +253,41 @@ static var configuration = null:
 
 
 static func get_scheme() -> InputIconScheme:
-	return load("res://addons/awesome_input_icons/input_icon_configuration.tres").scheme
+	return configuration.scheme
 
 
 static func get_configuration() -> InputIconConfiguration:
 	return load("res://addons/awesome_input_icons/input_icon_configuration.tres")
+
+
+static func get_icon(action: StringName, event_index: int = 0) -> Texture2D:
+	var events: Array[InputEvent] = InputMap.action_get_events(action)
+
+	if not events:
+		printerr("Input Icon: No events found for action: " + action)
+		return null
+
+	if event_index > events.size():
+		printerr("Input Icon: Invalid event index: " + str(event_index))
+		return null
+
+	var event: InputEvent = events[event_index]
+
+	match event.get_class():
+		"InputEventKey":
+			var keycode = event.keycode if event.keycode else event.physical_keycode
+			# return get_keycode_icon(keycode)
+		_:
+			printerr("Input Icon: Unsupported event type: " + str(event))
+
+	return null
+
+# static func get_keycode_icon(keycode: int) -> Texture2D:
+# 	print_debug("Run")
+# 	for element in scheme.list:
+# 		if element.key == keycode:
+# 			return element.icon
+# 	push_warning(
+# 		"Input Icon: No icon found for keycode: " + str(keycode) + " in the current scheme"
+# 	)
+# 	return null

@@ -34,7 +34,7 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/awesome_input_icons/plugin.cfg")
+enabled=PackedStringArray("res://addons/awesome_input_icons/plugin.cfg", "res://addons/nv.file_system/plugin.cfg")
 
 [input]
 

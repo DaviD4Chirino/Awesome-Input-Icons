@@ -1,11 +1,4 @@
-res://addons/awesome_input_icons/KeyIcon.gd
-res://addons/awesome_input_icons/InputIcon.gd
-res://addons/awesome_input_icons/InputIconGlobal.gd
-res://addons/awesome_input_icons/resources/scripts/configuration.gd
-res://addons/awesome_input_icons/KeyIconsList.gd
-res://addons/awesome_input_icons/classes/InputIconTextureRect.gd
-res://addons/awesome_input_icons/classes/InputIconSprite2D.gd
 res://addons/awesome_input_icons/resources/scripts/InputIconScheme.gd
-res://addons/awesome_input_icons/resources/keyboard.tres
-res://addons/awesome_input_icons/input_icon_configuration.tres
+res://addons/awesome_input_icons/resources/scripts/KeyIcon.gd
 res://addons/awesome_input_icons/input_icon_sprite_2d.tscn
+res://addons/awesome_input_icons/resources/new_resource.tres
