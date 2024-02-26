@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7nl576mf5md7"]
-
-[ext_resource type="Script" path="res://addons/awesome_input_icons/classes/InputIconTextureRect.gd" id="1_e27c5"]
-
-[node name="InputIconTextureRect" type="TextureRect"]
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("1_e27c5")

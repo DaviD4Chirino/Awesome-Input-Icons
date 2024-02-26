@@ -1,10 +1,1373 @@
-[gd_resource type="Resource" script_class="InputIconScheme" load_steps=2 format=3 uid="uid://dgvd84fxdwwa2"]
+[gd_resource type="Resource" script_class="InputIconScheme" load_steps=231 format=3 uid="uid://dgvd84fxdwwa2"]
 
 [ext_resource type="Script" path="res://addons/awesome_input_icons/resources/scripts/InputIconScheme.gd" id="1_o60va"]
+[ext_resource type="Script" path="res://addons/awesome_input_icons/resources/scripts/KeyIcon.gd" id="1_pthji"]
+[ext_resource type="Texture2D" uid="uid://gvqkih24utri" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/keyboard_escape.svg" id="2_7gmti"]
+
+[sub_resource type="Resource" id="Resource_plsxo"]
+resource_name = "JOY Invalid"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = -1
+
+[sub_resource type="Resource" id="Resource_gmmjk"]
+resource_name = "JOY A"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 0
+
+[sub_resource type="Resource" id="Resource_3p5xx"]
+resource_name = "JOY B"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 1
+
+[sub_resource type="Resource" id="Resource_6acx3"]
+resource_name = "JOY X"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 2
+
+[sub_resource type="Resource" id="Resource_fthpg"]
+resource_name = "JOY Y"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 3
+
+[sub_resource type="Resource" id="Resource_8nnhc"]
+resource_name = "JOY Back"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 4
+
+[sub_resource type="Resource" id="Resource_d8t71"]
+resource_name = "JOY Guide"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 5
+
+[sub_resource type="Resource" id="Resource_fbirb"]
+resource_name = "JOY Start"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 6
+
+[sub_resource type="Resource" id="Resource_8bisa"]
+resource_name = "JOY Left Stick"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 7
+
+[sub_resource type="Resource" id="Resource_7irvq"]
+resource_name = "JOY Right Stick"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 8
+
+[sub_resource type="Resource" id="Resource_jo68k"]
+resource_name = "JOY Left Shoulder"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 9
+
+[sub_resource type="Resource" id="Resource_0edrt"]
+resource_name = "JOY Right Shoulder"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 10
+
+[sub_resource type="Resource" id="Resource_5bdc8"]
+resource_name = "JOY Dpad Up"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 11
+
+[sub_resource type="Resource" id="Resource_elot5"]
+resource_name = "JOY Dpad Down"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 12
+
+[sub_resource type="Resource" id="Resource_srvbt"]
+resource_name = "JOY Dpad Left"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 13
+
+[sub_resource type="Resource" id="Resource_rds8b"]
+resource_name = "JOY Dpad Right"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 14
+
+[sub_resource type="Resource" id="Resource_uw5ck"]
+resource_name = "JOY Misc 1"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 15
+
+[sub_resource type="Resource" id="Resource_ffite"]
+resource_name = "JOY Paddle 1"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 16
+
+[sub_resource type="Resource" id="Resource_xcbk0"]
+resource_name = "JOY Paddle 2"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 17
+
+[sub_resource type="Resource" id="Resource_3t51i"]
+resource_name = "JOY Paddle 3"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 18
+
+[sub_resource type="Resource" id="Resource_ypn5t"]
+resource_name = "JOY Paddle 4"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 19
+
+[sub_resource type="Resource" id="Resource_kdqqp"]
+resource_name = "JOY Touchpad"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 20
+
+[sub_resource type="Resource" id="Resource_v1tim"]
+resource_name = "JOY SDL Max"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 21
+
+[sub_resource type="Resource" id="Resource_warp6"]
+resource_name = "JOY Max"
+script = ExtResource("1_pthji")
+input_type = 2
+keycode = 128
+
+[sub_resource type="Resource" id="Resource_w8fy7"]
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 0
+
+[sub_resource type="Resource" id="Resource_5xxnt"]
+resource_name = "Special"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194304
+
+[sub_resource type="Resource" id="Resource_hg5sx"]
+resource_name = "Escape"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194305
+icon = ExtResource("2_7gmti")
+
+[sub_resource type="Resource" id="Resource_0eiec"]
+resource_name = "Tab"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194306
+
+[sub_resource type="Resource" id="Resource_wkxum"]
+resource_name = "Backtab"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194307
+
+[sub_resource type="Resource" id="Resource_kmdrf"]
+resource_name = "Backspace"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194308
+
+[sub_resource type="Resource" id="Resource_wt7xh"]
+resource_name = "Enter"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194309
+
+[sub_resource type="Resource" id="Resource_wqpw7"]
+resource_name = "Kp Enter"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194310
+
+[sub_resource type="Resource" id="Resource_4um07"]
+resource_name = "Insert"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194311
+
+[sub_resource type="Resource" id="Resource_e2e4j"]
+resource_name = "Delete"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194312
+
+[sub_resource type="Resource" id="Resource_igvh5"]
+resource_name = "Pause"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194313
+
+[sub_resource type="Resource" id="Resource_ngyw0"]
+resource_name = "Print"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194314
+
+[sub_resource type="Resource" id="Resource_m1dgj"]
+resource_name = "SysReq"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194315
+
+[sub_resource type="Resource" id="Resource_ih46m"]
+resource_name = "Clear"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194316
+
+[sub_resource type="Resource" id="Resource_iemum"]
+resource_name = "Home"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194317
+
+[sub_resource type="Resource" id="Resource_v2xcr"]
+resource_name = "End"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194318
+
+[sub_resource type="Resource" id="Resource_ny7q6"]
+resource_name = "Left"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194319
+
+[sub_resource type="Resource" id="Resource_cue8g"]
+resource_name = "Up"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194320
+
+[sub_resource type="Resource" id="Resource_odvsm"]
+resource_name = "Right"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194321
+
+[sub_resource type="Resource" id="Resource_q6wgb"]
+resource_name = "Down"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194322
+
+[sub_resource type="Resource" id="Resource_51t8a"]
+resource_name = "PageUp"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194323
+
+[sub_resource type="Resource" id="Resource_kvbsx"]
+resource_name = "PageDown"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194324
+
+[sub_resource type="Resource" id="Resource_6bejn"]
+resource_name = "Shift"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194325
+
+[sub_resource type="Resource" id="Resource_qn7sr"]
+resource_name = "Ctrl"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194326
+
+[sub_resource type="Resource" id="Resource_dhlbq"]
+resource_name = "Windows"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194327
+
+[sub_resource type="Resource" id="Resource_evi3j"]
+resource_name = "Alt"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194328
+
+[sub_resource type="Resource" id="Resource_wnmb0"]
+resource_name = "CapsLock"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194329
+
+[sub_resource type="Resource" id="Resource_g54ar"]
+resource_name = "NumLock"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194330
+
+[sub_resource type="Resource" id="Resource_aai2l"]
+resource_name = "ScrollLock"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194331
+
+[sub_resource type="Resource" id="Resource_hvsig"]
+resource_name = "F1"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194332
+
+[sub_resource type="Resource" id="Resource_wlmi1"]
+resource_name = "F2"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194333
+
+[sub_resource type="Resource" id="Resource_kvyu0"]
+resource_name = "F3"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194334
+
+[sub_resource type="Resource" id="Resource_jm2lo"]
+resource_name = "F4"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194335
+
+[sub_resource type="Resource" id="Resource_56i7i"]
+resource_name = "F5"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194336
+
+[sub_resource type="Resource" id="Resource_72kut"]
+resource_name = "F6"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194337
+
+[sub_resource type="Resource" id="Resource_gli6f"]
+resource_name = "F7"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194338
+
+[sub_resource type="Resource" id="Resource_tdq56"]
+resource_name = "F8"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194339
+
+[sub_resource type="Resource" id="Resource_i6rnn"]
+resource_name = "F9"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194340
+
+[sub_resource type="Resource" id="Resource_jf68v"]
+resource_name = "F10"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194341
+
+[sub_resource type="Resource" id="Resource_p7ead"]
+resource_name = "F11"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194342
+
+[sub_resource type="Resource" id="Resource_sv853"]
+resource_name = "F12"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194343
+
+[sub_resource type="Resource" id="Resource_ddmuu"]
+resource_name = "F13"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194344
+
+[sub_resource type="Resource" id="Resource_coyfs"]
+resource_name = "F14"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194345
+
+[sub_resource type="Resource" id="Resource_1sl21"]
+resource_name = "F15"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194346
+
+[sub_resource type="Resource" id="Resource_yh3bw"]
+resource_name = "F16"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194347
+
+[sub_resource type="Resource" id="Resource_g0j7d"]
+resource_name = "F17"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194348
+
+[sub_resource type="Resource" id="Resource_vhvf2"]
+resource_name = "F18"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194349
+
+[sub_resource type="Resource" id="Resource_42rfk"]
+resource_name = "F19"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194350
+
+[sub_resource type="Resource" id="Resource_gdqk3"]
+resource_name = "F20"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194351
+
+[sub_resource type="Resource" id="Resource_t86xf"]
+resource_name = "F21"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194352
+
+[sub_resource type="Resource" id="Resource_720sd"]
+resource_name = "F22"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194353
+
+[sub_resource type="Resource" id="Resource_fgcx7"]
+resource_name = "F23"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194354
+
+[sub_resource type="Resource" id="Resource_q5o3e"]
+resource_name = "F24"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194355
+
+[sub_resource type="Resource" id="Resource_6tpur"]
+resource_name = "F25"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194356
+
+[sub_resource type="Resource" id="Resource_cs1we"]
+resource_name = "F26"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194357
+
+[sub_resource type="Resource" id="Resource_hg35p"]
+resource_name = "F27"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194358
+
+[sub_resource type="Resource" id="Resource_l3qls"]
+resource_name = "F28"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194359
+
+[sub_resource type="Resource" id="Resource_dfypq"]
+resource_name = "F29"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194360
+
+[sub_resource type="Resource" id="Resource_ho6fv"]
+resource_name = "F30"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194361
+
+[sub_resource type="Resource" id="Resource_vq3gl"]
+resource_name = "F31"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194362
+
+[sub_resource type="Resource" id="Resource_q1ak4"]
+resource_name = "F32"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194363
+
+[sub_resource type="Resource" id="Resource_6w006"]
+resource_name = "F33"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194364
+
+[sub_resource type="Resource" id="Resource_8nn8j"]
+resource_name = "F34"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194365
+
+[sub_resource type="Resource" id="Resource_g07k7"]
+resource_name = "F35"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194366
+
+[sub_resource type="Resource" id="Resource_alvub"]
+resource_name = "Kp Multiply"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194433
+
+[sub_resource type="Resource" id="Resource_eoqhj"]
+resource_name = "Kp Divide"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194434
+
+[sub_resource type="Resource" id="Resource_xuunr"]
+resource_name = "Kp Subtract"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194435
+
+[sub_resource type="Resource" id="Resource_d7h33"]
+resource_name = "Kp Period"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194436
+
+[sub_resource type="Resource" id="Resource_vlmjx"]
+resource_name = "Kp Add"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194437
+
+[sub_resource type="Resource" id="Resource_eikbj"]
+resource_name = "Kp 0"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194438
+
+[sub_resource type="Resource" id="Resource_a762v"]
+resource_name = "Kp 1"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194439
+
+[sub_resource type="Resource" id="Resource_j7vs5"]
+resource_name = "Kp 2"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194440
+
+[sub_resource type="Resource" id="Resource_hmggp"]
+resource_name = "Kp 3"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194441
+
+[sub_resource type="Resource" id="Resource_oqlpj"]
+resource_name = "Kp 4"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194442
+
+[sub_resource type="Resource" id="Resource_onrsw"]
+resource_name = "Kp 5"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194443
+
+[sub_resource type="Resource" id="Resource_uj43u"]
+resource_name = "Kp 6"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194444
+
+[sub_resource type="Resource" id="Resource_121be"]
+resource_name = "Kp 7"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194445
+
+[sub_resource type="Resource" id="Resource_3w2eu"]
+resource_name = "Kp 8"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194446
+
+[sub_resource type="Resource" id="Resource_qm8iw"]
+resource_name = "Kp 9"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194447
+
+[sub_resource type="Resource" id="Resource_4k1ai"]
+resource_name = "Menu"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194370
+
+[sub_resource type="Resource" id="Resource_rrfvn"]
+resource_name = "Hyper"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194371
+
+[sub_resource type="Resource" id="Resource_pn2qd"]
+resource_name = "Help"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194373
+
+[sub_resource type="Resource" id="Resource_17i33"]
+resource_name = "Back"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194376
+
+[sub_resource type="Resource" id="Resource_gehtu"]
+resource_name = "Forward"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194377
+
+[sub_resource type="Resource" id="Resource_lyhpv"]
+resource_name = "Stop"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194378
+
+[sub_resource type="Resource" id="Resource_32u03"]
+resource_name = "Refresh"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194379
+
+[sub_resource type="Resource" id="Resource_m5vra"]
+resource_name = "VolumeDown"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194380
+
+[sub_resource type="Resource" id="Resource_cat7o"]
+resource_name = "VolumeMute"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194381
+
+[sub_resource type="Resource" id="Resource_ulm36"]
+resource_name = "VolumeUp"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194382
+
+[sub_resource type="Resource" id="Resource_6addq"]
+resource_name = "MediaPlay"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194388
+
+[sub_resource type="Resource" id="Resource_lk0m3"]
+resource_name = "MediaStop"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194389
+
+[sub_resource type="Resource" id="Resource_1yfec"]
+resource_name = "MediaPrevious"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194390
+
+[sub_resource type="Resource" id="Resource_td1at"]
+resource_name = "MediaNext"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194391
+
+[sub_resource type="Resource" id="Resource_0khy6"]
+resource_name = "MediaRecord"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194392
+
+[sub_resource type="Resource" id="Resource_cco4d"]
+resource_name = "HomePage"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194393
+
+[sub_resource type="Resource" id="Resource_2h4yj"]
+resource_name = "Favorites"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194394
+
+[sub_resource type="Resource" id="Resource_saavg"]
+resource_name = "Search"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194395
+
+[sub_resource type="Resource" id="Resource_5hdwb"]
+resource_name = "StandBy"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194396
+
+[sub_resource type="Resource" id="Resource_75f1a"]
+resource_name = "OpenURL"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194397
+
+[sub_resource type="Resource" id="Resource_b6b0w"]
+resource_name = "LaunchMail"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194398
+
+[sub_resource type="Resource" id="Resource_al8ux"]
+resource_name = "LaunchMedia"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194399
+
+[sub_resource type="Resource" id="Resource_240x1"]
+resource_name = "Launch0"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194400
+
+[sub_resource type="Resource" id="Resource_0ldte"]
+resource_name = "Launch1"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194401
+
+[sub_resource type="Resource" id="Resource_lksoh"]
+resource_name = "Launch2"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194402
+
+[sub_resource type="Resource" id="Resource_dfljv"]
+resource_name = "Launch3"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194403
+
+[sub_resource type="Resource" id="Resource_6ll5b"]
+resource_name = "Launch4"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194404
+
+[sub_resource type="Resource" id="Resource_smshw"]
+resource_name = "Launch5"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194405
+
+[sub_resource type="Resource" id="Resource_glbus"]
+resource_name = "Launch6"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194406
+
+[sub_resource type="Resource" id="Resource_jp0bq"]
+resource_name = "Launch7"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194407
+
+[sub_resource type="Resource" id="Resource_17cv6"]
+resource_name = "Launch8"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194408
+
+[sub_resource type="Resource" id="Resource_l1x4h"]
+resource_name = "Launch9"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194409
+
+[sub_resource type="Resource" id="Resource_5jqdw"]
+resource_name = "LaunchA"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194410
+
+[sub_resource type="Resource" id="Resource_yywwg"]
+resource_name = "LaunchB"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194411
+
+[sub_resource type="Resource" id="Resource_j1mxu"]
+resource_name = "LaunchC"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194412
+
+[sub_resource type="Resource" id="Resource_74815"]
+resource_name = "LaunchD"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194413
+
+[sub_resource type="Resource" id="Resource_gbkib"]
+resource_name = "LaunchE"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194414
+
+[sub_resource type="Resource" id="Resource_6mehq"]
+resource_name = "LaunchF"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194415
+
+[sub_resource type="Resource" id="Resource_f7h8f"]
+resource_name = "Globe"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194416
+
+[sub_resource type="Resource" id="Resource_j4mb4"]
+resource_name = "On-screen keyboard"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194417
+
+[sub_resource type="Resource" id="Resource_v0ylb"]
+resource_name = "JIS Eisu"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194418
+
+[sub_resource type="Resource" id="Resource_1leje"]
+resource_name = "JIS Kana"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 4194419
+
+[sub_resource type="Resource" id="Resource_twcqr"]
+resource_name = "Unknown"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 8388607
+
+[sub_resource type="Resource" id="Resource_7hhou"]
+resource_name = "Space"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 32
+
+[sub_resource type="Resource" id="Resource_fe1l0"]
+resource_name = "Exclam"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 33
+
+[sub_resource type="Resource" id="Resource_fyesk"]
+resource_name = "QuoteDbl"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 34
+
+[sub_resource type="Resource" id="Resource_v4wdq"]
+resource_name = "NumberSign"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 35
+
+[sub_resource type="Resource" id="Resource_b77ry"]
+resource_name = "Dollar"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 36
+
+[sub_resource type="Resource" id="Resource_yeh2d"]
+resource_name = "Percent"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 37
+
+[sub_resource type="Resource" id="Resource_qd28l"]
+resource_name = "Ampersand"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 38
+
+[sub_resource type="Resource" id="Resource_6davu"]
+resource_name = "Apostrophe"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 39
+
+[sub_resource type="Resource" id="Resource_i60k2"]
+resource_name = "ParenLeft"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 40
+
+[sub_resource type="Resource" id="Resource_jdatp"]
+resource_name = "ParenRight"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 41
+
+[sub_resource type="Resource" id="Resource_6klfl"]
+resource_name = "Asterisk"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 42
+
+[sub_resource type="Resource" id="Resource_1mui2"]
+resource_name = "Plus"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 43
+
+[sub_resource type="Resource" id="Resource_3vgeu"]
+resource_name = "Comma"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 44
+
+[sub_resource type="Resource" id="Resource_t5gqd"]
+resource_name = "Minus"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 45
+
+[sub_resource type="Resource" id="Resource_wiqk4"]
+resource_name = "Period"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 46
+
+[sub_resource type="Resource" id="Resource_5u0rp"]
+resource_name = "Slash"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 47
+
+[sub_resource type="Resource" id="Resource_j36ch"]
+resource_name = "0"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 48
+
+[sub_resource type="Resource" id="Resource_tyx72"]
+resource_name = "1"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 49
+
+[sub_resource type="Resource" id="Resource_owtfi"]
+resource_name = "2"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 50
+
+[sub_resource type="Resource" id="Resource_o7a6n"]
+resource_name = "3"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 51
+
+[sub_resource type="Resource" id="Resource_bj6yt"]
+resource_name = "4"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 52
+
+[sub_resource type="Resource" id="Resource_gedvh"]
+resource_name = "5"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 53
+
+[sub_resource type="Resource" id="Resource_sdqxu"]
+resource_name = "6"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 54
+
+[sub_resource type="Resource" id="Resource_lme2v"]
+resource_name = "7"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 55
+
+[sub_resource type="Resource" id="Resource_i2jd0"]
+resource_name = "8"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 56
+
+[sub_resource type="Resource" id="Resource_lk731"]
+resource_name = "9"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 57
+
+[sub_resource type="Resource" id="Resource_5g21i"]
+resource_name = "Colon"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 58
+
+[sub_resource type="Resource" id="Resource_8gxsv"]
+resource_name = "Semicolon"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 59
+
+[sub_resource type="Resource" id="Resource_hbhff"]
+resource_name = "Less"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 60
+
+[sub_resource type="Resource" id="Resource_8nk4a"]
+resource_name = "Equal"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 61
+
+[sub_resource type="Resource" id="Resource_5ugpq"]
+resource_name = "Greater"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 62
+
+[sub_resource type="Resource" id="Resource_4h7k2"]
+resource_name = "Question"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 63
+
+[sub_resource type="Resource" id="Resource_1pr5r"]
+resource_name = "At"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 64
+
+[sub_resource type="Resource" id="Resource_wghg1"]
+resource_name = "A"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 65
+
+[sub_resource type="Resource" id="Resource_0erv5"]
+resource_name = "B"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 66
+
+[sub_resource type="Resource" id="Resource_8arp3"]
+resource_name = "C"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 67
+
+[sub_resource type="Resource" id="Resource_wdmnp"]
+resource_name = "D"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 68
+
+[sub_resource type="Resource" id="Resource_ir8un"]
+resource_name = "E"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 69
+
+[sub_resource type="Resource" id="Resource_2eacq"]
+resource_name = "F"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 70
+
+[sub_resource type="Resource" id="Resource_cw876"]
+resource_name = "G"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 71
+
+[sub_resource type="Resource" id="Resource_sg7e0"]
+resource_name = "H"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 72
+
+[sub_resource type="Resource" id="Resource_gm0ko"]
+resource_name = "I"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 73
+
+[sub_resource type="Resource" id="Resource_mjt5k"]
+resource_name = "J"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 74
+
+[sub_resource type="Resource" id="Resource_v5p3r"]
+resource_name = "K"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 75
+
+[sub_resource type="Resource" id="Resource_b6j6t"]
+resource_name = "L"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 76
+
+[sub_resource type="Resource" id="Resource_ltg3w"]
+resource_name = "M"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 77
+
+[sub_resource type="Resource" id="Resource_cleqc"]
+resource_name = "N"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 78
+
+[sub_resource type="Resource" id="Resource_mhlb1"]
+resource_name = "O"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 79
+
+[sub_resource type="Resource" id="Resource_63q7f"]
+resource_name = "P"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 80
+
+[sub_resource type="Resource" id="Resource_24cxi"]
+resource_name = "Q"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 81
+
+[sub_resource type="Resource" id="Resource_xres1"]
+resource_name = "R"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 82
+
+[sub_resource type="Resource" id="Resource_aaylq"]
+resource_name = "S"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 83
+
+[sub_resource type="Resource" id="Resource_fge6x"]
+resource_name = "T"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 84
+
+[sub_resource type="Resource" id="Resource_475fl"]
+resource_name = "U"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 85
+
+[sub_resource type="Resource" id="Resource_ge3yb"]
+resource_name = "V"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 86
+
+[sub_resource type="Resource" id="Resource_qq7vj"]
+resource_name = "W"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 87
+
+[sub_resource type="Resource" id="Resource_bk41n"]
+resource_name = "X"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 88
+
+[sub_resource type="Resource" id="Resource_oj2nb"]
+resource_name = "Y"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 89
+
+[sub_resource type="Resource" id="Resource_od7lw"]
+resource_name = "Z"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 90
+
+[sub_resource type="Resource" id="Resource_vcscd"]
+resource_name = "BracketLeft"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 91
+
+[sub_resource type="Resource" id="Resource_0vurg"]
+resource_name = "BackSlash"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 92
+
+[sub_resource type="Resource" id="Resource_4p7hr"]
+resource_name = "BracketRight"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 93
+
+[sub_resource type="Resource" id="Resource_lhb88"]
+resource_name = "AsciiCircum"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 94
+
+[sub_resource type="Resource" id="Resource_ohwqd"]
+resource_name = "UnderScore"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 95
+
+[sub_resource type="Resource" id="Resource_6fhq5"]
+resource_name = "QuoteLeft"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 96
+
+[sub_resource type="Resource" id="Resource_bf2rl"]
+resource_name = "BraceLeft"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 123
+
+[sub_resource type="Resource" id="Resource_wvt56"]
+resource_name = "Bar"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 124
+
+[sub_resource type="Resource" id="Resource_63b6n"]
+resource_name = "BraceRight"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 125
+
+[sub_resource type="Resource" id="Resource_4vjbc"]
+resource_name = "AsciiTilde"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 126
+
+[sub_resource type="Resource" id="Resource_sy05m"]
+resource_name = "Yen"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 165
+
+[sub_resource type="Resource" id="Resource_fatel"]
+resource_name = "Section"
+script = ExtResource("1_pthji")
+input_type = 0
+keycode = 167
+
+[sub_resource type="Resource" id="Resource_a6yod"]
+script = ExtResource("1_pthji")
+input_type = 1
+keycode = 0
+
+[sub_resource type="Resource" id="Resource_qgm8k"]
+resource_name = "Left Mouse Button"
+script = ExtResource("1_pthji")
+input_type = 1
+keycode = 1
+
+[sub_resource type="Resource" id="Resource_7rwm8"]
+resource_name = "Right Mouse Button"
+script = ExtResource("1_pthji")
+input_type = 1
+keycode = 2
+
+[sub_resource type="Resource" id="Resource_a8h3i"]
+resource_name = "Middle Mouse Button"
+script = ExtResource("1_pthji")
+input_type = 1
+keycode = 3
+
+[sub_resource type="Resource" id="Resource_b4vl4"]
+resource_name = "Mouse Wheel Up"
+script = ExtResource("1_pthji")
+input_type = 1
+keycode = 4
+
+[sub_resource type="Resource" id="Resource_4jr1y"]
+resource_name = "Mouse Wheel Down"
+script = ExtResource("1_pthji")
+input_type = 1
+keycode = 5
+
+[sub_resource type="Resource" id="Resource_v8fn7"]
+resource_name = "Mouse Wheel Left"
+script = ExtResource("1_pthji")
+input_type = 1
+keycode = 6
+
+[sub_resource type="Resource" id="Resource_et00q"]
+resource_name = "Mouse Wheel Right"
+script = ExtResource("1_pthji")
+input_type = 1
+keycode = 7
+
+[sub_resource type="Resource" id="Resource_hnuos"]
+resource_name = "X Button 1"
+script = ExtResource("1_pthji")
+input_type = 1
+keycode = 8
+
+[sub_resource type="Resource" id="Resource_m37ph"]
+resource_name = "X Button 2"
+script = ExtResource("1_pthji")
+input_type = 1
+keycode = 9
 
 [resource]
 script = ExtResource("1_o60va")
 generate_presets = false
-keyboard = Array[Resource("res://addons/awesome_input_icons/resources/scripts/KeyIcon.gd")]([])
-mouse = Array[Resource("res://addons/awesome_input_icons/resources/scripts/KeyIcon.gd")]([])
-joy = Array[Resource("res://addons/awesome_input_icons/resources/scripts/KeyIcon.gd")]([])
+keyboard = Array[ExtResource("1_pthji")]([SubResource("Resource_w8fy7"), SubResource("Resource_5xxnt"), SubResource("Resource_hg5sx"), SubResource("Resource_0eiec"), SubResource("Resource_wkxum"), SubResource("Resource_kmdrf"), SubResource("Resource_wt7xh"), SubResource("Resource_wqpw7"), SubResource("Resource_4um07"), SubResource("Resource_e2e4j"), SubResource("Resource_igvh5"), SubResource("Resource_ngyw0"), SubResource("Resource_m1dgj"), SubResource("Resource_ih46m"), SubResource("Resource_iemum"), SubResource("Resource_v2xcr"), SubResource("Resource_ny7q6"), SubResource("Resource_cue8g"), SubResource("Resource_odvsm"), SubResource("Resource_q6wgb"), SubResource("Resource_51t8a"), SubResource("Resource_kvbsx"), SubResource("Resource_6bejn"), SubResource("Resource_qn7sr"), SubResource("Resource_dhlbq"), SubResource("Resource_evi3j"), SubResource("Resource_wnmb0"), SubResource("Resource_g54ar"), SubResource("Resource_aai2l"), SubResource("Resource_hvsig"), SubResource("Resource_wlmi1"), SubResource("Resource_kvyu0"), SubResource("Resource_jm2lo"), SubResource("Resource_56i7i"), SubResource("Resource_72kut"), SubResource("Resource_gli6f"), SubResource("Resource_tdq56"), SubResource("Resource_i6rnn"), SubResource("Resource_jf68v"), SubResource("Resource_p7ead"), SubResource("Resource_sv853"), SubResource("Resource_ddmuu"), SubResource("Resource_coyfs"), SubResource("Resource_1sl21"), SubResource("Resource_yh3bw"), SubResource("Resource_g0j7d"), SubResource("Resource_vhvf2"), SubResource("Resource_42rfk"), SubResource("Resource_gdqk3"), SubResource("Resource_t86xf"), SubResource("Resource_720sd"), SubResource("Resource_fgcx7"), SubResource("Resource_q5o3e"), SubResource("Resource_6tpur"), SubResource("Resource_cs1we"), SubResource("Resource_hg35p"), SubResource("Resource_l3qls"), SubResource("Resource_dfypq"), SubResource("Resource_ho6fv"), SubResource("Resource_vq3gl"), SubResource("Resource_q1ak4"), SubResource("Resource_6w006"), SubResource("Resource_8nn8j"), SubResource("Resource_g07k7"), SubResource("Resource_alvub"), SubResource("Resource_eoqhj"), SubResource("Resource_xuunr"), SubResource("Resource_d7h33"), SubResource("Resource_vlmjx"), SubResource("Resource_eikbj"), SubResource("Resource_a762v"), SubResource("Resource_j7vs5"), SubResource("Resource_hmggp"), SubResource("Resource_oqlpj"), SubResource("Resource_onrsw"), SubResource("Resource_uj43u"), SubResource("Resource_121be"), SubResource("Resource_3w2eu"), SubResource("Resource_qm8iw"), SubResource("Resource_4k1ai"), SubResource("Resource_rrfvn"), SubResource("Resource_pn2qd"), SubResource("Resource_17i33"), SubResource("Resource_gehtu"), SubResource("Resource_lyhpv"), SubResource("Resource_32u03"), SubResource("Resource_m5vra"), SubResource("Resource_cat7o"), SubResource("Resource_ulm36"), SubResource("Resource_6addq"), SubResource("Resource_lk0m3"), SubResource("Resource_1yfec"), SubResource("Resource_td1at"), SubResource("Resource_0khy6"), SubResource("Resource_cco4d"), SubResource("Resource_2h4yj"), SubResource("Resource_saavg"), SubResource("Resource_5hdwb"), SubResource("Resource_75f1a"), SubResource("Resource_b6b0w"), SubResource("Resource_al8ux"), SubResource("Resource_240x1"), SubResource("Resource_0ldte"), SubResource("Resource_lksoh"), SubResource("Resource_dfljv"), SubResource("Resource_6ll5b"), SubResource("Resource_smshw"), SubResource("Resource_glbus"), SubResource("Resource_jp0bq"), SubResource("Resource_17cv6"), SubResource("Resource_l1x4h"), SubResource("Resource_5jqdw"), SubResource("Resource_yywwg"), SubResource("Resource_j1mxu"), SubResource("Resource_74815"), SubResource("Resource_gbkib"), SubResource("Resource_6mehq"), SubResource("Resource_f7h8f"), SubResource("Resource_j4mb4"), SubResource("Resource_v0ylb"), SubResource("Resource_1leje"), SubResource("Resource_twcqr"), SubResource("Resource_7hhou"), SubResource("Resource_fe1l0"), SubResource("Resource_fyesk"), SubResource("Resource_v4wdq"), SubResource("Resource_b77ry"), SubResource("Resource_yeh2d"), SubResource("Resource_qd28l"), SubResource("Resource_6davu"), SubResource("Resource_i60k2"), SubResource("Resource_jdatp"), SubResource("Resource_6klfl"), SubResource("Resource_1mui2"), SubResource("Resource_3vgeu"), SubResource("Resource_t5gqd"), SubResource("Resource_wiqk4"), SubResource("Resource_5u0rp"), SubResource("Resource_j36ch"), SubResource("Resource_tyx72"), SubResource("Resource_owtfi"), SubResource("Resource_o7a6n"), SubResource("Resource_bj6yt"), SubResource("Resource_gedvh"), SubResource("Resource_sdqxu"), SubResource("Resource_lme2v"), SubResource("Resource_i2jd0"), SubResource("Resource_lk731"), SubResource("Resource_5g21i"), SubResource("Resource_8gxsv"), SubResource("Resource_hbhff"), SubResource("Resource_8nk4a"), SubResource("Resource_5ugpq"), SubResource("Resource_4h7k2"), SubResource("Resource_1pr5r"), SubResource("Resource_wghg1"), SubResource("Resource_0erv5"), SubResource("Resource_8arp3"), SubResource("Resource_wdmnp"), SubResource("Resource_ir8un"), SubResource("Resource_2eacq"), SubResource("Resource_cw876"), SubResource("Resource_sg7e0"), SubResource("Resource_gm0ko"), SubResource("Resource_mjt5k"), SubResource("Resource_v5p3r"), SubResource("Resource_b6j6t"), SubResource("Resource_ltg3w"), SubResource("Resource_cleqc"), SubResource("Resource_mhlb1"), SubResource("Resource_63q7f"), SubResource("Resource_24cxi"), SubResource("Resource_xres1"), SubResource("Resource_aaylq"), SubResource("Resource_fge6x"), SubResource("Resource_475fl"), SubResource("Resource_ge3yb"), SubResource("Resource_qq7vj"), SubResource("Resource_bk41n"), SubResource("Resource_oj2nb"), SubResource("Resource_od7lw"), SubResource("Resource_vcscd"), SubResource("Resource_0vurg"), SubResource("Resource_4p7hr"), SubResource("Resource_lhb88"), SubResource("Resource_ohwqd"), SubResource("Resource_6fhq5"), SubResource("Resource_bf2rl"), SubResource("Resource_wvt56"), SubResource("Resource_63b6n"), SubResource("Resource_4vjbc"), SubResource("Resource_sy05m"), SubResource("Resource_fatel")])
+mouse = Array[ExtResource("1_pthji")]([SubResource("Resource_a6yod"), SubResource("Resource_qgm8k"), SubResource("Resource_7rwm8"), SubResource("Resource_a8h3i"), SubResource("Resource_b4vl4"), SubResource("Resource_4jr1y"), SubResource("Resource_v8fn7"), SubResource("Resource_et00q"), SubResource("Resource_hnuos"), SubResource("Resource_m37ph")])
+joy = Array[ExtResource("1_pthji")]([SubResource("Resource_plsxo"), SubResource("Resource_gmmjk"), SubResource("Resource_3p5xx"), SubResource("Resource_6acx3"), SubResource("Resource_fthpg"), SubResource("Resource_8nnhc"), SubResource("Resource_d8t71"), SubResource("Resource_fbirb"), SubResource("Resource_8bisa"), SubResource("Resource_7irvq"), SubResource("Resource_jo68k"), SubResource("Resource_0edrt"), SubResource("Resource_5bdc8"), SubResource("Resource_elot5"), SubResource("Resource_srvbt"), SubResource("Resource_rds8b"), SubResource("Resource_uw5ck"), SubResource("Resource_ffite"), SubResource("Resource_xcbk0"), SubResource("Resource_3t51i"), SubResource("Resource_ypn5t"), SubResource("Resource_kdqqp"), SubResource("Resource_v1tim"), SubResource("Resource_warp6")])
