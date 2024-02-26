@@ -1,1 +1,3 @@
-InputDictionary
+InputIconScheme
+InputIconConfiguration
+KeyIcon

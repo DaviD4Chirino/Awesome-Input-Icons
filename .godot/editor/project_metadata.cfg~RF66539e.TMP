@@ -1,0 +1,46 @@
+[editor_metadata]
+
+executable_path="C:/godot/Godot.exe"
+
+[debug_options]
+
+run_live_debug=true
+run_reload_scripts=true
+
+[linked_properties]
+
+Control:scale=true
+RichTextLabel:scale=true
+Sprite2D:scale=true
+Label:scale=true
+MultiNodeEdit:scale=true
+TextureRect:scale=true
+Node2D:scale=true
+HBoxContainer:scale=true
+GridContainer:scale=true
+EditorDebuggerRemoteObject:scale=true
+VBoxContainer:scale=true
+MarginContainer:scale=true
+
+[dialog_bounds]
+
+create_new_node=Rect2(229, 208, 675, 525)
+project_settings=Rect2(186, 328, 675, 525)
+search_help=Rect2(360, 225, 720, 450)
+
+[script_setup]
+
+last_selected_language="GDScript"
+
+[project_settings]
+
+advanced_mode=true
+
+[recent_files]
+
+scenes=["res://addons/awesome_input_icons/input_icon_sprite_2d.tscn", "res://addons/resources_spreadsheet_view/editor_view.tscn", "res://node_2d.tscn", "res://control.tscn", "res://action_icon.tscn", "res://addons/awesome_input_icons/input_icon_texture_rect.tscn", "res://addons/awesome_input_icons/input_action_icon.tscn", "res://addons/awesome_input_icons/test_scene.tscn", "res://input_action_icon.tscn"]
+scripts=["String", "InputIconScheme", "res://addons/awesome_input_icons/InputIcon.gd", "res://addons/awesome_input_icons/classes/InputIconSprite2D.gd", "res://node_2d.gd", "res://addons/awesome_input_icons/input_dictionary.gd", "res://addons/awesome_input_icons/test_scene.gd", "res://addons/awesome_input_icons/plugin.cfg", "res://addons/ActionIcon.gd", "res://addons/awesome_input_icons/InputActionIcon.gd"]
+
+[color_picker]
+
+recent_presets=PackedColorArray(0.337963, 0.283257, 0.302126, 1, 0, 0, 0, 1)

@@ -1,35 +1,50 @@
-## This is a sprite2d that takes an action name and automatically loads the proper icon
-extends Sprite2D
-
-##TODO: Add support for joysticks, steam deck, switch, etc.
+## Global Class for all the script in the Awesome Input Icons plugin
 class_name InputIcon
-## The name of the action, it has to exist in the InputMap
-@export var action: StringName = "":
-	set(value):
-		action = value
-		if !action:
-			texture = null
-			return
-		_update()
 
-## The index of the event, to select if theres more than one
-@export var event_index: int = 0:
-	set(value):
-		event_index = value
-		_update()
+##NOTE: Since for now the configuration only contains the scheme, this may seem redundant, BUT, in the future you can add more things to the configuration.
+static var configuration = load("res://addons/awesome_input_icons/input_icon_configuration.tres")
 
-## If the icon should be outlined
-@export var outline: bool = false:
-	set(value):
-		outline = value
-		_update()
+static var scheme = load("res://addons/awesome_input_icons/input_icon_configuration.tres").scheme
 
 
-## It updates the texture, this way all 3 properties gets updated at the same time
-func _update():
-	texture = InputIconGlobal.get_icon(action, event_index, outline)
+## The main function, give it an action in your [param InputMap] and a optional event index, it returns you a [param Texture2D] that represents the icon
+static func get_icon(action: StringName, event_index: int = 0) -> Texture2D:
+	var events: Array[InputEvent] = InputMap.action_get_events(action)
+
+	if not events:
+		printerr("Input Icon: No events found for action: " + action)
+		return null
+
+	if event_index > events.size():
+		printerr("Input Icon: Invalid event index: " + str(event_index))
+		return null
+
+	var event: InputEvent = events[event_index]
+	var icon: Texture2D = null
+
+	## Since the [param key] value in the [param KeyIcon] depends on its type, we need to check the class of the event, once with the event class we can get the icon with proper type context
+
+	return get_icon_by_event(event)
 
 
-func _input(event):
-	if event is InputEventKey or event is InputEventMouseButton:
-		texture = InputIconGlobal.get_icon_by_event(event, outline)
+## [b]Tip:[/b] You can call this instead of get_icon if you only have an [param InputEvent]
+static func get_icon_by_event(event: InputEvent) -> Texture2D:
+	var icon: Texture2D = null
+
+	## Since the [param key] value in the [param KeyIcon] depends on its type, we need to check the class of the event, once with the event class we can get the icon with proper type context
+
+	match event.get_class():
+		"InputEventKey":
+			var keycode = event.keycode if event.keycode else event.physical_keycode
+			icon = scheme.get_key_icon(keycode, KeyIcon.InputTypes.KEYBOARD).icon
+
+		"InputEventMouseButton":
+			icon = scheme.get_key_icon(event.button_index, KeyIcon.InputTypes.MOUSE).icon
+
+		"InputEventJoypadButton":
+			icon = scheme.get_key_icon(event.button_index, KeyIcon.InputTypes.JOY_BUTTON).icon
+
+		_:
+			printerr("Input Icon: Unsupported event type: " + str(event))
+
+	return icon

@@ -2,30 +2,25 @@
 
 ![The icon of the addon](addons/awesome_input_icons/plugin_icon.png)
 
- A Object class with `static functions` that search the given action name and returns the proper icon. Icons made by Kenney. *(Note: right now only supports keyboard and mouse because i don´t have that much time)*
-
-## Contents
-
- This addon adds 2 Classes (`InputIcon` and `InputIconTextureRect`) to the tree and a Object class (`InputIconGlobal`)
-
-* `InputIconGlobal`
-  * Its sole purpose is to provide static functions, this way you can call `InputIconGlobal.*` similar to an autoload (without being one)
-* `InputIcon` and `InputIconTextureRect`
-  * They are `Sprite2D` and `TextureRect` respectively as premade classes to ease common use cases. They both are essentially the same
+ A Object class with `static functions` that search the given action name and returns the proper icon. Icons made by Kenney.
 
 ## How to use
 
-With the addon activated, add a new node and select the `InputIcon` or `InputIconTextureRect`, they are inside the `Sprite2D` node and `TextureRectNode`. You can also search for them using `InputIcon`
-![Creating a new Action icon or InputIconTextureRect](readme_media/create_new_node_screen.png)
+You can:
 
-Once you added them, you will notice that they are the same nodes you know, except for these:
-![Showing the export properties of InputIcon Classes ](readme_media/ActionIconClassPropertyShowcase.png)
+1. Use either the `InputIconSprite2D` or `InputIconTextureRect`, they will have exported variables of `action_name` and `event_index`. The action_name MUST be the same in your input_map, and the event can go into negatives but not be grater than the event list.
+   * Once you fill that up it will display an icon defined in your `InputIconScheme`, in this case it will be in the default scheme in: `addons/awesome_input_icons/resources/default_input_icons_outline.tres`
 
-You put the action name in `Action`, the event you want to show in `event_index` and since the asset pack contains outlined icon, you can choose their style as well with `Outline`
+2. You can use in code with this line:
+   * ```InputIcon.get_icon(action_name: StringName, event_index: int = 0)``` as it returns a `Texure2D`
+
+3. If you dont have a action_name you can use `get_icon_by_event(event: InputEvent)` with is the same as `get_icon` but it does not convert the action_name into a event and instead it work directly with the event
+
 <details>
 <summary>
-Step-by-step guide
+How to use InputIconTextureRext and InputIconSprite2D, step by step
 </summary>
+
 I have a dummy action called `action_one`
 
 ![A screen of me having action_one with different events](readme_media/usage_showcase_1.png)
@@ -40,44 +35,72 @@ Heres with `InputIconTextureRect` with all my events:
 
 ![InputIconTextureRect showing all my events with icons](readme_media/usage_showcase_4.png)
 
-</details>
-
 ___
 Both actions have the same script except they extends from different classes, check it out
 >
 
 ```GDScript
 
-## The name of the action, it has to exist in the InputMap
-@export var action: StringName = "":
+
+## The name of the action in your InputMap, it has to be an existing action
+@export var action_name: StringName = &"":
  set(value):
-  action = value
-  if !action:
-   return
+  action_name = value
   _update()
 
-## The index of the event, to select if theres more than one
+## The Index of the event, if you have more than one event in the same action.
+## You can use negative numbers but not a number bigger than the number of events
 @export var event_index: int = 0:
  set(value):
   event_index = value
   _update()
 
-## If the icon should be outlined
-@export var outline: bool = false:
- set(value):
-  outline = value
-  _update()
+
+func _ready():
+ _update()
 
 
-## It updates the texture, this way all 3 properties gets updated at the same time
 func _update():
- texture = InputIconGlobal.get_icon(action, event_index, outline)
+ texture = InputIcon.get_icon(action_name, event_index)
 
 ```
 
-This line: `InputIconGlobal.get_icon(action, event_index, outline)` is basically all you are gonna need, with the name of the action, the event index and a option outline, it returns a `Texture2D` or `null`
+</details>
 
-Check out the [docs](https://github.com/DaviD4Chirino/Awesome-Input-Icons/wiki)
+## Contents
+
+This addon has  `RefObject` of the class_name `InputIcon`. It contains static variables and functions ready to be used everywhere. Think of it as an `autoload` *(You can use it as `InputIcon.get_icon(...)`)*
+
+It adds a handful of deferent classes to the editor, they are as follows:
+
+* `InputIconConfiguration`
+  * As the name implies, is a resource that contains configuration data for the addon and the project, right now only has the `InputIconScheme` in the `scheme` variable
+* `InputIconScheme`
+  * Contains 3 exported arrays and 3 static arrays as well as an exported boolean called `generate_presets`
+    * `generate_presets` once activated inside the editor, will delete all the data of the arrays and populate them with all the necessary data for a fresh scheme *(Instead of adding 193 elements to the array, putting the correct index for each key of the keyboard, activate this and it will do that for you, and alo for the joystic and mouse; __WARNING:__ this destroys the previous changes)*
+  * The exported arrays `keys`, `mouse_buttons` and `joy_buttons`
+    * all of them are the same, separated to be easier to edit and categorize. They only accept a custom class called `KeyIcon`
+* `KeyIcon`
+  * It exports three variables: `keycode`, `icon` and `InputType`
+    * `keycode` is a integer that represents the index of the event, to be referenced again in the InputEvents enums
+    * `icon` is a `Texure2D` to go along this `keycode`, in other words if the keycode and type corresponds to the left mouse button, you will get this value if your action is the left mouse button
+    * `InputType`, since the keycode value changes depending of what type of input it is, you need to specify the type.
+    * After you add a type and a keycode, the Resource will rename itself to the name of the key for better readability
+
+## Customization
+
+If you want to create your own input icons you can create a new `InputIconScheme` and click `generate_presets`, that will give you something like this:
+
+  ![InputIconScheme with populated arrays](<readme_media/creating a scheme1.png>)
+
+Inside it will look like:
+
+![Inside the InputIconScheme are KeyIconResources with names representing the key](<readme_media/creating a scheme2.png>)
+
+and then you just open the key you want to add the icon, and put them in the icon parameter (do not mess with the other values) like so:
+![An Event with an icon](<readme_media/creating a scheme3.png>)
+
+finaly you reference the new scheme in the `input_icon_configuration.tres` resource located in the base of the addon: `addons/awesome_input_icons/input_icon_configuration.tres`
 ___
 
 ### Credits

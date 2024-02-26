@@ -1,4 +1,5 @@
-ActionIcon
+InputIconSprite2D
+InputIconTextureRect
 Sprite2D
 HBoxContainer
 VBoxContainer
