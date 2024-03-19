@@ -1,5 +1,8 @@
-InputIconSprite2D
+Camera3D
+InputIconSprite3D
+Sprite3D
 InputIconTextureRect
+InputIconSprite2D
 Sprite2D
 HBoxContainer
 VBoxContainer

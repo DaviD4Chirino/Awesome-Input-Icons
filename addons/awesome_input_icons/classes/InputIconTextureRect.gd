@@ -15,10 +15,5 @@ class_name InputIconTextureRect extends TextureRect
 		event_index = value
 		_update()
 
-
-func _ready():
-	_update()
-
-
 func _update():
 	texture = InputIcon.get_icon(action_name, event_index)
