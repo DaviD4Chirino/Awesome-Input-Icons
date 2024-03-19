@@ -30,6 +30,10 @@ window/size/viewport_width=500
 window/size/viewport_height=500
 window/stretch/mode="canvas_items"
 
+[dotnet]
+
+project/assembly_name="Awesome input icons w- Kenney"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/awesome_input_icons/plugin.cfg", "res://addons/nv.file_system/plugin.cfg")

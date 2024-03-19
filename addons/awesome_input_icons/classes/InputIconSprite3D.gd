@@ -1,7 +1,5 @@
-## This is a sprite2d that takes an action name and automatically loads the proper icon
-extends Sprite2D
-class_name InputIconSprite2D
-
+## This is a Sprite3D that takes an action name and automatically loads the proper icon
+class_name InputIconSprite3D extends Sprite3D
 ## The name of the action in your InputMap, it has to be an existing action
 @export var action_name: StringName = &"":
 	set(value):
@@ -16,7 +14,4 @@ class_name InputIconSprite2D
 		_update()
 
 func _update():
-	texture = InputIcon.get_icon(
-		action_name, event_index
-		)
- 
+	texture = InputIcon.get_icon(action_name, event_index)

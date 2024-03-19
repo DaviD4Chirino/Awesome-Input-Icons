@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdkqcsb3k5lya"]
+
+[ext_resource type="Script" path="res://addons/awesome_input_icons/classes/InputIconSprite3D.gd" id="1_drwos"]
+[ext_resource type="Texture2D" uid="uid://csora5yub5jfm" path="res://icon.svg" id="1_yqkoq"]
+
+[node name="Sprite3D" type="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0125597)
+texture = ExtResource("1_yqkoq")
+script = ExtResource("1_drwos")
+action_name = &"action"
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0278574, 0, 2.8817)

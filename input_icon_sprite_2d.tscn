@@ -4,3 +4,4 @@
 
 [node name="InputIconSprite2D" type="Sprite2D"]
 script = ExtResource("1_tiy0t")
+action_name = &"action3"
