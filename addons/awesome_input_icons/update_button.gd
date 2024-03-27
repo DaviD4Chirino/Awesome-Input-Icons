@@ -15,7 +15,6 @@ var editor_plugin: EditorPlugin
 
 func _ready() -> void:
 	hide()
-
 	_check_for_update()
 
 func _check_for_update() -> void:
@@ -43,7 +42,7 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 			return _version_to_number(version) > _version_to_number(current_version))
 	
 	print(versions[0].tag_name)
-	
+
 	if versions.size() > 0:
 		download_update_panel.next_version_release = versions[0]
 

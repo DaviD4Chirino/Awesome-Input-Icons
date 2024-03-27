@@ -14,7 +14,7 @@ const TEMP_FILE_PATH = "user://temp.zip"
 var next_version_release: Dictionary:
 	set(value):
 		next_version_release = value
-		label.text = "v%s is available for download" % value.tag_name.substr(1)
+		label.text = "v%s is available for download" % value.tag_name
 		release_notes_button.uri = value.html_url
 
 func _on_download_button_pressed() -> void:
