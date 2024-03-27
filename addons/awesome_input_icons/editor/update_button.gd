@@ -3,9 +3,6 @@ extends Button
 ## Base code by Nathan Hoad (https://github.com/nathanhoad)
 ## at https://github.com/nathanhoad/godot_dialogue_manager
 
-## Also basically stolen from BenjaTK (https://github.com/BenjaTK)
-## In his Gaea Plugin at https://github.com/BenjaTK/Gaea
-
 const RELEASES_URL: String = "https://api.github.com/repos/DaviD4Chirino/Awesome-Input-Icons/releases"
 const LOCAL_CONFIG_PATH: String = "res://addons/awesome_input_icons/plugin.cfg"
 
@@ -43,6 +40,8 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 			var version: String=release.tag_name
 
 			return _version_to_number(version) > _version_to_number(current_version))
+	
+	print(versions[0].tag_name)
 
 	if versions.size() > 0:
 		download_update_panel.next_version_release = versions[0]
