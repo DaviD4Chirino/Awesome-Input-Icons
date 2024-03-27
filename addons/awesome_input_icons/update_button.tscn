@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "v1.0.1 available"
+text = "v0 available"
 script = ExtResource("1_n2nq1")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
@@ -25,7 +25,6 @@ offset_left = -142.0
 offset_top = 8.0
 offset_right = 142.0
 offset_bottom = 201.0
-version = 0
 
 [node name="UpdateFailedDialog" type="AcceptDialog" parent="."]
 position = Vector2i(0, 36)

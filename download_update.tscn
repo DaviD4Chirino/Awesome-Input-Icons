@@ -12,7 +12,6 @@ grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_iatpf")
-version = 105
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
