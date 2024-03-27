@@ -63,4 +63,4 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 	zip_reader.close()
 	DirAccess.remove_absolute(TEMP_FILE_PATH)
 
-	updated.emit(next_version_release.tag_name.substr(1))
+	updated.emit(next_version_release.tag_name)

@@ -52,18 +52,18 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 func _on_pressed() -> void:
 	download_dialog.popup_centered()
 
-func _on_download_update_panel_updated(new_version) -> void:
+func _on_download_update_panel_failed() -> void:
+	download_dialog.hide()
+	update_failed_dialog.popup_centered()
+
+func _on_download_update_updated(new_version: String):
 	download_dialog.hide()
 
 	editor_plugin.get_editor_interface().get_resource_filesystem().scan()
 
 	print_rich("\n[b]Updated Awesome Input Icons to v%s\n" % new_version)
 	editor_plugin.get_editor_interface().call_deferred("set_plugin_enabled", "Awesome Input Icons", true)
-	editor_plugin.get_editor_interface().set_plugin_enabled("gaea", false)
-
-func _on_download_update_panel_failed() -> void:
-	download_dialog.hide()
-	update_failed_dialog.popup_centered()
+	editor_plugin.get_editor_interface().set_plugin_enabled("Awesome Input Icons", false)
 
 func _get_version() -> String:
 	var config: ConfigFile = ConfigFile.new()
