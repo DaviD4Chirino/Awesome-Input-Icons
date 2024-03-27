@@ -1,2 +1,5 @@
-res://addons/awesome_input_icons/update_button.gd
+res://playground.tscn
 res://addons/awesome_input_icons/update_button.tscn
+res://download_update.tscn
+res://download_update.gd
+res://addons/awesome_input_icons/update_button.gd
