@@ -1,2 +1,4 @@
 res://addons/awesome_input_icons/editor/update_button.gd
-res://addons/awesome_input_icons/update_button.gd
+res://addons/awesome_input_icons/plugin.cfg
+res://addons/awesome_input_icons/InputIcon.gd
+res://addons/awesome_input_icons/awesome_input_icons.gd

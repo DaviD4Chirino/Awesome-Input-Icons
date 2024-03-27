@@ -5,6 +5,7 @@ var docker_scene = null
 
 func _enter_tree():
 	docker_scene = UPDATE_BUTTON_SCENE.instantiate()
+	docker_scene.editor_plugin = self
 	add_control_to_container(EditorPlugin.CONTAINER_TOOLBAR, docker_scene)
 
 func _exit_tree():
