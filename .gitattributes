@@ -4,4 +4,4 @@
 # Only include the addons folder when downloading from the Asset Library.
 /**        export-ignore
 /addons    !export-ignore
-/addons/awesome_input_icons !export-ignore
+/addons/awesome_input_icons/** !export-ignore
