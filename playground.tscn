@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnhdm6f0aj0l0"]
+
+[ext_resource type="Script" path="res://playground.gd" id="1_kh68k"]
+
+[node name="playground" type="Node2D"]
+script = ExtResource("1_kh68k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+centered = false
