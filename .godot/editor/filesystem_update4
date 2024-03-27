@@ -1,1 +1,6 @@
 res://addons/awesome_input_icons/update_button.gd
+res://download_update.tscn
+res://addons/awesome_input_icons/update_button.tscn
+res://playground.tscn
+res://addons/awesome_input_icons/editor/download_update.tscn
+res://addons/awesome_input_icons/editor/update_button.tscn

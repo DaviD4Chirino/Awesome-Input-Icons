@@ -1,9 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://dyjaccwiosvwq"]
 
-[ext_resource type="Script" path="res://addons/awesome_input_icons/update_button.gd" id="1_n2nq1"]
-[ext_resource type="PackedScene" uid="uid://bsl6du60suv5q" path="res://download_update.tscn" id="2_f5yit"]
+[ext_resource type="Script" path="res://addons/awesome_input_icons/editor/update_button.gd" id="1_n2nq1"]
+[ext_resource type="PackedScene" uid="uid://bsl6du60suv5q" path="res://addons/awesome_input_icons/editor/download_update.tscn" id="2_f5yit"]
 
 [node name="UpdateButton" type="Button"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
