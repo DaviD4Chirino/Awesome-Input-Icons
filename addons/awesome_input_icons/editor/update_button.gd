@@ -40,8 +40,6 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 			var version: String=release.tag_name
 
 			return _version_to_number(version) > _version_to_number(current_version))
-	
-	print(versions[0].tag_name)
 
 	if versions.size() > 0:
 		download_update_panel.next_version_release = versions[0]
