@@ -12,5 +12,5 @@ func _enter_tree():
 func _exit_tree():
 	# Clean-up of the plugin goes here.
 	remove_control_from_container(EditorPlugin.CONTAINER_TOOLBAR, update_button)
-	update_button.free()
+	update_button.queue_free()
 	pass
