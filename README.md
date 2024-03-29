@@ -4,6 +4,14 @@
 
  A Object class with `static functions` that search the given action name and returns the proper icon. Icons made by Kenney.
 
+## Installation
+
+Go to the releases tab and download the latest source. Inside it there will be a addons folder with the `awesome input icons`. Drag and drop the addons folder into the base of your project.
+
+Or go to the `AssetLib` tab and search for `Awesome Input Icon` and download it form there.
+
+Then go to `project>project config>plugins` and activate Awesome Input Icons.
+
 ## How to use
 
 You can:
