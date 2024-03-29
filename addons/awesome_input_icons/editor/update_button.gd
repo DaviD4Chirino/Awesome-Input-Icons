@@ -60,8 +60,8 @@ func _on_download_update_updated(new_version: String):
 	editor_plugin.get_editor_interface().get_resource_filesystem().scan()
 
 	print_rich("\n[b]Updated Awesome Input Icons to v%s\n" % new_version)
-	editor_plugin.get_editor_interface().call_deferred("set_plugin_enabled", "Awesome Input Icons", true)
-	editor_plugin.get_editor_interface().set_plugin_enabled("Awesome Input Icons", false)
+	editor_plugin.get_editor_interface().call_deferred("set_plugin_enabled", "awesome_input_icons", true)
+	editor_plugin.get_editor_interface().set_plugin_enabled("awesome_input_icons", false)
 
 func _get_version() -> String:
 	var config: ConfigFile = ConfigFile.new()
