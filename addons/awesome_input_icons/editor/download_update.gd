@@ -6,10 +6,13 @@ signal updated(new_version: String)
 
 const TEMP_FILE_PATH = "user://temp.zip"
 
-@onready var http_request: HTTPRequest = $HTTPRequest
-@onready var label: Label = %Version
-@onready var download_button: Button = %DownloadButton
-@onready var release_notes_button: LinkButton = $VBoxContainer/CenterContainer2/LinkButton
+@export var addon_name: String = ""
+
+@export_category("Nodes")
+@export var http_request: HTTPRequest
+@export var label: Label
+@export var download_button: Button
+@export var release_notes_button: LinkButton
 
 var next_version_release: Dictionary:
 	set(value):
@@ -18,9 +21,9 @@ var next_version_release: Dictionary:
 		release_notes_button.uri = value.html_url
 
 func _on_download_button_pressed() -> void:
-	# Make sure the actual Gaea repo doesn't update itself accidentally.
-	# if FileAccess.file_exists("res://scenes/demos/cellular/cellular_demo.tscn"):
-	# 	push_error("You can't update Gaea from within itself.")
+	# Make sure the actual repo doesn't update itself accidentally.
+	# if FileAccess.file_exists(".tscn"):
+	# 	push_error("You can't update from within itself.")
 	# 	failed.emit()
 	# 	return
 
@@ -38,7 +41,7 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 	zip_file.store_buffer(body)
 	zip_file.close()
 
-	OS.move_to_trash(ProjectSettings.globalize_path("res://addons/awesome_input_icons"))
+	OS.move_to_trash(ProjectSettings.globalize_path("res://addons/%s" % addon_name))
 
 	var zip_reader: ZIPReader = ZIPReader.new()
 	zip_reader.open(TEMP_FILE_PATH)
