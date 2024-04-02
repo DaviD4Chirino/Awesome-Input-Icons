@@ -238,6 +238,20 @@ static var joy_buttons: Array[int] = [
 	JOY_BUTTON_MAX
 ]
 
+static var joy_axis_buttons : Array[Dictionary] = [
+	{ "axis": JOY_AXIS_LEFT_X, "axis_value": -1},
+	{ "axis": JOY_AXIS_LEFT_X, "axis_value": +1},
+	{ "axis": JOY_AXIS_INVALID, "axis_value": 0},
+	{ "axis": JOY_AXIS_LEFT_Y, "axis_value": -1},
+	{ "axis": JOY_AXIS_LEFT_Y, "axis_value": +1},
+	{ "axis": JOY_AXIS_RIGHT_X, "axis_value": -1},
+	{ "axis": JOY_AXIS_RIGHT_X, "axis_value": +1},
+	{ "axis": JOY_AXIS_RIGHT_Y, "axis_value": -1},
+	{ "axis": JOY_AXIS_RIGHT_Y, "axis_value": +1},
+	{ "axis": JOY_AXIS_TRIGGER_LEFT, "axis_value": 1},
+	{ "axis": JOY_AXIS_TRIGGER_RIGHT, "axis_value": 1},
+]
+
 ## [b]DESTRUCTIVE[/b] it will fill arrays below with empty [class KeyIcons]
 @export var generate_presets: bool = false:
 	set = set_generate_preset
@@ -248,6 +262,7 @@ static var joy_buttons: Array[int] = [
 ## @tutorial(Guidance):  https://docs.godotengine.org/en/stable/classes/class_%40globalscope.html#enum-globalscope-joybutton
 @export var joy: Array[KeyIcon] = []
 
+@export var joy_axis: Array[KeyIcon] = []
 
 # i wish i had a button
 func set_generate_preset(value: bool) -> void:
@@ -259,6 +274,7 @@ func set_generate_preset(value: bool) -> void:
 		keyboard = populate_key_icons(keys, KeyIcon.InputTypes.KEYBOARD)
 		mouse = populate_key_icons(mouse_buttons, KeyIcon.InputTypes.MOUSE)
 		joy = populate_key_icons(joy_buttons, KeyIcon.InputTypes.JOY_BUTTON)
+		joy_axis = populate_key_icons_for_axis(joy_axis_buttons, KeyIcon.InputTypes.JOY_AXIS)
 
 	generate_presets = false
 
@@ -272,6 +288,16 @@ func populate_key_icons(array: Array, type: KeyIcon.InputTypes) -> Array[KeyIcon
 		arr.append(key_icon)
 	return arr
 
+
+func populate_key_icons_for_axis(array: Array, type: KeyIcon.InputTypes) -> Array[KeyIcon]:
+	var arr: Array[KeyIcon] = []
+	for pair in array:
+		var key_icon: KeyIcon = KeyIcon.new()
+		key_icon.input_type = type
+		key_icon.keycode = pair.axis
+		key_icon.axis_value = pair.axis_value
+		arr.append(key_icon)
+	return arr
 
 ## We gram the KeyIcon Resource by its keycode and type
 func get_key_icon(keycode: int, type: KeyIcon.InputTypes) -> KeyIcon:
@@ -287,6 +313,11 @@ func get_key_icon(keycode: int, type: KeyIcon.InputTypes) -> KeyIcon:
 	# 		return key_icon
 	return null
 
+func get_key_icon_by_axis(axis: int, axis_value: float):
+	for key_icon in joy_axis:
+		if key_icon.keycode == axis and is_equal_approx(key_icon.axis_value, signf(axis_value)):
+			return key_icon
+	return null
 
 ## We grab the KeyIcon Resource by its keycode in an array, its more of a helper function
 func get_key_icon_by_keycode(keycode: int, array: Array[KeyIcon]) -> KeyIcon:

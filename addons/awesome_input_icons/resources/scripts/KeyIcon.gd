@@ -1,16 +1,21 @@
 @tool
 extends Resource
 class_name KeyIcon
-enum InputTypes { KEYBOARD, MOUSE, JOY_BUTTON }
+enum InputTypes { KEYBOARD, MOUSE, JOY_BUTTON, JOY_AXIS }
 @export var input_type: InputTypes = InputTypes.KEYBOARD
 
 ## The keycode, its value depends on its type
 @export var keycode: int = KEY_NONE:
 	set = update_name
 
+@export var axis_value: float = 0:
+	set = update_name_for_axis
 ## And the image that represents that keycode
 @export var icon: Texture2D
 
+func update_name_for_axis(value: float) -> void:
+	axis_value = value
+	update_name(keycode)
 
 ## For better readability in the editor, we change the resource name to the name of the key.
 ## The only easy one is to use the [param OS.get_keycode_string], the rest we have to do manually.
@@ -32,6 +37,9 @@ func update_name(value: int) -> void:
 
 		InputTypes.JOY_BUTTON:
 			_update_name_joy(keycode)
+
+		InputTypes.JOY_AXIS:
+			_update_name_joy_axis(keycode, axis_value)
 
 
 func _update_name_mouse(value: int) -> void:
@@ -63,6 +71,23 @@ func _update_name_mouse(value: int) -> void:
 		MOUSE_BUTTON_XBUTTON2:
 			resource_name = "X Button 2"
 
+func _update_name_joy_axis(axis:int, value: float) -> void:
+	#resource_name = JoyAxis.keys()[axis]
+	match axis:
+		JOY_AXIS_INVALID:
+			resource_name = "Joy Axis Invalid"
+		JOY_AXIS_LEFT_X:
+			resource_name = "Joy Axis Left X %s" % ("Left" if value < 0 else "Right")
+		JOY_AXIS_LEFT_Y:
+			resource_name = "Joy Axis Left Y %s" % ("Up" if value < 0 else "Down")
+		JOY_AXIS_RIGHT_X:
+			resource_name = "Joy Axis Right X %s" % ("Left" if value < 0 else "Right")
+		JOY_AXIS_RIGHT_Y:
+			resource_name = "Joy Axis Right Y %s" % ("Up" if value < 0 else "Down")
+		JOY_AXIS_TRIGGER_LEFT:
+			resource_name = "Joy Trigger Left"
+		JOY_AXIS_TRIGGER_RIGHT:
+			resource_name = "Joy Trigger Right"
 
 func _update_name_joy(value: int) -> void:
 	match value:
