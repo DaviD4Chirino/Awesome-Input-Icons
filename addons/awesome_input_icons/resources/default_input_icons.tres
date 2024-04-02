@@ -577,7 +577,7 @@ axis_value = 0.0
 icon = ExtResource("33_k68hs")
 
 [sub_resource type="Resource" id="Resource_b7w3h"]
-resource_name = "Meta"
+resource_name = "Windows"
 script = ExtResource("1_kuw04")
 input_type = 0
 keycode = 4194327
