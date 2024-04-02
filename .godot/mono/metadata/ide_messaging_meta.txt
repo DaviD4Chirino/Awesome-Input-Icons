@@ -1,2 +1,0 @@
-﻿51642
-C:/godot/godot.exe
