@@ -5,7 +5,7 @@ class_name InputIcon
 static var configuration = load("res://addons/awesome_input_icons/input_icon_configuration.tres")
 
 ## This one is written like this because the get function would not cooperate
-static var scheme : InputIconScheme = load("res://addons/awesome_input_icons/input_icon_configuration.tres").scheme
+static var scheme: InputIconScheme = load("res://addons/awesome_input_icons/input_icon_configuration.tres").scheme
 
 ## The main function, give it an action in your [param InputMap] and a optional event index, it returns you a [param Texture2D] that represents the icon
 static func get_icon(action: StringName, event_index: int=0) -> Texture2D:

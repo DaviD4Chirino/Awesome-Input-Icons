@@ -238,18 +238,18 @@ static var joy_buttons: Array[int] = [
 	JOY_BUTTON_MAX
 ]
 
-static var joy_axis_buttons : Array[Dictionary] = [
-	{ "axis": JOY_AXIS_LEFT_X, "axis_value": -1},
-	{ "axis": JOY_AXIS_LEFT_X, "axis_value": +1},
-	{ "axis": JOY_AXIS_INVALID, "axis_value": 0},
-	{ "axis": JOY_AXIS_LEFT_Y, "axis_value": -1},
-	{ "axis": JOY_AXIS_LEFT_Y, "axis_value": +1},
-	{ "axis": JOY_AXIS_RIGHT_X, "axis_value": -1},
-	{ "axis": JOY_AXIS_RIGHT_X, "axis_value": +1},
-	{ "axis": JOY_AXIS_RIGHT_Y, "axis_value": -1},
-	{ "axis": JOY_AXIS_RIGHT_Y, "axis_value": +1},
-	{ "axis": JOY_AXIS_TRIGGER_LEFT, "axis_value": 1},
-	{ "axis": JOY_AXIS_TRIGGER_RIGHT, "axis_value": 1},
+static var joy_axis_buttons: Array[Dictionary] = [
+	{"axis": JOY_AXIS_LEFT_X, "axis_value": - 1},
+	{"axis": JOY_AXIS_LEFT_X, "axis_value": + 1},
+	{"axis": JOY_AXIS_INVALID, "axis_value": 0},
+	{"axis": JOY_AXIS_LEFT_Y, "axis_value": - 1},
+	{"axis": JOY_AXIS_LEFT_Y, "axis_value": + 1},
+	{"axis": JOY_AXIS_RIGHT_X, "axis_value": - 1},
+	{"axis": JOY_AXIS_RIGHT_X, "axis_value": + 1},
+	{"axis": JOY_AXIS_RIGHT_Y, "axis_value": - 1},
+	{"axis": JOY_AXIS_RIGHT_Y, "axis_value": + 1},
+	{"axis": JOY_AXIS_TRIGGER_LEFT, "axis_value": 1},
+	{"axis": JOY_AXIS_TRIGGER_RIGHT, "axis_value": 1},
 ]
 
 ## [b]DESTRUCTIVE[/b] it will fill arrays below with empty [class KeyIcons]
@@ -278,7 +278,6 @@ func set_generate_preset(value: bool) -> void:
 
 	generate_presets = false
 
-
 func populate_key_icons(array: Array, type: KeyIcon.InputTypes) -> Array[KeyIcon]:
 	var arr: Array[KeyIcon] = []
 	for code in array:
@@ -287,7 +286,6 @@ func populate_key_icons(array: Array, type: KeyIcon.InputTypes) -> Array[KeyIcon
 		key_icon.keycode = code
 		arr.append(key_icon)
 	return arr
-
 
 func populate_key_icons_for_axis(array: Array, type: KeyIcon.InputTypes) -> Array[KeyIcon]:
 	var arr: Array[KeyIcon] = []
