@@ -24,6 +24,10 @@ config/name="Awesome input icons w/ Kenney"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://addons/awesome_input_icons/plugin_icon.png"
 
+[autoload]
+
+SceneManager="*res://addons/awesome_scene_manager/autoloads/SceneManager.tscn"
+
 [display]
 
 window/size/viewport_width=500
@@ -36,7 +40,7 @@ project/assembly_name="Awesome input icons w- Kenney"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/awesome_input_icons/plugin.cfg", "res://addons/nv.file_system/plugin.cfg")
+enabled=PackedStringArray("res://addons/awesome_input_icons/plugin.cfg", "res://addons/awesome_scene_manager/plugin.cfg", "res://addons/nv.file_system/plugin.cfg")
 
 [input]
 

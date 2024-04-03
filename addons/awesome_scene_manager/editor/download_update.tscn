@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://bsl6du60suv5q"]
 
-[ext_resource type="Script" path="res://addons/awesome_input_icons/editor/download_update.gd" id="1_iatpf"]
-[ext_resource type="Texture2D" uid="uid://bulhpn8sdvg6x" path="res://addons/awesome_input_icons/plugin_icon.png" id="2_pafwx"]
+[ext_resource type="Script" path="res://addons/awesome_scene_manager/editor/download_update.gd" id="1_iatpf"]
+[ext_resource type="Texture2D" uid="uid://671dgkmms71u" path="res://addons/awesome_scene_manager/plugin_icon_800x800.png" id="2_er6hc"]
 
-[node name="DownloadUpdate" type="Control"]
+[node name="DownloadUpdate" type="Control" node_paths=PackedStringArray("http_request", "label", "download_button", "release_notes_button")]
 layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
@@ -12,6 +12,10 @@ grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_iatpf")
+http_request = NodePath("HTTPRequest")
+label = NodePath("VBoxContainer/Version")
+download_button = NodePath("VBoxContainer/CenterContainer/DownloadButton")
+release_notes_button = NodePath("VBoxContainer/CenterContainer2/LinkButton")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
@@ -30,7 +34,7 @@ alignment = 1
 [node name="Icon" type="TextureRect" parent="VBoxContainer"]
 custom_minimum_size = Vector2(50, 100)
 layout_mode = 2
-texture = ExtResource("2_pafwx")
+texture = ExtResource("2_er6hc")
 expand_mode = 3
 stretch_mode = 5
 

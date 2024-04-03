@@ -1,26 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://dyjaccwiosvwq"]
 
 [ext_resource type="Script" path="res://addons/awesome_input_icons/editor/update_button.gd" id="1_n2nq1"]
-[ext_resource type="Script" path="res://addons/awesome_input_icons/editor/download_update.gd" id="2_5lhdm"]
-[ext_resource type="Texture2D" uid="uid://bulhpn8sdvg6x" path="res://addons/awesome_input_icons/plugin_icon.png" id="3_irgp0"]
+[ext_resource type="Script" path="res://addons/awesome_input_icons/editor/DownloadUpdate.gd" id="2_mpgh5"]
+[ext_resource type="Texture2D" uid="uid://bulhpn8sdvg6x" path="res://addons/awesome_input_icons/plugin_icon.png" id="3_watbi"]
 
-[node name="UpdateButton" type="Button" node_paths=PackedStringArray("http_request", "download_dialog", "update_failed_dialog", "download_update_panel")]
+[node name="UpdateButton" type="Button"]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Awesome Input Icons v1.0.1 available"
+text = "Awesome Input Icons v1.1.2 available"
 script = ExtResource("1_n2nq1")
-RELEASES_URL = "https://api.github.com/repos/DaviD4Chirino/Awesome-Input-Icons/releases"
-LOCAL_CONFIG_PATH = "res://addons/awesome_input_icons/plugin.cfg"
-addon_name = " awesome_input_icons"
-addon_title = "Awesome Input Icons"
-http_request = NodePath("HTTPRequest")
-download_dialog = NodePath("DownloadDialog")
-update_failed_dialog = NodePath("UpdateFailedDialog")
-download_update_panel = NodePath("DownloadDialog/DownloadUpdate")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
@@ -29,7 +21,7 @@ title = ""
 size = Vector2i(300, 250)
 ok_button_text = "Close"
 
-[node name="DownloadUpdate" type="Control" parent="DownloadDialog" node_paths=PackedStringArray("http_request", "label", "download_button", "release_notes_button")]
+[node name="DownloadUpdate" type="Control" parent="DownloadDialog"]
 layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
@@ -41,12 +33,7 @@ offset_bottom = 201.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("2_5lhdm")
-addon_name = "awesome_input_icons"
-http_request = NodePath("HTTPRequest")
-label = NodePath("VBoxContainer/Version")
-download_button = NodePath("VBoxContainer/CenterContainer/DownloadButton")
-release_notes_button = NodePath("VBoxContainer/CenterContainer2/LinkButton")
+script = ExtResource("2_mpgh5")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="DownloadDialog/DownloadUpdate"]
 
@@ -65,7 +52,7 @@ alignment = 1
 [node name="Icon" type="TextureRect" parent="DownloadDialog/DownloadUpdate/VBoxContainer"]
 custom_minimum_size = Vector2(50, 100)
 layout_mode = 2
-texture = ExtResource("3_irgp0")
+texture = ExtResource("3_watbi")
 expand_mode = 3
 stretch_mode = 5
 
@@ -104,5 +91,9 @@ dialog_text = "All the files are up to date"
 
 [node name="Timer" type="Timer" parent="."]
 
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
+[connection signal="failed" from="DownloadDialog/DownloadUpdate" to="." method="_on_download_update_panel_failed"]
+[connection signal="updated" from="DownloadDialog/DownloadUpdate" to="." method="_on_download_update_updated"]
 [connection signal="request_completed" from="DownloadDialog/DownloadUpdate/HTTPRequest" to="DownloadDialog/DownloadUpdate" method="_on_http_request_request_completed"]
 [connection signal="pressed" from="DownloadDialog/DownloadUpdate/VBoxContainer/CenterContainer/DownloadButton" to="DownloadDialog/DownloadUpdate" method="_on_download_button_pressed"]
