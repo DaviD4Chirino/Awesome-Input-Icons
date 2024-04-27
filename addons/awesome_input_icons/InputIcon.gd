@@ -58,6 +58,9 @@ static func get_icon_by_event(event: InputEvent) -> Texture2D:
 		"InputEventJoypadMotion":
 			icon = scheme.get_key_icon_by_axis(event.axis, event.axis_value).icon
 
+		"InputEventMouseMotion":
+			icon = scheme.get_key_icon_by_relative_motion(event.relative).icon
+
 		_:
 			printerr("Unsupported event type: " + str(event))
 
