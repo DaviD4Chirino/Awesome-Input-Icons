@@ -252,6 +252,13 @@ static var joy_axis_buttons: Array[Dictionary] = [
 	{"axis": JOY_AXIS_TRIGGER_RIGHT, "axis_value": 1},
 ]
 
+static var mouse_motion_directions: Array[Dictionary] = [
+	{"axis": Vector2.AXIS_X, "axis_value": -1},
+	{"axis": Vector2.AXIS_X, "axis_value": 1},
+	{"axis": Vector2.AXIS_Y, "axis_value": -1},
+	{"axis": Vector2.AXIS_Y, "axis_value": 1},
+]
+
 ## [b]DESTRUCTIVE[/b] it will fill arrays below with empty [class KeyIcons]
 @export var generate_presets: bool = false:
 	set = set_generate_preset
@@ -264,6 +271,8 @@ static var joy_axis_buttons: Array[Dictionary] = [
 
 @export var joy_axis: Array[KeyIcon] = []
 
+@export var mouse_motions: Array[KeyIcon] = []
+
 # i wish i had a button
 func set_generate_preset(value: bool) -> void:
 	generate_presets = value
@@ -275,7 +284,7 @@ func set_generate_preset(value: bool) -> void:
 		mouse = populate_key_icons(mouse_buttons, KeyIcon.InputTypes.MOUSE)
 		joy = populate_key_icons(joy_buttons, KeyIcon.InputTypes.JOY_BUTTON)
 		joy_axis = populate_key_icons_for_axis(joy_axis_buttons, KeyIcon.InputTypes.JOY_AXIS)
-
+		mouse_motions = populate_key_icons_for_axis(mouse_motion_directions, KeyIcon.InputTypes.JOY_AXIS)
 	generate_presets = false
 
 func populate_key_icons(array: Array, type: KeyIcon.InputTypes) -> Array[KeyIcon]:
@@ -314,6 +323,19 @@ func get_key_icon(keycode: int, type: KeyIcon.InputTypes) -> KeyIcon:
 func get_key_icon_by_axis(axis: int, axis_value: float):
 	for key_icon in joy_axis:
 		if key_icon.keycode == axis and is_equal_approx(key_icon.axis_value, signf(axis_value)):
+			return key_icon
+	return null
+
+func get_key_icon_by_relative_motion(relative: Vector2i):
+	var axis_index := -1
+
+	if abs(relative.x) > abs(relative.y):
+		axis_index = Vector2.AXIS_X
+	else:
+		axis_index = Vector2.AXIS_Y
+
+	for key_icon in mouse_motions:
+		if key_icon.keycode == axis_index and is_equal_approx(key_icon.axis_value, signf(relative[axis_index])):
 			return key_icon
 	return null
 

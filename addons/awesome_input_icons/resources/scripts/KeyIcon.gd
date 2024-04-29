@@ -1,7 +1,7 @@
 @tool
 extends Resource
 class_name KeyIcon
-enum InputTypes {KEYBOARD, MOUSE, JOY_BUTTON, JOY_AXIS}
+enum InputTypes {KEYBOARD, MOUSE, JOY_BUTTON, JOY_AXIS, MOUSE_MOTION}
 @export var input_type: InputTypes = InputTypes.KEYBOARD
 
 ## The keycode, its value depends on its type
@@ -41,6 +41,9 @@ func update_name(value: int) -> void:
 		InputTypes.JOY_AXIS:
 			_update_name_joy_axis(keycode, axis_value)
 
+		InputTypes.MOUSE_MOTION:
+			_update_name_mouse_motion(keycode, axis_value)
+
 func _update_name_mouse(value: int) -> void:
 	match value:
 		MOUSE_BUTTON_LEFT:
@@ -69,6 +72,13 @@ func _update_name_mouse(value: int) -> void:
 
 		MOUSE_BUTTON_XBUTTON2:
 			resource_name = "X Button 2"
+
+func _update_name_mouse_motion(axis: int, value: float) -> void:
+	match axis:
+		Vector2.AXIS_X:
+			resource_name = "Mouse Move X %s" % ("Left" if value < 0 else "Right")
+		Vector2.AXIS_Y:
+			resource_name = "Mouse Move Y %s" % ("Up" if value < 0 else "Down")
 
 func _update_name_joy_axis(axis: int, value: float) -> void:
 	#resource_name = JoyAxis.keys()[axis]
