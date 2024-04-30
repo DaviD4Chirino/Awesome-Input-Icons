@@ -2,10 +2,6 @@ extends Node2D
 
 @onready var sprite: Sprite2D = $Sprite2D
 
-func _ready():
-	print("logaritmo")
-
-
 #region Nuevo Code Region
 func _input(event):
 	if event is InputEventKey or is_correct_joypad_input(event) or is_correct_mouse_input(event):

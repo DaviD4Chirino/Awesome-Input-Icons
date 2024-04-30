@@ -17,9 +17,11 @@ Then go to `project>project config>plugins` and activate Awesome Input Icons.
 You can:
 
 1. Use either the `InputIconSprite2D` or `InputIconTextureRect`, they will have exported variables of `action_name` and `event_index`. The action_name MUST be the same in your input_map, and the event can go into negatives but not be grater than the event list.
+   
    * Once you fill that up it will display an icon defined in your `InputIconScheme`, in this case it will be in the default scheme in: `addons/awesome_input_icons/resources/default_input_icons_outline.tres`
 
 2. You can use in code with this line:
+   
    * ```InputIcon.get_icon(action_name: StringName, event_index: int = 0)``` as it returns a `Texure2D`
 
 3. If you dont have a action_name you can use `get_icon_by_event(event: InputEvent)` with is the same as `get_icon` but it does not convert the action_name into a event and instead it work directly with the event
@@ -44,12 +46,12 @@ Heres with `InputIconTextureRect` with all my events:
 ![InputIconTextureRect showing all my events with icons](readme_media/usage_showcase_4.png)
 
 ___
+
 Both actions have the same script except they extends from different classes, check it out
->
+
+> 
 
 ```GDScript
-
-
 ## The name of the action in your InputMap, it has to be an existing action
 @export var action_name: StringName = &"":
  set(value):
@@ -70,7 +72,6 @@ func _ready():
 
 func _update():
  texture = InputIcon.get_icon(action_name, event_index)
-
 ```
 
 </details>
@@ -109,6 +110,7 @@ and then you just open the key you want to add the icon, and put them in the ico
 ![An Event with an icon](<readme_media/creating a scheme3.png>)
 
 finaly you reference the new scheme in the `input_icon_configuration.tres` resource located in the base of the addon: `addons/awesome_input_icons/input_icon_configuration.tres`
+
 ___
 
 ### Credits
