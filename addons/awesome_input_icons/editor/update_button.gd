@@ -23,10 +23,6 @@ var editor_plugin: EditorPlugin
 # 	pass
 
 func _ready() -> void:
-	print(
-		get_config("name")
-	)
-	# config
 	hide()
 	_check_for_update()
 
