@@ -4,7 +4,11 @@ extends Node2D
 
 #region Nuevo Code Region
 func _input(event):
-	if event is InputEventKey or is_correct_joypad_input(event) or is_correct_mouse_input(event):
+	if (
+		event is InputEventKey and event.is_released()
+		) or (
+		is_correct_joypad_input(event) or is_correct_mouse_input(event)
+	):
 		sprite.texture = InputIcon.get_icon_by_event(event)
 
 #endregion

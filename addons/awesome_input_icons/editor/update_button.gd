@@ -3,8 +3,12 @@ extends Button
 ## Base code by Nathan Hoad (https://github.com/nathanhoad)
 ## at https://github.com/nathanhoad/godot_dialogue_manager
 
-const RELEASES_URL: String = "https://api.github.com/repos/DaviD4Chirino/Awesome-Input-Icons/releases"
-const LOCAL_CONFIG_PATH: String = "res://addons/awesome_input_icons/plugin.cfg"
+@onready var addon_name: String = get_config("addon_name")
+@onready var addon_title: String = get_config("name")
+
+@onready var releases_url: String = "https://api.github.com/repos/%s/releases" % get_config("repo")
+
+@export_file() var LOCAL_CONFIG_PATH: String = "res://addons/awesome_input_icons/plugin.cfg"
 
 var editor_plugin: EditorPlugin
 
@@ -13,12 +17,21 @@ var editor_plugin: EditorPlugin
 @onready var update_failed_dialog: AcceptDialog = $UpdateFailedDialog
 @onready var download_update_panel: Control = $DownloadDialog/DownloadUpdate
 
+# func _process(delta):
+	
+# 	print(releases_url)
+# 	pass
+
 func _ready() -> void:
+	print(
+		get_config("name")
+	)
+	# config
 	hide()
 	_check_for_update()
 
 func _check_for_update() -> void:
-	http_request.request(RELEASES_URL)
+	http_request.request(releases_url)
 
 func _on_http_request_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void:
 	if result != HTTPRequest.RESULT_SUCCESS:
@@ -44,7 +57,9 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 	if versions.size() > 0:
 		download_update_panel.next_version_release = versions[0]
 
-		text = "Awesome Input Icons v%s available" % versions[0].tag_name
+		text = "%s v%s available" % [addon_title, versions[0].tag_name]
+
+		download_update_panel.addon_name = addon_name
 		show()
 
 func _on_pressed() -> void:
@@ -59,9 +74,11 @@ func _on_download_update_updated(new_version: String):
 
 	editor_plugin.get_editor_interface().get_resource_filesystem().scan()
 
-	print_rich("\n[b]Updated Awesome Input Icons to v%s\n" % new_version)
-	editor_plugin.get_editor_interface().call_deferred("set_plugin_enabled", "awesome_input_icons", true)
-	editor_plugin.get_editor_interface().set_plugin_enabled("awesome_input_icons", false)
+	print_rich("\n[b]Updated %s to v%s\n" % [addon_title, new_version])
+
+	editor_plugin.get_editor_interface().call_deferred("set_plugin_enabled", addon_name, true)
+
+	editor_plugin.get_editor_interface().set_plugin_enabled(addon_name, false)
 
 func _get_version() -> String:
 	var config: ConfigFile = ConfigFile.new()
@@ -71,3 +88,10 @@ func _get_version() -> String:
 
 func _version_to_number(version: String) -> int:
 	return version.replace(".", "").to_int()
+
+func get_config(property: String) -> String:
+	var config: ConfigFile = ConfigFile.new()
+
+	config.load(LOCAL_CONFIG_PATH)
+	return config.get_value("plugin", property)
+	pass

@@ -10,12 +10,15 @@ const TEMP_FILE_PATH = "user://temp.zip"
 @onready var label: Label = %Version
 @onready var download_button: Button = %DownloadButton
 @onready var release_notes_button: LinkButton = $VBoxContainer/CenterContainer2/LinkButton
+@onready var icon: TextureRect = %Icon
 
 var next_version_release: Dictionary:
 	set(value):
 		next_version_release = value
 		label.text = "v%s is available for download" % value.tag_name
 		release_notes_button.uri = value.html_url
+
+var addon_name: String = ""
 
 func _on_download_button_pressed() -> void:
 	# Make sure the actual Gaea repo doesn't update itself accidentally.
@@ -38,7 +41,7 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 	zip_file.store_buffer(body)
 	zip_file.close()
 
-	OS.move_to_trash(ProjectSettings.globalize_path("res://addons/awesome_input_icons"))
+	OS.move_to_trash(ProjectSettings.globalize_path("res://addons/%s" % addon_name))
 
 	var zip_reader: ZIPReader = ZIPReader.new()
 	zip_reader.open(TEMP_FILE_PATH)
@@ -64,3 +67,13 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 	DirAccess.remove_absolute(TEMP_FILE_PATH)
 
 	updated.emit(next_version_release.tag_name)
+
+func set_icon() -> void:
+	var plugin_icon = load("res://addons/%s/plugin_icon.png" % addon_name)
+
+	if plugin_icon:
+		icon.texture = plugin_icon
+
+func _on_download_dialog_about_to_popup() -> void:
+	set_icon()
+	pass # Replace with function body.

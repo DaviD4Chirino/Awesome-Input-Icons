@@ -40,7 +40,7 @@ project/assembly_name="Awesome input icons w- Kenney"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/awesome_input_icons/plugin.cfg", "res://addons/awesome_scene_manager/plugin.cfg", "res://addons/nv.file_system/plugin.cfg")
+enabled=PackedStringArray("res://addons/awesome_input_icons/plugin.cfg", "res://addons/nv.file_system/plugin.cfg")
 
 [input]
 
@@ -57,6 +57,7 @@ action={
 action_joypad={
 "deadzone": 0.5,
 "events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":11,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":0,"axis_value":-1.0,"script":null)
 ]
 }
 
