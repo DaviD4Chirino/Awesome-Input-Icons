@@ -7,11 +7,15 @@ class_name ReactiveKeyComponent
 ## if it has an texture property, it will use that, otherwise it do nothing (but print a warning)
 
 ## It NEEDS to have a .texture property
-@export var sprite2d: Sprite2D
-@export var sprite3d: Sprite3D
+@export var texture_handler: Node
 
 # func _ready() -> void:
 # 	assert(sprite., "The sprite needs to have a texture property")
+
+
+func _ready() -> void:
+	assert(texture_handler != null, "Texture handler is not set")
+	assert(texture_handler.get(&"texture") != null, "The texture_handler needs to have a texture property")
 
 
 func _input(event):
@@ -39,8 +43,4 @@ func is_correct_mouse_input(event: InputEvent) -> bool:
 
 
 func _update_texture(texture: Texture2D) -> void:
-	if sprite2d != null:
-		sprite2d.texture = texture
-
-	if sprite3d != null:
-		sprite3d.texture = texture
+	texture_handler.set(&"texture", texture)

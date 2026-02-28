@@ -7,7 +7,7 @@
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1945994657]
 centered = false
 
-[node name="ReactiveKeyComponent" type="Node" parent="." unique_id=403250525 node_paths=PackedStringArray("sprite2d")]
+[node name="ReactiveKeyComponent" type="Node" parent="." unique_id=403250525 node_paths=PackedStringArray("texture_handler")]
 script = ExtResource("1_rupst")
-sprite2d = NodePath("../Sprite2D")
+texture_handler = NodePath("../Sprite2D")
 metadata/_custom_type_script = "uid://v8bvyktjbiwi"

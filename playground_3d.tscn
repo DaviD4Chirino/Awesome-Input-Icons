@@ -6,12 +6,13 @@
 [node name="Playground3d" type="Node3D" unique_id=1303953281]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2037881530]
+transform = Transform3D(0.9345776, 0, 0.35575947, 0, 1, 0, -0.35575947, 0, 0.9345776, 0.8889712, 0, -0.6430949)
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1484461094]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.7259328)
 texture = ExtResource("1_3s4e8")
 
-[node name="ReactiveKeyComponent" type="Node" parent="." unique_id=791464385 node_paths=PackedStringArray("sprite3d")]
+[node name="ReactiveKeyComponent" type="Node" parent="." unique_id=791464385 node_paths=PackedStringArray("texture_handler")]
 script = ExtResource("2_vs8qi")
-sprite3d = NodePath("../Sprite3D")
+texture_handler = NodePath("../Sprite3D")
 metadata/_custom_type_script = "uid://v8bvyktjbiwi"
