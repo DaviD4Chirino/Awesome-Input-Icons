@@ -1,18 +1,27 @@
 @tool
 extends EditorPlugin
 
-const UPDATE_BUTTON_SCENE = preload("res://addons/awesome_input_icons/editor/update_button.tscn")
+var editor_feature_profile := EditorFeatureProfile.new()
 
-var update_button
+## All the classes this plugin adds to the editor, handy to have
+var all_classes: Array[StringName] = [
+	&"InputIcon",
+	&"InputIconScheme",
+	&"InputIconConfiguration",
+	&"InputIconSprite2D",
+	&"InputIconSprite3D",
+	&"InputIconTextureRect",
+]
 
 
 func _enter_tree():
-	update_button = UPDATE_BUTTON_SCENE.instantiate()
-	update_button.editor_plugin = self
-	add_control_to_container(EditorPlugin.CONTAINER_TOOLBAR, update_button)
+	_set_disable_classes(false)
 
 
 func _exit_tree():
-	# Clean-up of the plugin goes here.
-	remove_control_from_container(EditorPlugin.CONTAINER_TOOLBAR, update_button)
-	update_button.queue_free()
+	_set_disable_classes(true)
+
+
+func _set_disable_classes(disable: bool) -> void:
+	for string_name in all_classes:
+		editor_feature_profile.set_disable_class(string_name, disable)
