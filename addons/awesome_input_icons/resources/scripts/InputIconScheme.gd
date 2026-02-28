@@ -239,6 +239,7 @@ static var joy_buttons: Array[int] = [
 	JOY_BUTTON_SDL_MAX,
 	JOY_BUTTON_MAX,
 ]
+
 static var joy_axis_buttons: Array[Dictionary] = [
 	{ "axis": JOY_AXIS_LEFT_X, "axis_value": -1 },
 	{ "axis": JOY_AXIS_LEFT_X, "axis_value": +1 },

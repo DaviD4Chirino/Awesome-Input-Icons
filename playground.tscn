@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://cnhdm6f0aj0l0"]
 
-[ext_resource type="Script" uid="uid://bx3hdrq86jaso" path="res://playground.gd" id="1_kh68k"]
+[ext_resource type="Script" uid="uid://v8bvyktjbiwi" path="res://components/reactive_key_component.gd" id="1_rupst"]
 
 [node name="playground" type="Node2D" unique_id=513566106]
-script = ExtResource("1_kh68k")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1945994657]
 centered = false
+
+[node name="ReactiveKeyComponent" type="Node" parent="." unique_id=403250525 node_paths=PackedStringArray("sprite2d")]
+script = ExtResource("1_rupst")
+sprite2d = NodePath("../Sprite2D")
+metadata/_custom_type_script = "uid://v8bvyktjbiwi"
