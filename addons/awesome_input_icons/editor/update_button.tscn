@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dyjaccwiosvwq"]
+[gd_scene format=3 uid="uid://dyjaccwiosvwq"]
 
-[ext_resource type="Script" path="res://addons/awesome_input_icons/editor/update_button.gd" id="1_n2nq1"]
-[ext_resource type="Script" path="res://addons/awesome_input_icons/editor/DownloadUpdate.gd" id="2_mpgh5"]
+[ext_resource type="Script" uid="uid://er6l6h15esps" path="res://addons/awesome_input_icons/editor/update_button.gd" id="1_n2nq1"]
+[ext_resource type="Script" uid="uid://dbot42vp8cy6t" path="res://addons/awesome_input_icons/editor/DownloadUpdate.gd" id="2_mpgh5"]
 [ext_resource type="Texture2D" uid="uid://csora5yub5jfm" path="res://icon.svg" id="3_1ww4k"]
 
-[node name="UpdateButton" type="Button"]
+[node name="UpdateButton" type="Button" unique_id=1999530567]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -13,14 +14,14 @@ grow_vertical = 2
 text = "Awesome Input Icons v1.3.0 available"
 script = ExtResource("1_n2nq1")
 
-[node name="HTTPRequest" type="HTTPRequest" parent="."]
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=894710629]
 
-[node name="DownloadDialog" type="AcceptDialog" parent="."]
+[node name="DownloadDialog" type="AcceptDialog" parent="." unique_id=304145620]
 title = ""
 size = Vector2i(300, 250)
 ok_button_text = "Close"
 
-[node name="DownloadUpdate" type="Control" parent="DownloadDialog"]
+[node name="DownloadUpdate" type="Control" parent="DownloadDialog" unique_id=1367375922]
 layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
@@ -34,9 +35,9 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("2_mpgh5")
 
-[node name="HTTPRequest" type="HTTPRequest" parent="DownloadDialog/DownloadUpdate"]
+[node name="HTTPRequest" type="HTTPRequest" parent="DownloadDialog/DownloadUpdate" unique_id=251141948]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="DownloadDialog/DownloadUpdate"]
+[node name="VBoxContainer" type="VBoxContainer" parent="DownloadDialog/DownloadUpdate" unique_id=116602860]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -48,7 +49,7 @@ grow_horizontal = 2
 theme_override_constants/separation = 5
 alignment = 1
 
-[node name="Icon" type="TextureRect" parent="DownloadDialog/DownloadUpdate/VBoxContainer"]
+[node name="Icon" type="TextureRect" parent="DownloadDialog/DownloadUpdate/VBoxContainer" unique_id=538545702]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 100)
 layout_mode = 2
@@ -56,40 +57,42 @@ texture = ExtResource("3_1ww4k")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="Version" type="Label" parent="DownloadDialog/DownloadUpdate/VBoxContainer"]
+[node name="Version" type="Label" parent="DownloadDialog/DownloadUpdate/VBoxContainer" unique_id=686277797]
 unique_name_in_owner = true
 layout_mode = 2
 text = "v1.3.0 is available for download"
 
-[node name="CenterContainer" type="CenterContainer" parent="DownloadDialog/DownloadUpdate/VBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="DownloadDialog/DownloadUpdate/VBoxContainer" unique_id=1278931971]
 layout_mode = 2
 
-[node name="DownloadButton" type="Button" parent="DownloadDialog/DownloadUpdate/VBoxContainer/CenterContainer"]
+[node name="DownloadButton" type="Button" parent="DownloadDialog/DownloadUpdate/VBoxContainer/CenterContainer" unique_id=1672349772]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Download and install update"
 
-[node name="CenterContainer2" type="CenterContainer" parent="DownloadDialog/DownloadUpdate/VBoxContainer"]
+[node name="CenterContainer2" type="CenterContainer" parent="DownloadDialog/DownloadUpdate/VBoxContainer" unique_id=1400784262]
 layout_mode = 2
 
-[node name="LinkButton" type="LinkButton" parent="DownloadDialog/DownloadUpdate/VBoxContainer/CenterContainer2"]
+[node name="LinkButton" type="LinkButton" parent="DownloadDialog/DownloadUpdate/VBoxContainer/CenterContainer2" unique_id=1280214536]
 layout_mode = 2
 text = "Read release notes..."
 uri = "https://github.com/DaviD4Chirino/Awesome-Input-Icons/releases/tag/1.3.0"
 
-[node name="UpdateFailedDialog" type="AcceptDialog" parent="."]
+[node name="UpdateFailedDialog" type="AcceptDialog" parent="." unique_id=1650062888]
+oversampling_override = 1.0
 position = Vector2i(0, 36)
 size = Vector2i(151, 100)
 dialog_text = "The update failed"
 
-[node name="UpdateSuccess" type="AcceptDialog" parent="."]
+[node name="UpdateSuccess" type="AcceptDialog" parent="." unique_id=1669304623]
+oversampling_override = 1.0
 title = ""
 position = Vector2i(0, 36)
 size = Vector2i(215, 100)
 ok_button_text = "Accept"
 dialog_text = "All the files are up to date"
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1167625416]
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

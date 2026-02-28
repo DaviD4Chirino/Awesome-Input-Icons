@@ -1,9 +1,11 @@
 @tool
-extends Resource
 class_name InputIconScheme
+extends Resource
+
 # We have a copy of the keys as an array for two reasons:
 # 1. We cannot iterate over the [param @GlobalScope.Key] enumerator, just reference it.
 # 2. In order to NOT add the 193 keyboards keys manualy, we can populate them in code.
+#region: keys and buttons
 static var keys: Array[int] = [
 	KEY_NONE,
 	KEY_SPECIAL,
@@ -197,7 +199,7 @@ static var keys: Array[int] = [
 	KEY_BRACERIGHT,
 	KEY_ASCIITILDE,
 	KEY_YEN,
-	KEY_SECTION
+	KEY_SECTION,
 ]
 static var mouse_buttons: Array[int] = [
 	MOUSE_BUTTON_NONE,
@@ -209,7 +211,7 @@ static var mouse_buttons: Array[int] = [
 	MOUSE_BUTTON_WHEEL_LEFT,
 	MOUSE_BUTTON_WHEEL_RIGHT,
 	MOUSE_BUTTON_XBUTTON1,
-	MOUSE_BUTTON_XBUTTON2
+	MOUSE_BUTTON_XBUTTON2,
 ]
 static var joy_buttons: Array[int] = [
 	JOY_BUTTON_INVALID,
@@ -235,57 +237,51 @@ static var joy_buttons: Array[int] = [
 	JOY_BUTTON_PADDLE4,
 	JOY_BUTTON_TOUCHPAD,
 	JOY_BUTTON_SDL_MAX,
-	JOY_BUTTON_MAX
+	JOY_BUTTON_MAX,
 ]
-
 static var joy_axis_buttons: Array[Dictionary] = [
-	{"axis": JOY_AXIS_LEFT_X, "axis_value": - 1},
-	{"axis": JOY_AXIS_LEFT_X, "axis_value": + 1},
-	{"axis": JOY_AXIS_INVALID, "axis_value": 0},
-	{"axis": JOY_AXIS_LEFT_Y, "axis_value": - 1},
-	{"axis": JOY_AXIS_LEFT_Y, "axis_value": + 1},
-	{"axis": JOY_AXIS_RIGHT_X, "axis_value": - 1},
-	{"axis": JOY_AXIS_RIGHT_X, "axis_value": + 1},
-	{"axis": JOY_AXIS_RIGHT_Y, "axis_value": - 1},
-	{"axis": JOY_AXIS_RIGHT_Y, "axis_value": + 1},
-	{"axis": JOY_AXIS_TRIGGER_LEFT, "axis_value": 1},
-	{"axis": JOY_AXIS_TRIGGER_RIGHT, "axis_value": 1},
+	{ "axis": JOY_AXIS_LEFT_X, "axis_value": -1 },
+	{ "axis": JOY_AXIS_LEFT_X, "axis_value": +1 },
+	{ "axis": JOY_AXIS_INVALID, "axis_value": 0 },
+	{ "axis": JOY_AXIS_LEFT_Y, "axis_value": -1 },
+	{ "axis": JOY_AXIS_LEFT_Y, "axis_value": +1 },
+	{ "axis": JOY_AXIS_RIGHT_X, "axis_value": -1 },
+	{ "axis": JOY_AXIS_RIGHT_X, "axis_value": +1 },
+	{ "axis": JOY_AXIS_RIGHT_Y, "axis_value": -1 },
+	{ "axis": JOY_AXIS_RIGHT_Y, "axis_value": +1 },
+	{ "axis": JOY_AXIS_TRIGGER_LEFT, "axis_value": 1 },
+	{ "axis": JOY_AXIS_TRIGGER_RIGHT, "axis_value": 1 },
 ]
-
 static var mouse_motion_directions: Array[Dictionary] = [
-	{"axis": Vector2.AXIS_X, "axis_value": -1},
-	{"axis": Vector2.AXIS_X, "axis_value": 1},
-	{"axis": Vector2.AXIS_Y, "axis_value": -1},
-	{"axis": Vector2.AXIS_Y, "axis_value": 1},
+	{ "axis": Vector2.AXIS_X, "axis_value": -1 },
+	{ "axis": Vector2.AXIS_X, "axis_value": 1 },
+	{ "axis": Vector2.AXIS_Y, "axis_value": -1 },
+	{ "axis": Vector2.AXIS_Y, "axis_value": 1 },
 ]
+#endregion
 
 ## [b]DESTRUCTIVE[/b] it will fill arrays below with empty [class KeyIcons]
-@export var generate_presets: bool = false:
-	set = set_generate_preset
-
+@export_tool_button("Generate Presets") var button = generate_presets_button
 @export var keyboard: Array[KeyIcon] = []
 @export var mouse: Array[KeyIcon] = []
 
-## @tutorial(Guidance):  https://docs.godotengine.org/en/stable/classes/class_%40globalscope.html#enum-globalscope-joybutton
+## @tutorial:
+## https://docs.godotengine.org/en/stable/classes/class_%40globalscope.html#enum-globalscope-joybutton
 @export var joy: Array[KeyIcon] = []
-
 @export var joy_axis: Array[KeyIcon] = []
-
 @export var mouse_motions: Array[KeyIcon] = []
 
-# i wish i had a button
-func set_generate_preset(value: bool) -> void:
-	generate_presets = value
+
+func generate_presets_button() -> void:
 	if not Engine.is_editor_hint():
 		return
 
-	if generate_presets:
-		keyboard = populate_key_icons(keys, KeyIcon.InputTypes.KEYBOARD)
-		mouse = populate_key_icons(mouse_buttons, KeyIcon.InputTypes.MOUSE)
-		joy = populate_key_icons(joy_buttons, KeyIcon.InputTypes.JOY_BUTTON)
-		joy_axis = populate_key_icons_for_axis(joy_axis_buttons, KeyIcon.InputTypes.JOY_AXIS)
-		mouse_motions = populate_key_icons_for_axis(mouse_motion_directions, KeyIcon.InputTypes.JOY_AXIS)
-	generate_presets = false
+	keyboard = populate_key_icons(keys, KeyIcon.InputTypes.KEYBOARD)
+	mouse = populate_key_icons(mouse_buttons, KeyIcon.InputTypes.MOUSE)
+	joy = populate_key_icons(joy_buttons, KeyIcon.InputTypes.JOY_BUTTON)
+	joy_axis = populate_key_icons_for_axis(joy_axis_buttons, KeyIcon.InputTypes.JOY_AXIS)
+	mouse_motions = populate_key_icons_for_axis(mouse_motion_directions, KeyIcon.InputTypes.JOY_AXIS)
+
 
 func populate_key_icons(array: Array, type: KeyIcon.InputTypes) -> Array[KeyIcon]:
 	var arr: Array[KeyIcon] = []
@@ -296,6 +292,7 @@ func populate_key_icons(array: Array, type: KeyIcon.InputTypes) -> Array[KeyIcon
 		arr.append(key_icon)
 	return arr
 
+
 func populate_key_icons_for_axis(array: Array, type: KeyIcon.InputTypes) -> Array[KeyIcon]:
 	var arr: Array[KeyIcon] = []
 	for pair in array:
@@ -305,6 +302,7 @@ func populate_key_icons_for_axis(array: Array, type: KeyIcon.InputTypes) -> Arra
 		key_icon.axis_value = pair.axis_value
 		arr.append(key_icon)
 	return arr
+
 
 ## We gram the KeyIcon Resource by its keycode and type
 func get_key_icon(keycode: int, type: KeyIcon.InputTypes) -> KeyIcon:
@@ -320,11 +318,13 @@ func get_key_icon(keycode: int, type: KeyIcon.InputTypes) -> KeyIcon:
 	# 		return key_icon
 	return null
 
+
 func get_key_icon_by_axis(axis: int, axis_value: float):
 	for key_icon in joy_axis:
 		if key_icon.keycode == axis and is_equal_approx(key_icon.axis_value, signf(axis_value)):
 			return key_icon
 	return null
+
 
 func get_key_icon_by_relative_motion(relative: Vector2i):
 	var axis_index := -1
@@ -338,6 +338,7 @@ func get_key_icon_by_relative_motion(relative: Vector2i):
 		if key_icon.keycode == axis_index and is_equal_approx(key_icon.axis_value, signf(relative[axis_index])):
 			return key_icon
 	return null
+
 
 ## We grab the KeyIcon Resource by its keycode in an array, its more of a helper function
 func get_key_icon_by_keycode(keycode: int, array: Array[KeyIcon]) -> KeyIcon:
