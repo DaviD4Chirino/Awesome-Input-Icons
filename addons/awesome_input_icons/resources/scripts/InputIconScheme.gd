@@ -265,12 +265,27 @@ static var mouse_motion_directions: Array[Dictionary] = [
 @export_tool_button("Generate Presets") var button = generate_presets_button
 @export var keyboard: Array[KeyIcon] = []
 @export var mouse: Array[KeyIcon] = []
-
+@export var mouse_motions: Array[KeyIcon] = []
 ## @tutorial:
 ## https://docs.godotengine.org/en/stable/classes/class_%40globalscope.html#enum-globalscope-joybutton
 @export var joy: Array[KeyIcon] = []
 @export var joy_axis: Array[KeyIcon] = []
-@export var mouse_motions: Array[KeyIcon] = []
+
+@export_group("Generation Configuration")
+@export_file_path var keyboard_icons_folder: String = ""
+@export var keyboard_icons_extension: String = ""
+
+@export_file_path var mouse_icons_folder: String = ""
+@export var mouse_icons_extension: String = ""
+
+@export_file_path var mouse_motions_icons_folder: String = ""
+@export var mouse_motions_icons_extension: String = ""
+
+@export_file_path var joy_icons_folder: String = ""
+@export var joy_icons_extension: String = ""
+
+@export_file_path var joy_axis_icons_folder: String = ""
+@export var joy_axis_icons_extension: String = ""
 
 
 func generate_presets_button() -> void:
@@ -281,7 +296,7 @@ func generate_presets_button() -> void:
 	mouse = populate_key_icons(mouse_buttons, KeyIcon.InputTypes.MOUSE)
 	joy = populate_key_icons(joy_buttons, KeyIcon.InputTypes.JOY_BUTTON)
 	joy_axis = populate_key_icons_for_axis(joy_axis_buttons, KeyIcon.InputTypes.JOY_AXIS)
-	mouse_motions = populate_key_icons_for_axis(mouse_motion_directions, KeyIcon.InputTypes.JOY_AXIS)
+	mouse_motions = populate_key_icons_for_axis(mouse_motion_directions, KeyIcon.InputTypes.MOUSE_MOTION)
 
 
 func populate_key_icons(array: Array, type: KeyIcon.InputTypes) -> Array[KeyIcon]:
@@ -290,6 +305,9 @@ func populate_key_icons(array: Array, type: KeyIcon.InputTypes) -> Array[KeyIcon
 		var key_icon: KeyIcon = KeyIcon.new()
 		key_icon.input_type = type
 		key_icon.keycode = code
+		## TODO: look into the folder and try to find the icon
+		key_icon.icon = \
+		ResourceLoader.load("res://addons/awesome_input_icons/assets/keyboard and mouse vector/keyboard_6.svg")
 		arr.append(key_icon)
 	return arr
 
