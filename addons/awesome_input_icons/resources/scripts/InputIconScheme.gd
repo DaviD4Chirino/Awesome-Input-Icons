@@ -241,9 +241,9 @@ static var joy_buttons: Array[int] = [
 ]
 
 static var joy_axis_buttons: Array[Dictionary] = [
+	{ "axis": JOY_AXIS_INVALID, "axis_value": 0 },
 	{ "axis": JOY_AXIS_LEFT_X, "axis_value": -1 },
 	{ "axis": JOY_AXIS_LEFT_X, "axis_value": +1 },
-	{ "axis": JOY_AXIS_INVALID, "axis_value": 0 },
 	{ "axis": JOY_AXIS_LEFT_Y, "axis_value": -1 },
 	{ "axis": JOY_AXIS_LEFT_Y, "axis_value": +1 },
 	{ "axis": JOY_AXIS_RIGHT_X, "axis_value": -1 },

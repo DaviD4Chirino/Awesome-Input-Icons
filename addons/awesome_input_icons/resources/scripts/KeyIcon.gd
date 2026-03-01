@@ -43,15 +43,21 @@ func update_name(value: int) -> void:
 		InputTypes.MOUSE_MOTION:
 			_update_name_mouse_motion(keycode, axis_value)
 
+# Names follow the convention of Category + Name + Direction
+# For example: Joy Axis Left X Left
+# or Mouse Motion Right
+# sometimes redundancy happens, for example: Joy Axis Left Left
+# we just gotta suck it up i guess
+
 
 func _update_name_mouse(value: int) -> void:
 	match value:
 		MOUSE_BUTTON_LEFT:
-			resource_name = "Left Mouse Button"
+			resource_name = "Mouse Button Left"
 		MOUSE_BUTTON_RIGHT:
-			resource_name = "Right Mouse Button"
+			resource_name = "Mouse Button Right"
 		MOUSE_BUTTON_MIDDLE:
-			resource_name = "Middle Mouse Button"
+			resource_name = "Mouse Button Middle"
 		MOUSE_BUTTON_WHEEL_UP:
 			resource_name = "Mouse Wheel Up"
 		MOUSE_BUTTON_WHEEL_DOWN:
@@ -69,9 +75,9 @@ func _update_name_mouse(value: int) -> void:
 func _update_name_mouse_motion(axis: int, value: float) -> void:
 	match axis:
 		Vector2.AXIS_X:
-			resource_name = "Mouse Move %s" % ("Left" if value < 0 else "Right")
+			resource_name = "Mouse Motion %s" % ("Left" if value < 0 else "Right")
 		Vector2.AXIS_Y:
-			resource_name = "Mouse Move %s" % ("Up" if value < 0 else "Down")
+			resource_name = "Mouse Motion %s" % ("Up" if value < 0 else "Down")
 
 
 func _update_name_joy_axis(axis: int, value: float) -> void:
@@ -96,50 +102,50 @@ func _update_name_joy_axis(axis: int, value: float) -> void:
 func _update_name_joy(value: int) -> void:
 	match value:
 		JOY_BUTTON_INVALID:
-			resource_name = "JOY Invalid"
+			resource_name = "Joy Invalid"
 		JOY_BUTTON_A:
-			resource_name = "JOY A"
+			resource_name = "Joy A"
 		JOY_BUTTON_B:
-			resource_name = "JOY B"
+			resource_name = "Joy B"
 		JOY_BUTTON_X:
-			resource_name = "JOY X"
+			resource_name = "Joy X"
 		JOY_BUTTON_Y:
-			resource_name = "JOY Y"
+			resource_name = "Joy Y"
 		JOY_BUTTON_BACK:
-			resource_name = "JOY Back"
+			resource_name = "Joy Back"
 		JOY_BUTTON_GUIDE:
-			resource_name = "JOY Guide"
+			resource_name = "Joy Guide"
 		JOY_BUTTON_START:
-			resource_name = "JOY Start"
+			resource_name = "Joy Start"
 		JOY_BUTTON_LEFT_STICK:
-			resource_name = "JOY Left Stick"
+			resource_name = "Joy Left Stick"
 		JOY_BUTTON_RIGHT_STICK:
-			resource_name = "JOY Right Stick"
+			resource_name = "Joy Right Stick"
 		JOY_BUTTON_LEFT_SHOULDER:
-			resource_name = "JOY Left Shoulder"
+			resource_name = "Joy Left Shoulder"
 		JOY_BUTTON_RIGHT_SHOULDER:
-			resource_name = "JOY Right Shoulder"
+			resource_name = "Joy Right Shoulder"
 		JOY_BUTTON_DPAD_UP:
-			resource_name = "JOY Dpad Up"
+			resource_name = "Joy Dpad Up"
 		JOY_BUTTON_DPAD_DOWN:
-			resource_name = "JOY Dpad Down"
+			resource_name = "Joy Dpad Down"
 		JOY_BUTTON_DPAD_LEFT:
-			resource_name = "JOY Dpad Left"
+			resource_name = "Joy Dpad Left"
 		JOY_BUTTON_DPAD_RIGHT:
-			resource_name = "JOY Dpad Right"
+			resource_name = "Joy Dpad Right"
 		JOY_BUTTON_PADDLE1:
-			resource_name = "JOY Paddle 1"
+			resource_name = "Joy Paddle 1"
 		JOY_BUTTON_PADDLE2:
-			resource_name = "JOY Paddle 2"
+			resource_name = "Joy Paddle 2"
 		JOY_BUTTON_PADDLE3:
-			resource_name = "JOY Paddle 3"
+			resource_name = "Joy Paddle 3"
 		JOY_BUTTON_PADDLE4:
-			resource_name = "JOY Paddle 4"
+			resource_name = "Joy Paddle 4"
 		JOY_BUTTON_TOUCHPAD:
-			resource_name = "JOY Touchpad"
+			resource_name = "Joy Touchpad"
 		JOY_BUTTON_MISC1:
-			resource_name = "JOY Misc 1"
+			resource_name = "Joy Misc 1"
 		JOY_BUTTON_SDL_MAX:
-			resource_name = "JOY SDL Max"
+			resource_name = "Joy SDL Max"
 		JOY_BUTTON_MAX:
-			resource_name = "JOY Max"
+			resource_name = "Joy Max"
