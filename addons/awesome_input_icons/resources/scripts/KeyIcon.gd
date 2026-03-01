@@ -69,9 +69,9 @@ func _update_name_mouse(value: int) -> void:
 func _update_name_mouse_motion(axis: int, value: float) -> void:
 	match axis:
 		Vector2.AXIS_X:
-			resource_name = "Mouse Move X %s" % ("Left" if value < 0 else "Right")
+			resource_name = "Mouse Move %s" % ("Left" if value < 0 else "Right")
 		Vector2.AXIS_Y:
-			resource_name = "Mouse Move Y %s" % ("Up" if value < 0 else "Down")
+			resource_name = "Mouse Move %s" % ("Up" if value < 0 else "Down")
 
 
 func _update_name_joy_axis(axis: int, value: float) -> void:
@@ -80,13 +80,13 @@ func _update_name_joy_axis(axis: int, value: float) -> void:
 		JOY_AXIS_INVALID:
 			resource_name = "Joy Axis Invalid"
 		JOY_AXIS_LEFT_X:
-			resource_name = "Joy Axis Left X %s" % ("Left" if value < 0 else "Right")
+			resource_name = "Joy Axis Left %s" % ("Left" if value < 0 else "Right")
 		JOY_AXIS_LEFT_Y:
-			resource_name = "Joy Axis Left Y %s" % ("Up" if value < 0 else "Down")
+			resource_name = "Joy Axis Left %s" % ("Up" if value < 0 else "Down")
 		JOY_AXIS_RIGHT_X:
-			resource_name = "Joy Axis Right X %s" % ("Left" if value < 0 else "Right")
+			resource_name = "Joy Axis Right %s" % ("Left" if value < 0 else "Right")
 		JOY_AXIS_RIGHT_Y:
-			resource_name = "Joy Axis Right Y %s" % ("Up" if value < 0 else "Down")
+			resource_name = "Joy Axis Right %s" % ("Up" if value < 0 else "Down")
 		JOY_AXIS_TRIGGER_LEFT:
 			resource_name = "Joy Trigger Left"
 		JOY_AXIS_TRIGGER_RIGHT:
