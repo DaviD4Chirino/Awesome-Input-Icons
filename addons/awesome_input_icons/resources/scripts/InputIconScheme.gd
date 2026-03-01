@@ -272,19 +272,19 @@ static var mouse_motion_directions: Array[Dictionary] = [
 @export var joy_axis: Array[KeyIcon] = []
 
 @export_group("Generation Configuration")
-@export_file_path var keyboard_icons_folder: String = ""
+@export_global_dir var keyboard_icons_folder: String = ""
 @export var keyboard_icons_extension: String = ""
 
-@export_file_path var mouse_icons_folder: String = ""
+@export_global_dir var mouse_icons_folder: String = ""
 @export var mouse_icons_extension: String = ""
 
-@export_file_path var mouse_motions_icons_folder: String = ""
+@export_global_dir var mouse_motions_icons_folder: String = ""
 @export var mouse_motions_icons_extension: String = ""
 
-@export_file_path var joy_icons_folder: String = ""
+@export_global_dir var joy_icons_folder: String = ""
 @export var joy_icons_extension: String = ""
 
-@export_file_path var joy_axis_icons_folder: String = ""
+@export_global_dir var joy_axis_icons_folder: String = ""
 @export var joy_axis_icons_extension: String = ""
 
 
