@@ -293,8 +293,11 @@ static var mouse_motion_directions: Array[Dictionary] = [
 
 
 func generate_presets_button() -> void:
-	if not Engine.is_editor_hint():
-		return
+	# disabled because the user might want to regenerate the icons mid game, like
+	# when it detects a new keyboard layout or a new joystick type or similar
+
+	# if not Engine.is_editor_hint():
+	# 	return
 
 	keyboard = populate_key_icons(keys, KeyIcon.InputTypes.KEYBOARD)
 	mouse = populate_key_icons(mouse_buttons, KeyIcon.InputTypes.MOUSE)
