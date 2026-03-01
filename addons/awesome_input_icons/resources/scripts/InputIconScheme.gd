@@ -263,6 +263,22 @@ static var mouse_motion_directions: Array[Dictionary] = [
 
 ## [b]DESTRUCTIVE[/b] it will fill arrays below with empty [class KeyIcons]
 @export_tool_button("Generate Presets") var button = generate_presets_button
+@export_dir var keyboard_icons_folder: String = ""
+@export var keyboard_icons_pattern: String = "[file_name].png"
+
+@export_dir var mouse_icons_folder: String = ""
+@export var mouse_icons_pattern: String = "[file_name].png"
+
+@export_dir var mouse_motions_icons_folder: String = ""
+@export var mouse_motions_icons_pattern: String = "[file_name].png"
+
+@export_dir var joy_icons_folder: String = ""
+@export var joy_icons_pattern: String = "[file_name].png"
+
+@export_dir var joy_axis_icons_folder: String = ""
+@export var joy_axis_icons_pattern: String = "[file_name].png"
+
+@export_group("Icons Arrays")
 @export var keyboard: Array[KeyIcon] = []
 @export var mouse: Array[KeyIcon] = []
 @export var mouse_motions: Array[KeyIcon] = []
@@ -270,22 +286,6 @@ static var mouse_motion_directions: Array[Dictionary] = [
 ## https://docs.godotengine.org/en/stable/classes/class_%40globalscope.html#enum-globalscope-joybutton
 @export var joy: Array[KeyIcon] = []
 @export var joy_axis: Array[KeyIcon] = []
-
-@export_group("Generation Configuration")
-@export_dir var keyboard_icons_folder: String = ""
-@export var keyboard_icons_extension: String = ""
-
-@export_dir var mouse_icons_folder: String = ""
-@export var mouse_icons_extension: String = ""
-
-@export_dir var mouse_motions_icons_folder: String = ""
-@export var mouse_motions_icons_extension: String = ""
-
-@export_dir var joy_icons_folder: String = ""
-@export var joy_icons_extension: String = ""
-
-@export_dir var joy_axis_icons_folder: String = ""
-@export var joy_axis_icons_extension: String = ""
 
 
 func generate_presets_button() -> void:
@@ -329,21 +329,19 @@ func get_key_image(key_icon_name: String, type: KeyIcon.InputTypes) -> Texture2D
 	match type:
 		KeyIcon.InputTypes.KEYBOARD:
 			current_folder = keyboard_icons_folder
-			current_extension = keyboard_icons_extension
 		KeyIcon.InputTypes.MOUSE:
 			current_folder = mouse_icons_folder
-			current_extension = mouse_icons_extension
 		KeyIcon.InputTypes.JOY_BUTTON:
 			current_folder = joy_icons_folder
-			current_extension = joy_icons_extension
 		KeyIcon.InputTypes.JOY_AXIS:
 			current_folder = joy_axis_icons_folder
-			current_extension = joy_axis_icons_extension
 		KeyIcon.InputTypes.MOUSE_MOTION:
 			current_folder = mouse_motions_icons_folder
-			current_extension = mouse_motions_icons_extension
 
-	var file_name: String = "%s/%s%s" % [current_folder, key_icon_name.to_snake_case(), current_extension]
+	var file_name: String = "%s/%s" % [
+		current_folder,
+		keyboard_icons_pattern.replace("[file_name]", key_icon_name.to_snake_case()),
+	]
 	print(file_name)
 	var image_exist := ResourceLoader.exists(file_name)
 
