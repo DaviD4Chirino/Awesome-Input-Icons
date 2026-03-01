@@ -56,7 +56,7 @@ static func get_icon_by_event(event: InputEvent) -> Texture2D:
 		"InputEventMouseButton":
 			icon = scheme.get_key_icon(event.button_index, KeyIcon.InputTypes.MOUSE).icon
 		"InputEventJoypadButton":
-			icon = scheme.get_key_icon(event.button_index, KeyIcon.InputTypes.JOY_BUTTON).icon
+			icon = scheme.get_key_icon(event.button_index, KeyIcon.InputTypes.JOY).icon
 		"InputEventJoypadMotion":
 			icon = scheme.get_key_icon_by_axis(event.axis, event.axis_value).icon
 		"InputEventMouseMotion":

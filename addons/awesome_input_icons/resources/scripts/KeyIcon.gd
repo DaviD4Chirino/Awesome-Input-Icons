@@ -2,7 +2,7 @@
 extends Resource
 
 class_name KeyIcon
-enum InputTypes { KEYBOARD, MOUSE, JOY_BUTTON, JOY_AXIS, MOUSE_MOTION }
+enum InputTypes { KEYBOARD, MOUSE, JOY, JOY_AXIS, MOUSE_MOTION }
 @export var input_type: InputTypes = InputTypes.KEYBOARD
 
 ## The keycode, its value depends on its type
@@ -36,7 +36,7 @@ func update_name(value: int) -> void:
 			resource_name = OS.get_keycode_string(keycode)
 		InputTypes.MOUSE:
 			_update_name_mouse(keycode)
-		InputTypes.JOY_BUTTON:
+		InputTypes.JOY:
 			_update_name_joy(keycode)
 		InputTypes.JOY_AXIS:
 			_update_name_joy_axis(keycode, axis_value)

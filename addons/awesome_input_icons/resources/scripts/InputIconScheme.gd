@@ -263,20 +263,24 @@ static var mouse_motion_directions: Array[Dictionary] = [
 
 ## [b]DESTRUCTIVE[/b] it will fill arrays below with empty [class KeyIcons]
 @export_tool_button("Generate Presets") var button = generate_presets_button
-@export_dir var keyboard_icons_folder: String = ""
-@export var keyboard_icons_pattern: String = "[file_name].png"
 
-@export_dir var mouse_icons_folder: String = ""
-@export var mouse_icons_pattern: String = "[file_name].png"
+## The parent of all the icons, file_pattern will look inside it, using it as a root
+@export_dir var icons_parent_folder: String = ""
 
-@export_dir var mouse_motions_icons_folder: String = ""
-@export var mouse_motions_icons_pattern: String = "[file_name].png"
-
-@export_dir var joy_icons_folder: String = ""
-@export var joy_icons_pattern: String = "[file_name].png"
-
-@export_dir var joy_axis_icons_folder: String = ""
-@export var joy_axis_icons_pattern: String = "[file_name].png"
+## A dynamic string that will replace anything inside [] with the respective values[br]
+##
+## [file_name] will be replaced with the name of the resource.to_snake_case()[br]
+## [group] will be replaced with by either of the individual arrays names[br]
+## Usage:
+## [codeblock]
+##     file_pattern = "[group]/[file_name].png"
+##     # will either become "keyboard/key_a.png", "mouse/mouse_button_left.png" or
+##     # "joy/joy_button_a.png"
+##     # depending on which type of the array is currently navigating
+## [/codeblock]
+## The values of the groups are the same as the names of the arrays[br]
+## The values of the file_name, you can hit generate once and reference that in snake_case
+@export var file_pattern: String = "[group]/[file_name].png"
 
 @export_group("Icons Arrays")
 @export var keyboard: Array[KeyIcon] = []
@@ -294,7 +298,7 @@ func generate_presets_button() -> void:
 
 	keyboard = populate_key_icons(keys, KeyIcon.InputTypes.KEYBOARD)
 	mouse = populate_key_icons(mouse_buttons, KeyIcon.InputTypes.MOUSE)
-	joy = populate_key_icons(joy_buttons, KeyIcon.InputTypes.JOY_BUTTON)
+	joy = populate_key_icons(joy_buttons, KeyIcon.InputTypes.JOY)
 	joy_axis = populate_key_icons_for_axis(joy_axis_buttons, KeyIcon.InputTypes.JOY_AXIS)
 	mouse_motions = populate_key_icons_for_axis(mouse_motion_directions, KeyIcon.InputTypes.MOUSE_MOTION)
 
@@ -323,32 +327,21 @@ func populate_key_icons_for_axis(array: Array, type: KeyIcon.InputTypes) -> Arra
 
 
 func get_key_image(key_icon_name: String, type: KeyIcon.InputTypes) -> Texture2D:
-	var current_folder: String = ""
-	var current_extension: String = ""
-
-	match type:
-		KeyIcon.InputTypes.KEYBOARD:
-			current_folder = keyboard_icons_folder
-		KeyIcon.InputTypes.MOUSE:
-			current_folder = mouse_icons_folder
-		KeyIcon.InputTypes.JOY_BUTTON:
-			current_folder = joy_icons_folder
-		KeyIcon.InputTypes.JOY_AXIS:
-			current_folder = joy_axis_icons_folder
-		KeyIcon.InputTypes.MOUSE_MOTION:
-			current_folder = mouse_motions_icons_folder
-
-	var file_name: String = "%s/%s" % [
-		current_folder,
-		keyboard_icons_pattern.replace("[file_name]", key_icon_name.to_snake_case()),
+	var type_name: String = (KeyIcon.InputTypes.keys()[type] as String).to_snake_case()
+	var file_path: String = "%s/%s" % [
+		icons_parent_folder,
+		_replace_placeholders(file_pattern, key_icon_name, type_name),
 	]
-	print(file_name)
-	var image_exist := ResourceLoader.exists(file_name)
+	print(file_path)
+	var image_exist := ResourceLoader.exists(file_path)
 
 	if image_exist:
-		return ResourceLoader.load(file_name)
-
+		return ResourceLoader.load(file_path)
 	return null
+
+
+func _replace_placeholders(string: String, file_name: String, type: String) -> String:
+	return string.replace("[file_name]", file_name.to_snake_case()).replace("[group]", type)
 
 
 ## We gram the KeyIcon Resource by its keycode and type
@@ -358,7 +351,7 @@ func get_key_icon(keycode: int, type: KeyIcon.InputTypes) -> KeyIcon:
 			return get_key_icon_by_keycode(keycode, keyboard)
 		KeyIcon.InputTypes.MOUSE:
 			return get_key_icon_by_keycode(keycode, mouse)
-		KeyIcon.InputTypes.JOY_BUTTON:
+		KeyIcon.InputTypes.JOY:
 			return get_key_icon_by_keycode(keycode, joy)
 	# for key_icon in keyboard:
 	# 	if key_icon.keycode == keycode:
