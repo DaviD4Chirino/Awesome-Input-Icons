@@ -1,1514 +1,1400 @@
 [gd_resource type="Resource" script_class="InputIconScheme" format=3 uid="uid://dkuho2ggp7k6s"]
 
 [ext_resource type="Script" uid="uid://btph2jkb0c5te" path="res://addons/awesome_input_icons/resources/scripts/KeyIcon.gd" id="1_kuw04"]
-[ext_resource type="Texture2D" uid="uid://cbjmxeyc41pff" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/keyboard_6.svg" id="2_novty"]
+[ext_resource type="Texture2D" uid="uid://bvx1hmanpa7w0" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/escape.svg" id="2_rcx7o"]
+[ext_resource type="Texture2D" uid="uid://b4bykvieqy4t" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/tab.svg" id="3_t020l"]
+[ext_resource type="Texture2D" uid="uid://x1376kw6ee5u" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/backspace.svg" id="4_tyalf"]
+[ext_resource type="Texture2D" uid="uid://daue65kjyn1rm" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/enter.svg" id="5_pqahv"]
+[ext_resource type="Texture2D" uid="uid://bjtknsys61luh" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/insert.svg" id="6_lqlwj"]
+[ext_resource type="Texture2D" uid="uid://bcbr70p6knaoy" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/delete.svg" id="7_ogv2n"]
+[ext_resource type="Texture2D" uid="uid://cg7k5ctdyiwuf" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/home.svg" id="8_qs868"]
+[ext_resource type="Texture2D" uid="uid://dil4al55nmv4y" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/end.svg" id="9_uv0bj"]
+[ext_resource type="Texture2D" uid="uid://bpn7jiy8lbv0j" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/page_up.svg" id="10_v7eoy"]
+[ext_resource type="Texture2D" uid="uid://b7v5exlvoit3t" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/page_down.svg" id="11_8lc87"]
+[ext_resource type="Texture2D" uid="uid://dtyvncblw3s8n" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/shift.svg" id="12_1lpod"]
+[ext_resource type="Texture2D" uid="uid://dav8e0ubj1va0" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/ctrl.svg" id="13_76vq7"]
+[ext_resource type="Texture2D" uid="uid://dedmlaa6c5qw4" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/alt.svg" id="14_jv1s4"]
+[ext_resource type="Texture2D" uid="uid://crm00u7a81xok" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/space.svg" id="15_3fsrr"]
+[ext_resource type="Texture2D" uid="uid://bk755mm3lih36" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/apostrophe.svg" id="16_asjkj"]
+[ext_resource type="Texture2D" uid="uid://dxpp0i41k21t4" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/asterisk.svg" id="17_woujc"]
+[ext_resource type="Texture2D" uid="uid://b4orbnig4hktl" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/plus.svg" id="18_gblyc"]
+[ext_resource type="Texture2D" uid="uid://bxx0r66nevlhi" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/comma.svg" id="19_d2e2p"]
+[ext_resource type="Texture2D" uid="uid://dymkfxpjrpv41" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/minus.svg" id="20_7uccg"]
+[ext_resource type="Texture2D" uid="uid://drjognsj5f84o" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/period.svg" id="21_1dbgu"]
+[ext_resource type="Texture2D" uid="uid://dvfuxie2e8mve" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/0.svg" id="22_uaq0e"]
+[ext_resource type="Texture2D" uid="uid://t3flrilnvaeh" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/1.svg" id="23_mtrdd"]
+[ext_resource type="Texture2D" uid="uid://chudvshy8tvy" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/2.svg" id="24_j4da0"]
+[ext_resource type="Texture2D" uid="uid://bc5x1kl28bubr" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/3.svg" id="25_bjnb6"]
+[ext_resource type="Texture2D" uid="uid://xy3ku26ut62" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/4.svg" id="26_1wklk"]
+[ext_resource type="Texture2D" uid="uid://c7osdw8kn1psw" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/5.svg" id="27_ggocx"]
+[ext_resource type="Texture2D" uid="uid://cbjmxeyc41pff" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/6.svg" id="28_olhgn"]
+[ext_resource type="Texture2D" uid="uid://ckopufdpt7ng1" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/7.svg" id="29_iug23"]
+[ext_resource type="Texture2D" uid="uid://c474s7wjs61md" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/8.svg" id="30_dseh8"]
+[ext_resource type="Texture2D" uid="uid://bwy46kkik4xpk" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/9.svg" id="31_3sl74"]
+[ext_resource type="Texture2D" uid="uid://djrmmc115763v" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/colon.svg" id="32_c55er"]
+[ext_resource type="Texture2D" uid="uid://cis1aav5ds2vd" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/semicolon.svg" id="33_d8u7m"]
+[ext_resource type="Texture2D" uid="uid://mpbgeein76xm" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/question.svg" id="34_hlvkc"]
+[ext_resource type="Texture2D" uid="uid://cwmvpkm5lx6vr" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/a.svg" id="35_4x4re"]
+[ext_resource type="Texture2D" uid="uid://coluh4mibvfim" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/b.svg" id="36_x8rbp"]
+[ext_resource type="Texture2D" uid="uid://bgkrb4k3a6fi4" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/c.svg" id="37_07kmh"]
+[ext_resource type="Texture2D" uid="uid://dajx4povk4eb3" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/d.svg" id="38_7xsu7"]
+[ext_resource type="Texture2D" uid="uid://qk6lj82nna5r" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/e.svg" id="39_wtaoy"]
+[ext_resource type="Texture2D" uid="uid://ddo2poeyagsje" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/f.svg" id="40_kouf8"]
+[ext_resource type="Texture2D" uid="uid://b2nt0gtcy8jmr" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/g.svg" id="41_jipxh"]
+[ext_resource type="Texture2D" uid="uid://5bsprnaua2bm" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/h.svg" id="42_h6hoc"]
+[ext_resource type="Texture2D" uid="uid://c8t7ue1kntbdp" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/i.svg" id="43_vosij"]
+[ext_resource type="Texture2D" uid="uid://c6c5j2h16v4qv" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/j.svg" id="44_yi48b"]
+[ext_resource type="Texture2D" uid="uid://c23t1lgpu1liv" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/k.svg" id="45_8bs0s"]
+[ext_resource type="Texture2D" uid="uid://eoyt4jtgomsi" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/l.svg" id="46_hot37"]
+[ext_resource type="Texture2D" uid="uid://ccsm4oji2qtlu" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/m.svg" id="47_fcot6"]
+[ext_resource type="Texture2D" uid="uid://v8bm7n6t287k" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/n.svg" id="48_5fwjq"]
+[ext_resource type="Texture2D" uid="uid://bal3cq6qv8ihs" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/o.svg" id="49_txwvg"]
+[ext_resource type="Texture2D" uid="uid://cg88shp0p61rw" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/p.svg" id="50_20qrf"]
+[ext_resource type="Texture2D" uid="uid://dao0p4gg2i0a6" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/q.svg" id="51_sohn8"]
+[ext_resource type="Texture2D" uid="uid://hvurbcjoomv0" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/r.svg" id="52_y4smg"]
+[ext_resource type="Texture2D" uid="uid://cmwxihbv0erns" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/s.svg" id="53_jbxup"]
+[ext_resource type="Texture2D" uid="uid://c2h7hqcypt1e7" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/t.svg" id="54_np44y"]
+[ext_resource type="Texture2D" uid="uid://b3hpb80i0rr1x" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/u.svg" id="55_tjyvg"]
+[ext_resource type="Texture2D" uid="uid://be558ypiawcop" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/v.svg" id="56_d0cih"]
+[ext_resource type="Texture2D" uid="uid://bbmcth1vdtsu4" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/w.svg" id="57_7nej1"]
+[ext_resource type="Texture2D" uid="uid://bmgfgujoniaaq" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/x.svg" id="58_fe5r1"]
+[ext_resource type="Texture2D" uid="uid://8k1xe27nefs6" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/y.svg" id="59_ywqp3"]
+[ext_resource type="Texture2D" uid="uid://ufa566vqu8u4" path="res://addons/awesome_input_icons/assets/keyboard and mouse vector/z.svg" id="60_1njut"]
 [ext_resource type="Script" uid="uid://coktl8sta8t4u" path="res://addons/awesome_input_icons/resources/scripts/InputIconScheme.gd" id="110_gvihj"]
 
-[sub_resource type="Resource" id="Resource_0chex"]
-resource_name = "JOY Invalid"
+[sub_resource type="Resource" id="Resource_c26lm"]
+resource_name = "Joy Invalid"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = -1
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_3i8rk"]
-resource_name = "JOY A"
+[sub_resource type="Resource" id="Resource_s1o53"]
+resource_name = "Joy A"
 script = ExtResource("1_kuw04")
 input_type = 2
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_f0b2q"]
-resource_name = "JOY B"
+[sub_resource type="Resource" id="Resource_rvaxx"]
+resource_name = "Joy B"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 1
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_7knqu"]
-resource_name = "JOY X"
+[sub_resource type="Resource" id="Resource_vrret"]
+resource_name = "Joy X"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 2
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_a3dwa"]
-resource_name = "JOY Y"
+[sub_resource type="Resource" id="Resource_itbbr"]
+resource_name = "Joy Y"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 3
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_qr7rm"]
-resource_name = "JOY Back"
+[sub_resource type="Resource" id="Resource_r3wuy"]
+resource_name = "Joy Back"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 4
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_uf0w5"]
-resource_name = "JOY Guide"
+[sub_resource type="Resource" id="Resource_422h4"]
+resource_name = "Joy Guide"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 5
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_4fv0s"]
-resource_name = "JOY Start"
+[sub_resource type="Resource" id="Resource_firqx"]
+resource_name = "Joy Start"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 6
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_3xkml"]
-resource_name = "JOY Left Stick"
+[sub_resource type="Resource" id="Resource_brbro"]
+resource_name = "Joy Left Stick"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 7
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_q5frs"]
-resource_name = "JOY Right Stick"
+[sub_resource type="Resource" id="Resource_lucdw"]
+resource_name = "Joy Right Stick"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 8
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_26k0b"]
-resource_name = "JOY Left Shoulder"
+[sub_resource type="Resource" id="Resource_ee8gg"]
+resource_name = "Joy Left Shoulder"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 9
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_w1v2s"]
-resource_name = "JOY Right Shoulder"
+[sub_resource type="Resource" id="Resource_5ioi2"]
+resource_name = "Joy Right Shoulder"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 10
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_4bs6l"]
-resource_name = "JOY Dpad Up"
+[sub_resource type="Resource" id="Resource_nlsn2"]
+resource_name = "Joy Dpad Up"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 11
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_wmw7c"]
-resource_name = "JOY Dpad Down"
+[sub_resource type="Resource" id="Resource_id405"]
+resource_name = "Joy Dpad Down"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 12
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_illnv"]
-resource_name = "JOY Dpad Left"
+[sub_resource type="Resource" id="Resource_61qdo"]
+resource_name = "Joy Dpad Left"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 13
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_kar3n"]
-resource_name = "JOY Dpad Right"
+[sub_resource type="Resource" id="Resource_5js24"]
+resource_name = "Joy Dpad Right"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 14
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_3awlg"]
-resource_name = "JOY Misc 1"
+[sub_resource type="Resource" id="Resource_hxg8f"]
+resource_name = "Joy Misc 1"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 15
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_w4aon"]
-resource_name = "JOY Paddle 1"
+[sub_resource type="Resource" id="Resource_8yv3l"]
+resource_name = "Joy Paddle 1"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 16
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_prjs1"]
-resource_name = "JOY Paddle 2"
+[sub_resource type="Resource" id="Resource_j65ir"]
+resource_name = "Joy Paddle 2"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 17
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_o7pf6"]
-resource_name = "JOY Paddle 3"
+[sub_resource type="Resource" id="Resource_717eb"]
+resource_name = "Joy Paddle 3"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 18
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_1v7kr"]
-resource_name = "JOY Paddle 4"
+[sub_resource type="Resource" id="Resource_ejy2g"]
+resource_name = "Joy Paddle 4"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 19
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_1lcbi"]
-resource_name = "JOY Touchpad"
+[sub_resource type="Resource" id="Resource_ope6a"]
+resource_name = "Joy Touchpad"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 20
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_nm8xi"]
-resource_name = "JOY SDL Max"
+[sub_resource type="Resource" id="Resource_x441w"]
+resource_name = "Joy SDL Max"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 21
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_26yut"]
-resource_name = "JOY Max"
+[sub_resource type="Resource" id="Resource_5mjjh"]
+resource_name = "Joy Max"
 script = ExtResource("1_kuw04")
 input_type = 2
 keycode = 128
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_a45gt"]
-resource_name = "Joy Axis Left X Left"
-script = ExtResource("1_kuw04")
-input_type = 3
-axis_value = -1.0
-
-[sub_resource type="Resource" id="Resource_3uymg"]
-resource_name = "Joy Axis Left X Right"
-script = ExtResource("1_kuw04")
-input_type = 3
-axis_value = 1.0
-
-[sub_resource type="Resource" id="Resource_m236e"]
+[sub_resource type="Resource" id="Resource_hf0a8"]
 resource_name = "Joy Axis Invalid"
 script = ExtResource("1_kuw04")
 input_type = 3
 keycode = -1
 
-[sub_resource type="Resource" id="Resource_er5u1"]
-resource_name = "Joy Axis Left Y Up"
+[sub_resource type="Resource" id="Resource_sive7"]
+resource_name = "Joy Axis Left Left"
+script = ExtResource("1_kuw04")
+input_type = 3
+axis_value = -1.0
+
+[sub_resource type="Resource" id="Resource_w81ln"]
+resource_name = "Joy Axis Left Right"
+script = ExtResource("1_kuw04")
+input_type = 3
+axis_value = 1.0
+
+[sub_resource type="Resource" id="Resource_pkkkd"]
+resource_name = "Joy Axis Left Up"
 script = ExtResource("1_kuw04")
 input_type = 3
 keycode = 1
 axis_value = -1.0
 
-[sub_resource type="Resource" id="Resource_7ne67"]
-resource_name = "Joy Axis Left Y Down"
+[sub_resource type="Resource" id="Resource_duog1"]
+resource_name = "Joy Axis Left Down"
 script = ExtResource("1_kuw04")
 input_type = 3
 keycode = 1
 axis_value = 1.0
 
-[sub_resource type="Resource" id="Resource_v3hk3"]
-resource_name = "Joy Axis Right X Left"
+[sub_resource type="Resource" id="Resource_tawgd"]
+resource_name = "Joy Axis Right Left"
 script = ExtResource("1_kuw04")
 input_type = 3
 keycode = 2
 axis_value = -1.0
 
-[sub_resource type="Resource" id="Resource_qdoia"]
-resource_name = "Joy Axis Right X Right"
+[sub_resource type="Resource" id="Resource_tok7i"]
+resource_name = "Joy Axis Right Right"
 script = ExtResource("1_kuw04")
 input_type = 3
 keycode = 2
 axis_value = 1.0
 
-[sub_resource type="Resource" id="Resource_0nwtu"]
-resource_name = "Joy Axis Right Y Up"
+[sub_resource type="Resource" id="Resource_0enij"]
+resource_name = "Joy Axis Right Up"
 script = ExtResource("1_kuw04")
 input_type = 3
 keycode = 3
 axis_value = -1.0
 
-[sub_resource type="Resource" id="Resource_vo0n1"]
-resource_name = "Joy Axis Right Y Down"
+[sub_resource type="Resource" id="Resource_lsfoy"]
+resource_name = "Joy Axis Right Down"
 script = ExtResource("1_kuw04")
 input_type = 3
 keycode = 3
 axis_value = 1.0
 
-[sub_resource type="Resource" id="Resource_xlark"]
+[sub_resource type="Resource" id="Resource_lyuge"]
 resource_name = "Joy Trigger Left"
 script = ExtResource("1_kuw04")
 input_type = 3
 keycode = 4
 axis_value = 1.0
 
-[sub_resource type="Resource" id="Resource_1jpql"]
+[sub_resource type="Resource" id="Resource_w6ykn"]
 resource_name = "Joy Trigger Right"
 script = ExtResource("1_kuw04")
 input_type = 3
 keycode = 5
 axis_value = 1.0
 
-[sub_resource type="Resource" id="Resource_qc78x"]
+[sub_resource type="Resource" id="Resource_opeik"]
 script = ExtResource("1_kuw04")
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_mpqjm"]
+[sub_resource type="Resource" id="Resource_fsxyi"]
 resource_name = "Special"
 script = ExtResource("1_kuw04")
 keycode = 4194304
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_y87mt"]
+[sub_resource type="Resource" id="Resource_gjrru"]
 resource_name = "Escape"
 script = ExtResource("1_kuw04")
 keycode = 4194305
-icon = ExtResource("2_novty")
+icon = ExtResource("2_rcx7o")
 
-[sub_resource type="Resource" id="Resource_bra6q"]
+[sub_resource type="Resource" id="Resource_2tsen"]
 resource_name = "Tab"
 script = ExtResource("1_kuw04")
 keycode = 4194306
-icon = ExtResource("2_novty")
+icon = ExtResource("3_t020l")
 
-[sub_resource type="Resource" id="Resource_vetgf"]
+[sub_resource type="Resource" id="Resource_eovqb"]
 resource_name = "Backtab"
 script = ExtResource("1_kuw04")
 keycode = 4194307
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_2hemq"]
+[sub_resource type="Resource" id="Resource_o5vb0"]
 resource_name = "Backspace"
 script = ExtResource("1_kuw04")
 keycode = 4194308
-icon = ExtResource("2_novty")
+icon = ExtResource("4_tyalf")
 
-[sub_resource type="Resource" id="Resource_hi3hy"]
+[sub_resource type="Resource" id="Resource_001vl"]
 resource_name = "Enter"
 script = ExtResource("1_kuw04")
 keycode = 4194309
-icon = ExtResource("2_novty")
+icon = ExtResource("5_pqahv")
 
-[sub_resource type="Resource" id="Resource_2rx8y"]
+[sub_resource type="Resource" id="Resource_kk2lb"]
 resource_name = "Kp Enter"
 script = ExtResource("1_kuw04")
 keycode = 4194310
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_jqhg8"]
+[sub_resource type="Resource" id="Resource_vvwr8"]
 resource_name = "Insert"
 script = ExtResource("1_kuw04")
 keycode = 4194311
-icon = ExtResource("2_novty")
+icon = ExtResource("6_lqlwj")
 
-[sub_resource type="Resource" id="Resource_0y5xe"]
+[sub_resource type="Resource" id="Resource_0xogy"]
 resource_name = "Delete"
 script = ExtResource("1_kuw04")
 keycode = 4194312
-icon = ExtResource("2_novty")
+icon = ExtResource("7_ogv2n")
 
-[sub_resource type="Resource" id="Resource_day8s"]
+[sub_resource type="Resource" id="Resource_7ndee"]
 resource_name = "Pause"
 script = ExtResource("1_kuw04")
 keycode = 4194313
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_lg1r2"]
+[sub_resource type="Resource" id="Resource_4hjab"]
 resource_name = "Print"
 script = ExtResource("1_kuw04")
 keycode = 4194314
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_ptnjs"]
+[sub_resource type="Resource" id="Resource_t3waf"]
 resource_name = "SysReq"
 script = ExtResource("1_kuw04")
 keycode = 4194315
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_gxiqn"]
+[sub_resource type="Resource" id="Resource_e7q0v"]
 resource_name = "Clear"
 script = ExtResource("1_kuw04")
 keycode = 4194316
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_b4vj1"]
+[sub_resource type="Resource" id="Resource_ab3ak"]
 resource_name = "Home"
 script = ExtResource("1_kuw04")
 keycode = 4194317
-icon = ExtResource("2_novty")
+icon = ExtResource("8_qs868")
 
-[sub_resource type="Resource" id="Resource_527wl"]
+[sub_resource type="Resource" id="Resource_m065d"]
 resource_name = "End"
 script = ExtResource("1_kuw04")
 keycode = 4194318
-icon = ExtResource("2_novty")
+icon = ExtResource("9_uv0bj")
 
-[sub_resource type="Resource" id="Resource_ydlky"]
+[sub_resource type="Resource" id="Resource_37itf"]
 resource_name = "Left"
 script = ExtResource("1_kuw04")
 keycode = 4194319
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_lvq8u"]
+[sub_resource type="Resource" id="Resource_i0dh1"]
 resource_name = "Up"
 script = ExtResource("1_kuw04")
 keycode = 4194320
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_be48s"]
+[sub_resource type="Resource" id="Resource_h73bp"]
 resource_name = "Right"
 script = ExtResource("1_kuw04")
 keycode = 4194321
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_5svwb"]
+[sub_resource type="Resource" id="Resource_0vevg"]
 resource_name = "Down"
 script = ExtResource("1_kuw04")
 keycode = 4194322
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_0d5px"]
+[sub_resource type="Resource" id="Resource_3qcv1"]
 resource_name = "PageUp"
 script = ExtResource("1_kuw04")
 keycode = 4194323
-icon = ExtResource("2_novty")
+icon = ExtResource("10_v7eoy")
 
-[sub_resource type="Resource" id="Resource_qmemi"]
+[sub_resource type="Resource" id="Resource_ihu7q"]
 resource_name = "PageDown"
 script = ExtResource("1_kuw04")
 keycode = 4194324
-icon = ExtResource("2_novty")
+icon = ExtResource("11_8lc87")
 
-[sub_resource type="Resource" id="Resource_rcx7o"]
+[sub_resource type="Resource" id="Resource_0c1tf"]
 resource_name = "Shift"
 script = ExtResource("1_kuw04")
 keycode = 4194325
-icon = ExtResource("2_novty")
+icon = ExtResource("12_1lpod")
 
-[sub_resource type="Resource" id="Resource_t020l"]
+[sub_resource type="Resource" id="Resource_nbxa1"]
 resource_name = "Ctrl"
 script = ExtResource("1_kuw04")
 keycode = 4194326
-icon = ExtResource("2_novty")
+icon = ExtResource("13_76vq7")
 
-[sub_resource type="Resource" id="Resource_tyalf"]
+[sub_resource type="Resource" id="Resource_clhg3"]
 resource_name = "Windows"
 script = ExtResource("1_kuw04")
 keycode = 4194327
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_pqahv"]
+[sub_resource type="Resource" id="Resource_isocd"]
 resource_name = "Alt"
 script = ExtResource("1_kuw04")
 keycode = 4194328
-icon = ExtResource("2_novty")
+icon = ExtResource("14_jv1s4")
 
-[sub_resource type="Resource" id="Resource_lqlwj"]
+[sub_resource type="Resource" id="Resource_x6f5q"]
 resource_name = "CapsLock"
 script = ExtResource("1_kuw04")
 keycode = 4194329
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_ogv2n"]
+[sub_resource type="Resource" id="Resource_ik43n"]
 resource_name = "NumLock"
 script = ExtResource("1_kuw04")
 keycode = 4194330
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_qs868"]
+[sub_resource type="Resource" id="Resource_525eb"]
 resource_name = "ScrollLock"
 script = ExtResource("1_kuw04")
 keycode = 4194331
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_uv0bj"]
+[sub_resource type="Resource" id="Resource_mkkq3"]
 resource_name = "F1"
 script = ExtResource("1_kuw04")
 keycode = 4194332
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_v7eoy"]
+[sub_resource type="Resource" id="Resource_wgb30"]
 resource_name = "F2"
 script = ExtResource("1_kuw04")
 keycode = 4194333
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_8lc87"]
+[sub_resource type="Resource" id="Resource_1er0j"]
 resource_name = "F3"
 script = ExtResource("1_kuw04")
 keycode = 4194334
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_1lpod"]
+[sub_resource type="Resource" id="Resource_3cdn3"]
 resource_name = "F4"
 script = ExtResource("1_kuw04")
 keycode = 4194335
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_76vq7"]
+[sub_resource type="Resource" id="Resource_g7vwq"]
 resource_name = "F5"
 script = ExtResource("1_kuw04")
 keycode = 4194336
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_jv1s4"]
+[sub_resource type="Resource" id="Resource_vwhvi"]
 resource_name = "F6"
 script = ExtResource("1_kuw04")
 keycode = 4194337
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_3fsrr"]
+[sub_resource type="Resource" id="Resource_s1rek"]
 resource_name = "F7"
 script = ExtResource("1_kuw04")
 keycode = 4194338
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_asjkj"]
+[sub_resource type="Resource" id="Resource_8b50g"]
 resource_name = "F8"
 script = ExtResource("1_kuw04")
 keycode = 4194339
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_woujc"]
+[sub_resource type="Resource" id="Resource_f6wdy"]
 resource_name = "F9"
 script = ExtResource("1_kuw04")
 keycode = 4194340
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_gblyc"]
+[sub_resource type="Resource" id="Resource_i1ag4"]
 resource_name = "F10"
 script = ExtResource("1_kuw04")
 keycode = 4194341
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_d2e2p"]
+[sub_resource type="Resource" id="Resource_280r5"]
 resource_name = "F11"
 script = ExtResource("1_kuw04")
 keycode = 4194342
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_7uccg"]
+[sub_resource type="Resource" id="Resource_70neh"]
 resource_name = "F12"
 script = ExtResource("1_kuw04")
 keycode = 4194343
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_1dbgu"]
+[sub_resource type="Resource" id="Resource_ev8g1"]
 resource_name = "F13"
 script = ExtResource("1_kuw04")
 keycode = 4194344
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_uaq0e"]
+[sub_resource type="Resource" id="Resource_adk8a"]
 resource_name = "F14"
 script = ExtResource("1_kuw04")
 keycode = 4194345
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_mtrdd"]
+[sub_resource type="Resource" id="Resource_go0it"]
 resource_name = "F15"
 script = ExtResource("1_kuw04")
 keycode = 4194346
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_j4da0"]
+[sub_resource type="Resource" id="Resource_6v2ph"]
 resource_name = "F16"
 script = ExtResource("1_kuw04")
 keycode = 4194347
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_bjnb6"]
+[sub_resource type="Resource" id="Resource_jdf6c"]
 resource_name = "F17"
 script = ExtResource("1_kuw04")
 keycode = 4194348
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_1wklk"]
+[sub_resource type="Resource" id="Resource_ehkqp"]
 resource_name = "F18"
 script = ExtResource("1_kuw04")
 keycode = 4194349
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_ggocx"]
+[sub_resource type="Resource" id="Resource_e5g2w"]
 resource_name = "F19"
 script = ExtResource("1_kuw04")
 keycode = 4194350
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_olhgn"]
+[sub_resource type="Resource" id="Resource_0gik0"]
 resource_name = "F20"
 script = ExtResource("1_kuw04")
 keycode = 4194351
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_iug23"]
+[sub_resource type="Resource" id="Resource_81f3d"]
 resource_name = "F21"
 script = ExtResource("1_kuw04")
 keycode = 4194352
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_dseh8"]
+[sub_resource type="Resource" id="Resource_mk3iq"]
 resource_name = "F22"
 script = ExtResource("1_kuw04")
 keycode = 4194353
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_3sl74"]
+[sub_resource type="Resource" id="Resource_a2w7u"]
 resource_name = "F23"
 script = ExtResource("1_kuw04")
 keycode = 4194354
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_c55er"]
+[sub_resource type="Resource" id="Resource_s84yq"]
 resource_name = "F24"
 script = ExtResource("1_kuw04")
 keycode = 4194355
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_d8u7m"]
+[sub_resource type="Resource" id="Resource_wnwp4"]
 resource_name = "F25"
 script = ExtResource("1_kuw04")
 keycode = 4194356
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_hlvkc"]
+[sub_resource type="Resource" id="Resource_grrxl"]
 resource_name = "F26"
 script = ExtResource("1_kuw04")
 keycode = 4194357
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_4x4re"]
+[sub_resource type="Resource" id="Resource_afigb"]
 resource_name = "F27"
 script = ExtResource("1_kuw04")
 keycode = 4194358
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_x8rbp"]
+[sub_resource type="Resource" id="Resource_1tvqr"]
 resource_name = "F28"
 script = ExtResource("1_kuw04")
 keycode = 4194359
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_07kmh"]
+[sub_resource type="Resource" id="Resource_v1fj6"]
 resource_name = "F29"
 script = ExtResource("1_kuw04")
 keycode = 4194360
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_7xsu7"]
+[sub_resource type="Resource" id="Resource_7svqf"]
 resource_name = "F30"
 script = ExtResource("1_kuw04")
 keycode = 4194361
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_wtaoy"]
+[sub_resource type="Resource" id="Resource_7xho4"]
 resource_name = "F31"
 script = ExtResource("1_kuw04")
 keycode = 4194362
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_kouf8"]
+[sub_resource type="Resource" id="Resource_ncv7l"]
 resource_name = "F32"
 script = ExtResource("1_kuw04")
 keycode = 4194363
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_jipxh"]
+[sub_resource type="Resource" id="Resource_50mvy"]
 resource_name = "F33"
 script = ExtResource("1_kuw04")
 keycode = 4194364
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_h6hoc"]
+[sub_resource type="Resource" id="Resource_fkpac"]
 resource_name = "F34"
 script = ExtResource("1_kuw04")
 keycode = 4194365
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_vosij"]
+[sub_resource type="Resource" id="Resource_cbc1t"]
 resource_name = "F35"
 script = ExtResource("1_kuw04")
 keycode = 4194366
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_yi48b"]
+[sub_resource type="Resource" id="Resource_jocxd"]
 resource_name = "Kp Multiply"
 script = ExtResource("1_kuw04")
 keycode = 4194433
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_8bs0s"]
+[sub_resource type="Resource" id="Resource_nc5v2"]
 resource_name = "Kp Divide"
 script = ExtResource("1_kuw04")
 keycode = 4194434
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_hot37"]
+[sub_resource type="Resource" id="Resource_dn8xu"]
 resource_name = "Kp Subtract"
 script = ExtResource("1_kuw04")
 keycode = 4194435
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_fcot6"]
+[sub_resource type="Resource" id="Resource_1gr5h"]
 resource_name = "Kp Period"
 script = ExtResource("1_kuw04")
 keycode = 4194436
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_5fwjq"]
+[sub_resource type="Resource" id="Resource_7jssf"]
 resource_name = "Kp Add"
 script = ExtResource("1_kuw04")
 keycode = 4194437
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_txwvg"]
+[sub_resource type="Resource" id="Resource_sxt2k"]
 resource_name = "Kp 0"
 script = ExtResource("1_kuw04")
 keycode = 4194438
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_20qrf"]
+[sub_resource type="Resource" id="Resource_1bx3k"]
 resource_name = "Kp 1"
 script = ExtResource("1_kuw04")
 keycode = 4194439
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_sohn8"]
+[sub_resource type="Resource" id="Resource_c7vsp"]
 resource_name = "Kp 2"
 script = ExtResource("1_kuw04")
 keycode = 4194440
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_y4smg"]
+[sub_resource type="Resource" id="Resource_162t3"]
 resource_name = "Kp 3"
 script = ExtResource("1_kuw04")
 keycode = 4194441
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_jbxup"]
+[sub_resource type="Resource" id="Resource_v3u43"]
 resource_name = "Kp 4"
 script = ExtResource("1_kuw04")
 keycode = 4194442
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_np44y"]
+[sub_resource type="Resource" id="Resource_vmlpa"]
 resource_name = "Kp 5"
 script = ExtResource("1_kuw04")
 keycode = 4194443
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_tjyvg"]
+[sub_resource type="Resource" id="Resource_5dxxq"]
 resource_name = "Kp 6"
 script = ExtResource("1_kuw04")
 keycode = 4194444
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_d0cih"]
+[sub_resource type="Resource" id="Resource_l4plw"]
 resource_name = "Kp 7"
 script = ExtResource("1_kuw04")
 keycode = 4194445
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_7nej1"]
+[sub_resource type="Resource" id="Resource_l81l3"]
 resource_name = "Kp 8"
 script = ExtResource("1_kuw04")
 keycode = 4194446
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_fe5r1"]
+[sub_resource type="Resource" id="Resource_kwvhd"]
 resource_name = "Kp 9"
 script = ExtResource("1_kuw04")
 keycode = 4194447
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_ywqp3"]
+[sub_resource type="Resource" id="Resource_166i2"]
 resource_name = "Menu"
 script = ExtResource("1_kuw04")
 keycode = 4194370
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_1njut"]
+[sub_resource type="Resource" id="Resource_tdfdq"]
 resource_name = "Hyper"
 script = ExtResource("1_kuw04")
 keycode = 4194371
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_c26lm"]
+[sub_resource type="Resource" id="Resource_ykrsf"]
 resource_name = "Help"
 script = ExtResource("1_kuw04")
 keycode = 4194373
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_s1o53"]
+[sub_resource type="Resource" id="Resource_l0eug"]
 resource_name = "Back"
 script = ExtResource("1_kuw04")
 keycode = 4194376
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_rvaxx"]
+[sub_resource type="Resource" id="Resource_nmmsi"]
 resource_name = "Forward"
 script = ExtResource("1_kuw04")
 keycode = 4194377
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_vrret"]
+[sub_resource type="Resource" id="Resource_kud2o"]
 resource_name = "Stop"
 script = ExtResource("1_kuw04")
 keycode = 4194378
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_itbbr"]
+[sub_resource type="Resource" id="Resource_8y7ai"]
 resource_name = "Refresh"
 script = ExtResource("1_kuw04")
 keycode = 4194379
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_r3wuy"]
+[sub_resource type="Resource" id="Resource_b6qel"]
 resource_name = "VolumeDown"
 script = ExtResource("1_kuw04")
 keycode = 4194380
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_422h4"]
+[sub_resource type="Resource" id="Resource_i7qrt"]
 resource_name = "VolumeMute"
 script = ExtResource("1_kuw04")
 keycode = 4194381
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_firqx"]
+[sub_resource type="Resource" id="Resource_qrgum"]
 resource_name = "VolumeUp"
 script = ExtResource("1_kuw04")
 keycode = 4194382
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_brbro"]
+[sub_resource type="Resource" id="Resource_lfnvo"]
 resource_name = "MediaPlay"
 script = ExtResource("1_kuw04")
 keycode = 4194388
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_lucdw"]
+[sub_resource type="Resource" id="Resource_j7yvr"]
 resource_name = "MediaStop"
 script = ExtResource("1_kuw04")
 keycode = 4194389
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_ee8gg"]
+[sub_resource type="Resource" id="Resource_vdohg"]
 resource_name = "MediaPrevious"
 script = ExtResource("1_kuw04")
 keycode = 4194390
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_5ioi2"]
+[sub_resource type="Resource" id="Resource_5he04"]
 resource_name = "MediaNext"
 script = ExtResource("1_kuw04")
 keycode = 4194391
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_nlsn2"]
+[sub_resource type="Resource" id="Resource_h587s"]
 resource_name = "MediaRecord"
 script = ExtResource("1_kuw04")
 keycode = 4194392
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_id405"]
+[sub_resource type="Resource" id="Resource_3k02h"]
 resource_name = "HomePage"
 script = ExtResource("1_kuw04")
 keycode = 4194393
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_61qdo"]
+[sub_resource type="Resource" id="Resource_y4dv6"]
 resource_name = "Favorites"
 script = ExtResource("1_kuw04")
 keycode = 4194394
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_5js24"]
+[sub_resource type="Resource" id="Resource_0puq7"]
 resource_name = "Search"
 script = ExtResource("1_kuw04")
 keycode = 4194395
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_hxg8f"]
+[sub_resource type="Resource" id="Resource_dutag"]
 resource_name = "StandBy"
 script = ExtResource("1_kuw04")
 keycode = 4194396
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_8yv3l"]
+[sub_resource type="Resource" id="Resource_cacid"]
 resource_name = "OpenURL"
 script = ExtResource("1_kuw04")
 keycode = 4194397
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_j65ir"]
+[sub_resource type="Resource" id="Resource_amgcr"]
 resource_name = "LaunchMail"
 script = ExtResource("1_kuw04")
 keycode = 4194398
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_717eb"]
+[sub_resource type="Resource" id="Resource_jba4f"]
 resource_name = "LaunchMedia"
 script = ExtResource("1_kuw04")
 keycode = 4194399
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_ejy2g"]
+[sub_resource type="Resource" id="Resource_srykt"]
 resource_name = "Launch0"
 script = ExtResource("1_kuw04")
 keycode = 4194400
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_ope6a"]
+[sub_resource type="Resource" id="Resource_nel7m"]
 resource_name = "Launch1"
 script = ExtResource("1_kuw04")
 keycode = 4194401
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_x441w"]
+[sub_resource type="Resource" id="Resource_ln0i6"]
 resource_name = "Launch2"
 script = ExtResource("1_kuw04")
 keycode = 4194402
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_5mjjh"]
+[sub_resource type="Resource" id="Resource_nqbi7"]
 resource_name = "Launch3"
 script = ExtResource("1_kuw04")
 keycode = 4194403
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_hf0a8"]
+[sub_resource type="Resource" id="Resource_0wggq"]
 resource_name = "Launch4"
 script = ExtResource("1_kuw04")
 keycode = 4194404
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_sive7"]
+[sub_resource type="Resource" id="Resource_w4dnx"]
 resource_name = "Launch5"
 script = ExtResource("1_kuw04")
 keycode = 4194405
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_w81ln"]
+[sub_resource type="Resource" id="Resource_6nhca"]
 resource_name = "Launch6"
 script = ExtResource("1_kuw04")
 keycode = 4194406
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_pkkkd"]
+[sub_resource type="Resource" id="Resource_eqax5"]
 resource_name = "Launch7"
 script = ExtResource("1_kuw04")
 keycode = 4194407
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_duog1"]
+[sub_resource type="Resource" id="Resource_mucy6"]
 resource_name = "Launch8"
 script = ExtResource("1_kuw04")
 keycode = 4194408
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_tawgd"]
+[sub_resource type="Resource" id="Resource_66wcf"]
 resource_name = "Launch9"
 script = ExtResource("1_kuw04")
 keycode = 4194409
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_tok7i"]
+[sub_resource type="Resource" id="Resource_g8w0q"]
 resource_name = "LaunchA"
 script = ExtResource("1_kuw04")
 keycode = 4194410
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_0enij"]
+[sub_resource type="Resource" id="Resource_d8ywt"]
 resource_name = "LaunchB"
 script = ExtResource("1_kuw04")
 keycode = 4194411
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_lsfoy"]
+[sub_resource type="Resource" id="Resource_6qv2h"]
 resource_name = "LaunchC"
 script = ExtResource("1_kuw04")
 keycode = 4194412
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_lyuge"]
+[sub_resource type="Resource" id="Resource_hjm1c"]
 resource_name = "LaunchD"
 script = ExtResource("1_kuw04")
 keycode = 4194413
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_w6ykn"]
+[sub_resource type="Resource" id="Resource_spvny"]
 resource_name = "LaunchE"
 script = ExtResource("1_kuw04")
 keycode = 4194414
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_opeik"]
+[sub_resource type="Resource" id="Resource_66kqn"]
 resource_name = "LaunchF"
 script = ExtResource("1_kuw04")
 keycode = 4194415
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_fsxyi"]
+[sub_resource type="Resource" id="Resource_my6hq"]
 resource_name = "Globe"
 script = ExtResource("1_kuw04")
 keycode = 4194416
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_gjrru"]
+[sub_resource type="Resource" id="Resource_aeydu"]
 resource_name = "On-screen keyboard"
 script = ExtResource("1_kuw04")
 keycode = 4194417
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_2tsen"]
+[sub_resource type="Resource" id="Resource_k5j41"]
 resource_name = "JIS Eisu"
 script = ExtResource("1_kuw04")
 keycode = 4194418
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_eovqb"]
+[sub_resource type="Resource" id="Resource_bglj2"]
 resource_name = "JIS Kana"
 script = ExtResource("1_kuw04")
 keycode = 4194419
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_o5vb0"]
+[sub_resource type="Resource" id="Resource_8w1tv"]
 resource_name = "Unknown"
 script = ExtResource("1_kuw04")
 keycode = 8388607
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_001vl"]
+[sub_resource type="Resource" id="Resource_m61pr"]
 resource_name = "Space"
 script = ExtResource("1_kuw04")
 keycode = 32
-icon = ExtResource("2_novty")
+icon = ExtResource("15_3fsrr")
 
-[sub_resource type="Resource" id="Resource_kk2lb"]
+[sub_resource type="Resource" id="Resource_dnr4a"]
 resource_name = "Exclam"
 script = ExtResource("1_kuw04")
 keycode = 33
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_vvwr8"]
+[sub_resource type="Resource" id="Resource_7xpdq"]
 resource_name = "QuoteDbl"
 script = ExtResource("1_kuw04")
 keycode = 34
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_0xogy"]
+[sub_resource type="Resource" id="Resource_h5ug0"]
 resource_name = "NumberSign"
 script = ExtResource("1_kuw04")
 keycode = 35
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_7ndee"]
+[sub_resource type="Resource" id="Resource_7inic"]
 resource_name = "Dollar"
 script = ExtResource("1_kuw04")
 keycode = 36
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_4hjab"]
+[sub_resource type="Resource" id="Resource_bf6dk"]
 resource_name = "Percent"
 script = ExtResource("1_kuw04")
 keycode = 37
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_t3waf"]
+[sub_resource type="Resource" id="Resource_pf4j0"]
 resource_name = "Ampersand"
 script = ExtResource("1_kuw04")
 keycode = 38
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_e7q0v"]
+[sub_resource type="Resource" id="Resource_xw4k2"]
 resource_name = "Apostrophe"
 script = ExtResource("1_kuw04")
 keycode = 39
-icon = ExtResource("2_novty")
+icon = ExtResource("16_asjkj")
 
-[sub_resource type="Resource" id="Resource_ab3ak"]
+[sub_resource type="Resource" id="Resource_igddn"]
 resource_name = "ParenLeft"
 script = ExtResource("1_kuw04")
 keycode = 40
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_m065d"]
+[sub_resource type="Resource" id="Resource_q65u5"]
 resource_name = "ParenRight"
 script = ExtResource("1_kuw04")
 keycode = 41
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_37itf"]
+[sub_resource type="Resource" id="Resource_y0xli"]
 resource_name = "Asterisk"
 script = ExtResource("1_kuw04")
 keycode = 42
-icon = ExtResource("2_novty")
+icon = ExtResource("17_woujc")
 
-[sub_resource type="Resource" id="Resource_i0dh1"]
+[sub_resource type="Resource" id="Resource_hbj3a"]
 resource_name = "Plus"
 script = ExtResource("1_kuw04")
 keycode = 43
-icon = ExtResource("2_novty")
+icon = ExtResource("18_gblyc")
 
-[sub_resource type="Resource" id="Resource_h73bp"]
+[sub_resource type="Resource" id="Resource_3imqe"]
 resource_name = "Comma"
 script = ExtResource("1_kuw04")
 keycode = 44
-icon = ExtResource("2_novty")
+icon = ExtResource("19_d2e2p")
 
-[sub_resource type="Resource" id="Resource_0vevg"]
+[sub_resource type="Resource" id="Resource_ixgbf"]
 resource_name = "Minus"
 script = ExtResource("1_kuw04")
 keycode = 45
-icon = ExtResource("2_novty")
+icon = ExtResource("20_7uccg")
 
-[sub_resource type="Resource" id="Resource_3qcv1"]
+[sub_resource type="Resource" id="Resource_amac5"]
 resource_name = "Period"
 script = ExtResource("1_kuw04")
 keycode = 46
-icon = ExtResource("2_novty")
+icon = ExtResource("21_1dbgu")
 
-[sub_resource type="Resource" id="Resource_ihu7q"]
+[sub_resource type="Resource" id="Resource_qmpry"]
 resource_name = "Slash"
 script = ExtResource("1_kuw04")
 keycode = 47
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_0c1tf"]
+[sub_resource type="Resource" id="Resource_g14jm"]
 resource_name = "0"
 script = ExtResource("1_kuw04")
 keycode = 48
-icon = ExtResource("2_novty")
+icon = ExtResource("22_uaq0e")
 
-[sub_resource type="Resource" id="Resource_nbxa1"]
+[sub_resource type="Resource" id="Resource_l16sx"]
 resource_name = "1"
 script = ExtResource("1_kuw04")
 keycode = 49
-icon = ExtResource("2_novty")
+icon = ExtResource("23_mtrdd")
 
-[sub_resource type="Resource" id="Resource_clhg3"]
+[sub_resource type="Resource" id="Resource_1frvo"]
 resource_name = "2"
 script = ExtResource("1_kuw04")
 keycode = 50
-icon = ExtResource("2_novty")
+icon = ExtResource("24_j4da0")
 
-[sub_resource type="Resource" id="Resource_isocd"]
+[sub_resource type="Resource" id="Resource_twast"]
 resource_name = "3"
 script = ExtResource("1_kuw04")
 keycode = 51
-icon = ExtResource("2_novty")
+icon = ExtResource("25_bjnb6")
 
-[sub_resource type="Resource" id="Resource_x6f5q"]
+[sub_resource type="Resource" id="Resource_0glen"]
 resource_name = "4"
 script = ExtResource("1_kuw04")
 keycode = 52
-icon = ExtResource("2_novty")
+icon = ExtResource("26_1wklk")
 
-[sub_resource type="Resource" id="Resource_ik43n"]
+[sub_resource type="Resource" id="Resource_0usjj"]
 resource_name = "5"
 script = ExtResource("1_kuw04")
 keycode = 53
-icon = ExtResource("2_novty")
+icon = ExtResource("27_ggocx")
 
-[sub_resource type="Resource" id="Resource_525eb"]
+[sub_resource type="Resource" id="Resource_ir85f"]
 resource_name = "6"
 script = ExtResource("1_kuw04")
 keycode = 54
-icon = ExtResource("2_novty")
+icon = ExtResource("28_olhgn")
 
-[sub_resource type="Resource" id="Resource_mkkq3"]
+[sub_resource type="Resource" id="Resource_sjj36"]
 resource_name = "7"
 script = ExtResource("1_kuw04")
 keycode = 55
-icon = ExtResource("2_novty")
+icon = ExtResource("29_iug23")
 
-[sub_resource type="Resource" id="Resource_wgb30"]
+[sub_resource type="Resource" id="Resource_1brob"]
 resource_name = "8"
 script = ExtResource("1_kuw04")
 keycode = 56
-icon = ExtResource("2_novty")
+icon = ExtResource("30_dseh8")
 
-[sub_resource type="Resource" id="Resource_1er0j"]
+[sub_resource type="Resource" id="Resource_gn214"]
 resource_name = "9"
 script = ExtResource("1_kuw04")
 keycode = 57
-icon = ExtResource("2_novty")
+icon = ExtResource("31_3sl74")
 
-[sub_resource type="Resource" id="Resource_3cdn3"]
+[sub_resource type="Resource" id="Resource_0qb64"]
 resource_name = "Colon"
 script = ExtResource("1_kuw04")
 keycode = 58
-icon = ExtResource("2_novty")
+icon = ExtResource("32_c55er")
 
-[sub_resource type="Resource" id="Resource_g7vwq"]
+[sub_resource type="Resource" id="Resource_cp1wx"]
 resource_name = "Semicolon"
 script = ExtResource("1_kuw04")
 keycode = 59
-icon = ExtResource("2_novty")
+icon = ExtResource("33_d8u7m")
 
-[sub_resource type="Resource" id="Resource_vwhvi"]
+[sub_resource type="Resource" id="Resource_iphtj"]
 resource_name = "Less"
 script = ExtResource("1_kuw04")
 keycode = 60
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_s1rek"]
+[sub_resource type="Resource" id="Resource_kxpvi"]
 resource_name = "Equal"
 script = ExtResource("1_kuw04")
 keycode = 61
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_8b50g"]
+[sub_resource type="Resource" id="Resource_iptmv"]
 resource_name = "Greater"
 script = ExtResource("1_kuw04")
 keycode = 62
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_f6wdy"]
+[sub_resource type="Resource" id="Resource_tc0e2"]
 resource_name = "Question"
 script = ExtResource("1_kuw04")
 keycode = 63
-icon = ExtResource("2_novty")
+icon = ExtResource("34_hlvkc")
 
-[sub_resource type="Resource" id="Resource_i1ag4"]
+[sub_resource type="Resource" id="Resource_psq24"]
 resource_name = "At"
 script = ExtResource("1_kuw04")
 keycode = 64
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_280r5"]
+[sub_resource type="Resource" id="Resource_ewf2g"]
 resource_name = "A"
 script = ExtResource("1_kuw04")
 keycode = 65
-icon = ExtResource("2_novty")
+icon = ExtResource("35_4x4re")
 
-[sub_resource type="Resource" id="Resource_70neh"]
+[sub_resource type="Resource" id="Resource_1upo1"]
 resource_name = "B"
 script = ExtResource("1_kuw04")
 keycode = 66
-icon = ExtResource("2_novty")
+icon = ExtResource("36_x8rbp")
 
-[sub_resource type="Resource" id="Resource_ev8g1"]
+[sub_resource type="Resource" id="Resource_0ylrr"]
 resource_name = "C"
 script = ExtResource("1_kuw04")
 keycode = 67
-icon = ExtResource("2_novty")
+icon = ExtResource("37_07kmh")
 
-[sub_resource type="Resource" id="Resource_adk8a"]
+[sub_resource type="Resource" id="Resource_u0lgc"]
 resource_name = "D"
 script = ExtResource("1_kuw04")
 keycode = 68
-icon = ExtResource("2_novty")
+icon = ExtResource("38_7xsu7")
 
-[sub_resource type="Resource" id="Resource_go0it"]
+[sub_resource type="Resource" id="Resource_lbrfx"]
 resource_name = "E"
 script = ExtResource("1_kuw04")
 keycode = 69
-icon = ExtResource("2_novty")
+icon = ExtResource("39_wtaoy")
 
-[sub_resource type="Resource" id="Resource_6v2ph"]
+[sub_resource type="Resource" id="Resource_o5few"]
 resource_name = "F"
 script = ExtResource("1_kuw04")
 keycode = 70
-icon = ExtResource("2_novty")
+icon = ExtResource("40_kouf8")
 
-[sub_resource type="Resource" id="Resource_jdf6c"]
+[sub_resource type="Resource" id="Resource_dkrxh"]
 resource_name = "G"
 script = ExtResource("1_kuw04")
 keycode = 71
-icon = ExtResource("2_novty")
+icon = ExtResource("41_jipxh")
 
-[sub_resource type="Resource" id="Resource_ehkqp"]
+[sub_resource type="Resource" id="Resource_m61l5"]
 resource_name = "H"
 script = ExtResource("1_kuw04")
 keycode = 72
-icon = ExtResource("2_novty")
+icon = ExtResource("42_h6hoc")
 
-[sub_resource type="Resource" id="Resource_e5g2w"]
+[sub_resource type="Resource" id="Resource_uh62o"]
 resource_name = "I"
 script = ExtResource("1_kuw04")
 keycode = 73
-icon = ExtResource("2_novty")
+icon = ExtResource("43_vosij")
 
-[sub_resource type="Resource" id="Resource_0gik0"]
+[sub_resource type="Resource" id="Resource_uo1fb"]
 resource_name = "J"
 script = ExtResource("1_kuw04")
 keycode = 74
-icon = ExtResource("2_novty")
+icon = ExtResource("44_yi48b")
 
-[sub_resource type="Resource" id="Resource_81f3d"]
+[sub_resource type="Resource" id="Resource_weqrc"]
 resource_name = "K"
 script = ExtResource("1_kuw04")
 keycode = 75
-icon = ExtResource("2_novty")
+icon = ExtResource("45_8bs0s")
 
-[sub_resource type="Resource" id="Resource_mk3iq"]
+[sub_resource type="Resource" id="Resource_ok1lu"]
 resource_name = "L"
 script = ExtResource("1_kuw04")
 keycode = 76
-icon = ExtResource("2_novty")
+icon = ExtResource("46_hot37")
 
-[sub_resource type="Resource" id="Resource_a2w7u"]
+[sub_resource type="Resource" id="Resource_8e1a4"]
 resource_name = "M"
 script = ExtResource("1_kuw04")
 keycode = 77
-icon = ExtResource("2_novty")
+icon = ExtResource("47_fcot6")
 
-[sub_resource type="Resource" id="Resource_s84yq"]
+[sub_resource type="Resource" id="Resource_hn8pp"]
 resource_name = "N"
 script = ExtResource("1_kuw04")
 keycode = 78
-icon = ExtResource("2_novty")
+icon = ExtResource("48_5fwjq")
 
-[sub_resource type="Resource" id="Resource_wnwp4"]
+[sub_resource type="Resource" id="Resource_hki1m"]
 resource_name = "O"
 script = ExtResource("1_kuw04")
 keycode = 79
-icon = ExtResource("2_novty")
+icon = ExtResource("49_txwvg")
 
-[sub_resource type="Resource" id="Resource_grrxl"]
+[sub_resource type="Resource" id="Resource_2gnfq"]
 resource_name = "P"
 script = ExtResource("1_kuw04")
 keycode = 80
-icon = ExtResource("2_novty")
+icon = ExtResource("50_20qrf")
 
-[sub_resource type="Resource" id="Resource_afigb"]
+[sub_resource type="Resource" id="Resource_aoonf"]
 resource_name = "Q"
 script = ExtResource("1_kuw04")
 keycode = 81
-icon = ExtResource("2_novty")
+icon = ExtResource("51_sohn8")
 
-[sub_resource type="Resource" id="Resource_1tvqr"]
+[sub_resource type="Resource" id="Resource_np4tn"]
 resource_name = "R"
 script = ExtResource("1_kuw04")
 keycode = 82
-icon = ExtResource("2_novty")
+icon = ExtResource("52_y4smg")
 
-[sub_resource type="Resource" id="Resource_v1fj6"]
+[sub_resource type="Resource" id="Resource_wagsc"]
 resource_name = "S"
 script = ExtResource("1_kuw04")
 keycode = 83
-icon = ExtResource("2_novty")
+icon = ExtResource("53_jbxup")
 
-[sub_resource type="Resource" id="Resource_7svqf"]
+[sub_resource type="Resource" id="Resource_jvqkm"]
 resource_name = "T"
 script = ExtResource("1_kuw04")
 keycode = 84
-icon = ExtResource("2_novty")
+icon = ExtResource("54_np44y")
 
-[sub_resource type="Resource" id="Resource_7xho4"]
+[sub_resource type="Resource" id="Resource_602yd"]
 resource_name = "U"
 script = ExtResource("1_kuw04")
 keycode = 85
-icon = ExtResource("2_novty")
+icon = ExtResource("55_tjyvg")
 
-[sub_resource type="Resource" id="Resource_ncv7l"]
+[sub_resource type="Resource" id="Resource_njpvd"]
 resource_name = "V"
 script = ExtResource("1_kuw04")
 keycode = 86
-icon = ExtResource("2_novty")
+icon = ExtResource("56_d0cih")
 
-[sub_resource type="Resource" id="Resource_50mvy"]
+[sub_resource type="Resource" id="Resource_dlxds"]
 resource_name = "W"
 script = ExtResource("1_kuw04")
 keycode = 87
-icon = ExtResource("2_novty")
+icon = ExtResource("57_7nej1")
 
-[sub_resource type="Resource" id="Resource_fkpac"]
+[sub_resource type="Resource" id="Resource_lck16"]
 resource_name = "X"
 script = ExtResource("1_kuw04")
 keycode = 88
-icon = ExtResource("2_novty")
+icon = ExtResource("58_fe5r1")
 
-[sub_resource type="Resource" id="Resource_cbc1t"]
+[sub_resource type="Resource" id="Resource_djoq1"]
 resource_name = "Y"
 script = ExtResource("1_kuw04")
 keycode = 89
-icon = ExtResource("2_novty")
+icon = ExtResource("59_ywqp3")
 
-[sub_resource type="Resource" id="Resource_jocxd"]
+[sub_resource type="Resource" id="Resource_u241d"]
 resource_name = "Z"
 script = ExtResource("1_kuw04")
 keycode = 90
-icon = ExtResource("2_novty")
+icon = ExtResource("60_1njut")
 
-[sub_resource type="Resource" id="Resource_nc5v2"]
+[sub_resource type="Resource" id="Resource_mjqqr"]
 resource_name = "BracketLeft"
 script = ExtResource("1_kuw04")
 keycode = 91
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_dn8xu"]
+[sub_resource type="Resource" id="Resource_tmruy"]
 resource_name = "BackSlash"
 script = ExtResource("1_kuw04")
 keycode = 92
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_1gr5h"]
+[sub_resource type="Resource" id="Resource_7yfmg"]
 resource_name = "BracketRight"
 script = ExtResource("1_kuw04")
 keycode = 93
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_7jssf"]
+[sub_resource type="Resource" id="Resource_kgt8j"]
 resource_name = "AsciiCircum"
 script = ExtResource("1_kuw04")
 keycode = 94
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_sxt2k"]
+[sub_resource type="Resource" id="Resource_1w8mh"]
 resource_name = "UnderScore"
 script = ExtResource("1_kuw04")
 keycode = 95
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_1bx3k"]
+[sub_resource type="Resource" id="Resource_8b2ix"]
 resource_name = "QuoteLeft"
 script = ExtResource("1_kuw04")
 keycode = 96
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_c7vsp"]
+[sub_resource type="Resource" id="Resource_gmwi3"]
 resource_name = "BraceLeft"
 script = ExtResource("1_kuw04")
 keycode = 123
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_162t3"]
+[sub_resource type="Resource" id="Resource_pjtmj"]
 resource_name = "Bar"
 script = ExtResource("1_kuw04")
 keycode = 124
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_v3u43"]
+[sub_resource type="Resource" id="Resource_5smos"]
 resource_name = "BraceRight"
 script = ExtResource("1_kuw04")
 keycode = 125
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_vmlpa"]
+[sub_resource type="Resource" id="Resource_me4lw"]
 resource_name = "AsciiTilde"
 script = ExtResource("1_kuw04")
 keycode = 126
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_5dxxq"]
+[sub_resource type="Resource" id="Resource_qanki"]
 resource_name = "Yen"
 script = ExtResource("1_kuw04")
 keycode = 165
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_l4plw"]
+[sub_resource type="Resource" id="Resource_2f745"]
 resource_name = "Section"
 script = ExtResource("1_kuw04")
 keycode = 167
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_l81l3"]
+[sub_resource type="Resource" id="Resource_wqppv"]
 script = ExtResource("1_kuw04")
 input_type = 1
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_kwvhd"]
-resource_name = "Left Mouse Button"
+[sub_resource type="Resource" id="Resource_mrfrb"]
+resource_name = "Mouse Button Left"
 script = ExtResource("1_kuw04")
 input_type = 1
 keycode = 1
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_166i2"]
-resource_name = "Right Mouse Button"
+[sub_resource type="Resource" id="Resource_3glkd"]
+resource_name = "Mouse Button Right"
 script = ExtResource("1_kuw04")
 input_type = 1
 keycode = 2
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_tdfdq"]
-resource_name = "Middle Mouse Button"
+[sub_resource type="Resource" id="Resource_dg0h4"]
+resource_name = "Mouse Button Middle"
 script = ExtResource("1_kuw04")
 input_type = 1
 keycode = 3
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_ykrsf"]
+[sub_resource type="Resource" id="Resource_eq6k3"]
 resource_name = "Mouse Wheel Up"
 script = ExtResource("1_kuw04")
 input_type = 1
 keycode = 4
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_l0eug"]
+[sub_resource type="Resource" id="Resource_3lv3u"]
 resource_name = "Mouse Wheel Down"
 script = ExtResource("1_kuw04")
 input_type = 1
 keycode = 5
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_nmmsi"]
+[sub_resource type="Resource" id="Resource_a8ctn"]
 resource_name = "Mouse Wheel Left"
 script = ExtResource("1_kuw04")
 input_type = 1
 keycode = 6
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_kud2o"]
+[sub_resource type="Resource" id="Resource_st6rq"]
 resource_name = "Mouse Wheel Right"
 script = ExtResource("1_kuw04")
 input_type = 1
 keycode = 7
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_8y7ai"]
+[sub_resource type="Resource" id="Resource_1fu48"]
 resource_name = "X Button 1"
 script = ExtResource("1_kuw04")
 input_type = 1
 keycode = 8
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_b6qel"]
+[sub_resource type="Resource" id="Resource_8cndo"]
 resource_name = "X Button 2"
 script = ExtResource("1_kuw04")
 input_type = 1
 keycode = 9
-icon = ExtResource("2_novty")
 
-[sub_resource type="Resource" id="Resource_i7qrt"]
-resource_name = "Joy Axis Left X Left"
+[sub_resource type="Resource" id="Resource_nucjo"]
+resource_name = "Mouse Motion Left"
 script = ExtResource("1_kuw04")
-input_type = 3
+input_type = 4
 axis_value = -1.0
 
-[sub_resource type="Resource" id="Resource_qrgum"]
-resource_name = "Joy Axis Left X Right"
+[sub_resource type="Resource" id="Resource_ce63y"]
+resource_name = "Mouse Motion Right"
 script = ExtResource("1_kuw04")
-input_type = 3
+input_type = 4
 axis_value = 1.0
 
-[sub_resource type="Resource" id="Resource_lfnvo"]
-resource_name = "Joy Axis Left Y Up"
+[sub_resource type="Resource" id="Resource_kv5c7"]
+resource_name = "Mouse Motion Up"
 script = ExtResource("1_kuw04")
-input_type = 3
+input_type = 4
 keycode = 1
 axis_value = -1.0
 
-[sub_resource type="Resource" id="Resource_j7yvr"]
-resource_name = "Joy Axis Left Y Down"
+[sub_resource type="Resource" id="Resource_14c2s"]
+resource_name = "Mouse Motion Down"
 script = ExtResource("1_kuw04")
-input_type = 3
+input_type = 4
 keycode = 1
 axis_value = 1.0
 
 [resource]
 script = ExtResource("110_gvihj")
-keyboard = Array[ExtResource("1_kuw04")]([SubResource("Resource_qc78x"), SubResource("Resource_mpqjm"), SubResource("Resource_y87mt"), SubResource("Resource_bra6q"), SubResource("Resource_vetgf"), SubResource("Resource_2hemq"), SubResource("Resource_hi3hy"), SubResource("Resource_2rx8y"), SubResource("Resource_jqhg8"), SubResource("Resource_0y5xe"), SubResource("Resource_day8s"), SubResource("Resource_lg1r2"), SubResource("Resource_ptnjs"), SubResource("Resource_gxiqn"), SubResource("Resource_b4vj1"), SubResource("Resource_527wl"), SubResource("Resource_ydlky"), SubResource("Resource_lvq8u"), SubResource("Resource_be48s"), SubResource("Resource_5svwb"), SubResource("Resource_0d5px"), SubResource("Resource_qmemi"), SubResource("Resource_rcx7o"), SubResource("Resource_t020l"), SubResource("Resource_tyalf"), SubResource("Resource_pqahv"), SubResource("Resource_lqlwj"), SubResource("Resource_ogv2n"), SubResource("Resource_qs868"), SubResource("Resource_uv0bj"), SubResource("Resource_v7eoy"), SubResource("Resource_8lc87"), SubResource("Resource_1lpod"), SubResource("Resource_76vq7"), SubResource("Resource_jv1s4"), SubResource("Resource_3fsrr"), SubResource("Resource_asjkj"), SubResource("Resource_woujc"), SubResource("Resource_gblyc"), SubResource("Resource_d2e2p"), SubResource("Resource_7uccg"), SubResource("Resource_1dbgu"), SubResource("Resource_uaq0e"), SubResource("Resource_mtrdd"), SubResource("Resource_j4da0"), SubResource("Resource_bjnb6"), SubResource("Resource_1wklk"), SubResource("Resource_ggocx"), SubResource("Resource_olhgn"), SubResource("Resource_iug23"), SubResource("Resource_dseh8"), SubResource("Resource_3sl74"), SubResource("Resource_c55er"), SubResource("Resource_d8u7m"), SubResource("Resource_hlvkc"), SubResource("Resource_4x4re"), SubResource("Resource_x8rbp"), SubResource("Resource_07kmh"), SubResource("Resource_7xsu7"), SubResource("Resource_wtaoy"), SubResource("Resource_kouf8"), SubResource("Resource_jipxh"), SubResource("Resource_h6hoc"), SubResource("Resource_vosij"), SubResource("Resource_yi48b"), SubResource("Resource_8bs0s"), SubResource("Resource_hot37"), SubResource("Resource_fcot6"), SubResource("Resource_5fwjq"), SubResource("Resource_txwvg"), SubResource("Resource_20qrf"), SubResource("Resource_sohn8"), SubResource("Resource_y4smg"), SubResource("Resource_jbxup"), SubResource("Resource_np44y"), SubResource("Resource_tjyvg"), SubResource("Resource_d0cih"), SubResource("Resource_7nej1"), SubResource("Resource_fe5r1"), SubResource("Resource_ywqp3"), SubResource("Resource_1njut"), SubResource("Resource_c26lm"), SubResource("Resource_s1o53"), SubResource("Resource_rvaxx"), SubResource("Resource_vrret"), SubResource("Resource_itbbr"), SubResource("Resource_r3wuy"), SubResource("Resource_422h4"), SubResource("Resource_firqx"), SubResource("Resource_brbro"), SubResource("Resource_lucdw"), SubResource("Resource_ee8gg"), SubResource("Resource_5ioi2"), SubResource("Resource_nlsn2"), SubResource("Resource_id405"), SubResource("Resource_61qdo"), SubResource("Resource_5js24"), SubResource("Resource_hxg8f"), SubResource("Resource_8yv3l"), SubResource("Resource_j65ir"), SubResource("Resource_717eb"), SubResource("Resource_ejy2g"), SubResource("Resource_ope6a"), SubResource("Resource_x441w"), SubResource("Resource_5mjjh"), SubResource("Resource_hf0a8"), SubResource("Resource_sive7"), SubResource("Resource_w81ln"), SubResource("Resource_pkkkd"), SubResource("Resource_duog1"), SubResource("Resource_tawgd"), SubResource("Resource_tok7i"), SubResource("Resource_0enij"), SubResource("Resource_lsfoy"), SubResource("Resource_lyuge"), SubResource("Resource_w6ykn"), SubResource("Resource_opeik"), SubResource("Resource_fsxyi"), SubResource("Resource_gjrru"), SubResource("Resource_2tsen"), SubResource("Resource_eovqb"), SubResource("Resource_o5vb0"), SubResource("Resource_001vl"), SubResource("Resource_kk2lb"), SubResource("Resource_vvwr8"), SubResource("Resource_0xogy"), SubResource("Resource_7ndee"), SubResource("Resource_4hjab"), SubResource("Resource_t3waf"), SubResource("Resource_e7q0v"), SubResource("Resource_ab3ak"), SubResource("Resource_m065d"), SubResource("Resource_37itf"), SubResource("Resource_i0dh1"), SubResource("Resource_h73bp"), SubResource("Resource_0vevg"), SubResource("Resource_3qcv1"), SubResource("Resource_ihu7q"), SubResource("Resource_0c1tf"), SubResource("Resource_nbxa1"), SubResource("Resource_clhg3"), SubResource("Resource_isocd"), SubResource("Resource_x6f5q"), SubResource("Resource_ik43n"), SubResource("Resource_525eb"), SubResource("Resource_mkkq3"), SubResource("Resource_wgb30"), SubResource("Resource_1er0j"), SubResource("Resource_3cdn3"), SubResource("Resource_g7vwq"), SubResource("Resource_vwhvi"), SubResource("Resource_s1rek"), SubResource("Resource_8b50g"), SubResource("Resource_f6wdy"), SubResource("Resource_i1ag4"), SubResource("Resource_280r5"), SubResource("Resource_70neh"), SubResource("Resource_ev8g1"), SubResource("Resource_adk8a"), SubResource("Resource_go0it"), SubResource("Resource_6v2ph"), SubResource("Resource_jdf6c"), SubResource("Resource_ehkqp"), SubResource("Resource_e5g2w"), SubResource("Resource_0gik0"), SubResource("Resource_81f3d"), SubResource("Resource_mk3iq"), SubResource("Resource_a2w7u"), SubResource("Resource_s84yq"), SubResource("Resource_wnwp4"), SubResource("Resource_grrxl"), SubResource("Resource_afigb"), SubResource("Resource_1tvqr"), SubResource("Resource_v1fj6"), SubResource("Resource_7svqf"), SubResource("Resource_7xho4"), SubResource("Resource_ncv7l"), SubResource("Resource_50mvy"), SubResource("Resource_fkpac"), SubResource("Resource_cbc1t"), SubResource("Resource_jocxd"), SubResource("Resource_nc5v2"), SubResource("Resource_dn8xu"), SubResource("Resource_1gr5h"), SubResource("Resource_7jssf"), SubResource("Resource_sxt2k"), SubResource("Resource_1bx3k"), SubResource("Resource_c7vsp"), SubResource("Resource_162t3"), SubResource("Resource_v3u43"), SubResource("Resource_vmlpa"), SubResource("Resource_5dxxq"), SubResource("Resource_l4plw")])
-mouse = Array[ExtResource("1_kuw04")]([SubResource("Resource_l81l3"), SubResource("Resource_kwvhd"), SubResource("Resource_166i2"), SubResource("Resource_tdfdq"), SubResource("Resource_ykrsf"), SubResource("Resource_l0eug"), SubResource("Resource_nmmsi"), SubResource("Resource_kud2o"), SubResource("Resource_8y7ai"), SubResource("Resource_b6qel")])
-mouse_motions = Array[ExtResource("1_kuw04")]([SubResource("Resource_i7qrt"), SubResource("Resource_qrgum"), SubResource("Resource_lfnvo"), SubResource("Resource_j7yvr")])
-joy = Array[ExtResource("1_kuw04")]([SubResource("Resource_0chex"), SubResource("Resource_3i8rk"), SubResource("Resource_f0b2q"), SubResource("Resource_7knqu"), SubResource("Resource_a3dwa"), SubResource("Resource_qr7rm"), SubResource("Resource_uf0w5"), SubResource("Resource_4fv0s"), SubResource("Resource_3xkml"), SubResource("Resource_q5frs"), SubResource("Resource_26k0b"), SubResource("Resource_w1v2s"), SubResource("Resource_4bs6l"), SubResource("Resource_wmw7c"), SubResource("Resource_illnv"), SubResource("Resource_kar3n"), SubResource("Resource_3awlg"), SubResource("Resource_w4aon"), SubResource("Resource_prjs1"), SubResource("Resource_o7pf6"), SubResource("Resource_1v7kr"), SubResource("Resource_1lcbi"), SubResource("Resource_nm8xi"), SubResource("Resource_26yut")])
-joy_axis = Array[ExtResource("1_kuw04")]([SubResource("Resource_a45gt"), SubResource("Resource_3uymg"), SubResource("Resource_m236e"), SubResource("Resource_er5u1"), SubResource("Resource_7ne67"), SubResource("Resource_v3hk3"), SubResource("Resource_qdoia"), SubResource("Resource_0nwtu"), SubResource("Resource_vo0n1"), SubResource("Resource_xlark"), SubResource("Resource_1jpql")])
-keyboard_icons_folder = null
-keyboard_icons_extension = null
-mouse_icons_folder = null
-mouse_icons_extension = null
-mouse_motions_icons_folder = null
-mouse_motions_icons_extension = null
-joy_icons_folder = null
-joy_icons_extension = null
-joy_axis_icons_folder = null
-joy_axis_icons_extension = null
+keyboard = Array[ExtResource("1_kuw04")]([SubResource("Resource_opeik"), SubResource("Resource_fsxyi"), SubResource("Resource_gjrru"), SubResource("Resource_2tsen"), SubResource("Resource_eovqb"), SubResource("Resource_o5vb0"), SubResource("Resource_001vl"), SubResource("Resource_kk2lb"), SubResource("Resource_vvwr8"), SubResource("Resource_0xogy"), SubResource("Resource_7ndee"), SubResource("Resource_4hjab"), SubResource("Resource_t3waf"), SubResource("Resource_e7q0v"), SubResource("Resource_ab3ak"), SubResource("Resource_m065d"), SubResource("Resource_37itf"), SubResource("Resource_i0dh1"), SubResource("Resource_h73bp"), SubResource("Resource_0vevg"), SubResource("Resource_3qcv1"), SubResource("Resource_ihu7q"), SubResource("Resource_0c1tf"), SubResource("Resource_nbxa1"), SubResource("Resource_clhg3"), SubResource("Resource_isocd"), SubResource("Resource_x6f5q"), SubResource("Resource_ik43n"), SubResource("Resource_525eb"), SubResource("Resource_mkkq3"), SubResource("Resource_wgb30"), SubResource("Resource_1er0j"), SubResource("Resource_3cdn3"), SubResource("Resource_g7vwq"), SubResource("Resource_vwhvi"), SubResource("Resource_s1rek"), SubResource("Resource_8b50g"), SubResource("Resource_f6wdy"), SubResource("Resource_i1ag4"), SubResource("Resource_280r5"), SubResource("Resource_70neh"), SubResource("Resource_ev8g1"), SubResource("Resource_adk8a"), SubResource("Resource_go0it"), SubResource("Resource_6v2ph"), SubResource("Resource_jdf6c"), SubResource("Resource_ehkqp"), SubResource("Resource_e5g2w"), SubResource("Resource_0gik0"), SubResource("Resource_81f3d"), SubResource("Resource_mk3iq"), SubResource("Resource_a2w7u"), SubResource("Resource_s84yq"), SubResource("Resource_wnwp4"), SubResource("Resource_grrxl"), SubResource("Resource_afigb"), SubResource("Resource_1tvqr"), SubResource("Resource_v1fj6"), SubResource("Resource_7svqf"), SubResource("Resource_7xho4"), SubResource("Resource_ncv7l"), SubResource("Resource_50mvy"), SubResource("Resource_fkpac"), SubResource("Resource_cbc1t"), SubResource("Resource_jocxd"), SubResource("Resource_nc5v2"), SubResource("Resource_dn8xu"), SubResource("Resource_1gr5h"), SubResource("Resource_7jssf"), SubResource("Resource_sxt2k"), SubResource("Resource_1bx3k"), SubResource("Resource_c7vsp"), SubResource("Resource_162t3"), SubResource("Resource_v3u43"), SubResource("Resource_vmlpa"), SubResource("Resource_5dxxq"), SubResource("Resource_l4plw"), SubResource("Resource_l81l3"), SubResource("Resource_kwvhd"), SubResource("Resource_166i2"), SubResource("Resource_tdfdq"), SubResource("Resource_ykrsf"), SubResource("Resource_l0eug"), SubResource("Resource_nmmsi"), SubResource("Resource_kud2o"), SubResource("Resource_8y7ai"), SubResource("Resource_b6qel"), SubResource("Resource_i7qrt"), SubResource("Resource_qrgum"), SubResource("Resource_lfnvo"), SubResource("Resource_j7yvr"), SubResource("Resource_vdohg"), SubResource("Resource_5he04"), SubResource("Resource_h587s"), SubResource("Resource_3k02h"), SubResource("Resource_y4dv6"), SubResource("Resource_0puq7"), SubResource("Resource_dutag"), SubResource("Resource_cacid"), SubResource("Resource_amgcr"), SubResource("Resource_jba4f"), SubResource("Resource_srykt"), SubResource("Resource_nel7m"), SubResource("Resource_ln0i6"), SubResource("Resource_nqbi7"), SubResource("Resource_0wggq"), SubResource("Resource_w4dnx"), SubResource("Resource_6nhca"), SubResource("Resource_eqax5"), SubResource("Resource_mucy6"), SubResource("Resource_66wcf"), SubResource("Resource_g8w0q"), SubResource("Resource_d8ywt"), SubResource("Resource_6qv2h"), SubResource("Resource_hjm1c"), SubResource("Resource_spvny"), SubResource("Resource_66kqn"), SubResource("Resource_my6hq"), SubResource("Resource_aeydu"), SubResource("Resource_k5j41"), SubResource("Resource_bglj2"), SubResource("Resource_8w1tv"), SubResource("Resource_m61pr"), SubResource("Resource_dnr4a"), SubResource("Resource_7xpdq"), SubResource("Resource_h5ug0"), SubResource("Resource_7inic"), SubResource("Resource_bf6dk"), SubResource("Resource_pf4j0"), SubResource("Resource_xw4k2"), SubResource("Resource_igddn"), SubResource("Resource_q65u5"), SubResource("Resource_y0xli"), SubResource("Resource_hbj3a"), SubResource("Resource_3imqe"), SubResource("Resource_ixgbf"), SubResource("Resource_amac5"), SubResource("Resource_qmpry"), SubResource("Resource_g14jm"), SubResource("Resource_l16sx"), SubResource("Resource_1frvo"), SubResource("Resource_twast"), SubResource("Resource_0glen"), SubResource("Resource_0usjj"), SubResource("Resource_ir85f"), SubResource("Resource_sjj36"), SubResource("Resource_1brob"), SubResource("Resource_gn214"), SubResource("Resource_0qb64"), SubResource("Resource_cp1wx"), SubResource("Resource_iphtj"), SubResource("Resource_kxpvi"), SubResource("Resource_iptmv"), SubResource("Resource_tc0e2"), SubResource("Resource_psq24"), SubResource("Resource_ewf2g"), SubResource("Resource_1upo1"), SubResource("Resource_0ylrr"), SubResource("Resource_u0lgc"), SubResource("Resource_lbrfx"), SubResource("Resource_o5few"), SubResource("Resource_dkrxh"), SubResource("Resource_m61l5"), SubResource("Resource_uh62o"), SubResource("Resource_uo1fb"), SubResource("Resource_weqrc"), SubResource("Resource_ok1lu"), SubResource("Resource_8e1a4"), SubResource("Resource_hn8pp"), SubResource("Resource_hki1m"), SubResource("Resource_2gnfq"), SubResource("Resource_aoonf"), SubResource("Resource_np4tn"), SubResource("Resource_wagsc"), SubResource("Resource_jvqkm"), SubResource("Resource_602yd"), SubResource("Resource_njpvd"), SubResource("Resource_dlxds"), SubResource("Resource_lck16"), SubResource("Resource_djoq1"), SubResource("Resource_u241d"), SubResource("Resource_mjqqr"), SubResource("Resource_tmruy"), SubResource("Resource_7yfmg"), SubResource("Resource_kgt8j"), SubResource("Resource_1w8mh"), SubResource("Resource_8b2ix"), SubResource("Resource_gmwi3"), SubResource("Resource_pjtmj"), SubResource("Resource_5smos"), SubResource("Resource_me4lw"), SubResource("Resource_qanki"), SubResource("Resource_2f745")])
+mouse = Array[ExtResource("1_kuw04")]([SubResource("Resource_wqppv"), SubResource("Resource_mrfrb"), SubResource("Resource_3glkd"), SubResource("Resource_dg0h4"), SubResource("Resource_eq6k3"), SubResource("Resource_3lv3u"), SubResource("Resource_a8ctn"), SubResource("Resource_st6rq"), SubResource("Resource_1fu48"), SubResource("Resource_8cndo")])
+mouse_motions = Array[ExtResource("1_kuw04")]([SubResource("Resource_nucjo"), SubResource("Resource_ce63y"), SubResource("Resource_kv5c7"), SubResource("Resource_14c2s")])
+joy = Array[ExtResource("1_kuw04")]([SubResource("Resource_c26lm"), SubResource("Resource_s1o53"), SubResource("Resource_rvaxx"), SubResource("Resource_vrret"), SubResource("Resource_itbbr"), SubResource("Resource_r3wuy"), SubResource("Resource_422h4"), SubResource("Resource_firqx"), SubResource("Resource_brbro"), SubResource("Resource_lucdw"), SubResource("Resource_ee8gg"), SubResource("Resource_5ioi2"), SubResource("Resource_nlsn2"), SubResource("Resource_id405"), SubResource("Resource_61qdo"), SubResource("Resource_5js24"), SubResource("Resource_hxg8f"), SubResource("Resource_8yv3l"), SubResource("Resource_j65ir"), SubResource("Resource_717eb"), SubResource("Resource_ejy2g"), SubResource("Resource_ope6a"), SubResource("Resource_x441w"), SubResource("Resource_5mjjh")])
+joy_axis = Array[ExtResource("1_kuw04")]([SubResource("Resource_hf0a8"), SubResource("Resource_sive7"), SubResource("Resource_w81ln"), SubResource("Resource_pkkkd"), SubResource("Resource_duog1"), SubResource("Resource_tawgd"), SubResource("Resource_tok7i"), SubResource("Resource_0enij"), SubResource("Resource_lsfoy"), SubResource("Resource_lyuge"), SubResource("Resource_w6ykn")])
+keyboard_icons_folder = "res://addons/awesome_input_icons/assets/keyboard and mouse vector"
+keyboard_icons_extension = ".svg"
+mouse_icons_folder = "res://addons/awesome_input_icons/assets/keyboard and mouse vector"
+mouse_icons_extension = ".svg"
+mouse_motions_icons_extension = ".svg"
+joy_icons_extension = ".svg"

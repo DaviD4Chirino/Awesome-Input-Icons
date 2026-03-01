@@ -272,19 +272,19 @@ static var mouse_motion_directions: Array[Dictionary] = [
 @export var joy_axis: Array[KeyIcon] = []
 
 @export_group("Generation Configuration")
-@export_global_dir var keyboard_icons_folder: String = ""
+@export_dir var keyboard_icons_folder: String = ""
 @export var keyboard_icons_extension: String = ""
 
-@export_global_dir var mouse_icons_folder: String = ""
+@export_dir var mouse_icons_folder: String = ""
 @export var mouse_icons_extension: String = ""
 
-@export_global_dir var mouse_motions_icons_folder: String = ""
+@export_dir var mouse_motions_icons_folder: String = ""
 @export var mouse_motions_icons_extension: String = ""
 
-@export_global_dir var joy_icons_folder: String = ""
+@export_dir var joy_icons_folder: String = ""
 @export var joy_icons_extension: String = ""
 
-@export_global_dir var joy_axis_icons_folder: String = ""
+@export_dir var joy_axis_icons_folder: String = ""
 @export var joy_axis_icons_extension: String = ""
 
 
@@ -306,8 +306,7 @@ func populate_key_icons(array: Array, type: KeyIcon.InputTypes) -> Array[KeyIcon
 		key_icon.input_type = type
 		key_icon.keycode = code
 		## TODO: look into the folder and try to find the icon
-		key_icon.icon = \
-		ResourceLoader.load("res://addons/awesome_input_icons/assets/keyboard and mouse vector/keyboard_6.svg")
+		key_icon.icon = get_key_image(key_icon.resource_name, type)
 		arr.append(key_icon)
 	return arr
 
@@ -321,6 +320,37 @@ func populate_key_icons_for_axis(array: Array, type: KeyIcon.InputTypes) -> Arra
 		key_icon.axis_value = pair.axis_value
 		arr.append(key_icon)
 	return arr
+
+
+func get_key_image(key_icon_name: String, type: KeyIcon.InputTypes) -> Texture2D:
+	var current_folder: String = ""
+	var current_extension: String = ""
+
+	match type:
+		KeyIcon.InputTypes.KEYBOARD:
+			current_folder = keyboard_icons_folder
+			current_extension = keyboard_icons_extension
+		KeyIcon.InputTypes.MOUSE:
+			current_folder = mouse_icons_folder
+			current_extension = mouse_icons_extension
+		KeyIcon.InputTypes.JOY_BUTTON:
+			current_folder = joy_icons_folder
+			current_extension = joy_icons_extension
+		KeyIcon.InputTypes.JOY_AXIS:
+			current_folder = joy_axis_icons_folder
+			current_extension = joy_axis_icons_extension
+		KeyIcon.InputTypes.MOUSE_MOTION:
+			current_folder = mouse_motions_icons_folder
+			current_extension = mouse_motions_icons_extension
+
+	var file_name: String = "%s/%s%s" % [current_folder, key_icon_name.to_snake_case(), current_extension]
+	print(file_name)
+	var image_exist := ResourceLoader.exists(file_name)
+
+	if image_exist:
+		return ResourceLoader.load(file_name)
+
+	return null
 
 
 ## We gram the KeyIcon Resource by its keycode and type
