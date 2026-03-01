@@ -118,13 +118,13 @@ func _update_name_joy(value: int) -> void:
 		JOY_BUTTON_START:
 			resource_name = "Joy Start"
 		JOY_BUTTON_LEFT_STICK:
-			resource_name = "Joy Left Stick"
+			resource_name = "Joy Stick Left"
 		JOY_BUTTON_RIGHT_STICK:
-			resource_name = "Joy Right Stick"
+			resource_name = "Joy Stick Right"
 		JOY_BUTTON_LEFT_SHOULDER:
-			resource_name = "Joy Left Shoulder"
+			resource_name = "Joy Shoulder Left"
 		JOY_BUTTON_RIGHT_SHOULDER:
-			resource_name = "Joy Right Shoulder"
+			resource_name = "Joy Shoulder Right"
 		JOY_BUTTON_DPAD_UP:
 			resource_name = "Joy Dpad Up"
 		JOY_BUTTON_DPAD_DOWN:
