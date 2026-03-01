@@ -15,7 +15,7 @@ class_name ReactiveKeyComponent
 
 func _ready() -> void:
 	assert(texture_handler != null, "Texture handler is not set")
-	assert(texture_handler.get(&"texture") != null, "The texture_handler needs to have a texture property")
+	assert(texture_handler.get(&"texture") == null, "The texture_handler needs to have a texture property")
 
 
 func _input(event):
