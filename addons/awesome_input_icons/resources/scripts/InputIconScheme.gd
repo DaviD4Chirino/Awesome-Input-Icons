@@ -322,6 +322,7 @@ func populate_key_icons_for_axis(array: Array, type: KeyIcon.InputTypes) -> Arra
 		key_icon.input_type = type
 		key_icon.keycode = pair.axis
 		key_icon.axis_value = pair.axis_value
+		key_icon.icon = get_key_image(key_icon.resource_name, type)
 		arr.append(key_icon)
 	return arr
 
