@@ -13,11 +13,6 @@ class_name ReactiveKeyComponent
 # 	assert(sprite., "The sprite needs to have a texture property")
 
 
-func _ready() -> void:
-	assert(texture_handler != null, "Texture handler is not set")
-	assert(texture_handler.get(&"texture") == null, "The texture_handler needs to have a texture property")
-
-
 func _input(event):
 	var is_key_event := event is InputEventKey
 	var is_joypad_input := is_correct_joypad_input(event)

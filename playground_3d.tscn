@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://8hx8rmtiaccs"]
 
-[ext_resource type="Texture2D" uid="uid://csora5yub5jfm" path="res://icon.svg" id="1_3s4e8"]
 [ext_resource type="Script" uid="uid://v8bvyktjbiwi" path="res://components/reactive_key_component.gd" id="2_vs8qi"]
 
 [node name="Playground3d" type="Node3D" unique_id=1303953281]
@@ -10,7 +9,6 @@ transform = Transform3D(0.9345776, 0, 0.35575947, 0, 1, 0, -0.35575947, 0, 0.934
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1484461094]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.7259328)
-texture = ExtResource("1_3s4e8")
 
 [node name="ReactiveKeyComponent" type="Node" parent="." unique_id=791464385 node_paths=PackedStringArray("texture_handler")]
 script = ExtResource("2_vs8qi")
