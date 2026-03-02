@@ -99,6 +99,36 @@ It adds a handful of deferent classes to the editor, they are as follows:
 ## Customization
 If you want to create your own input icons you can create a new `InputIconScheme`, there will be a button called generate and some properties to fill, like so:
 
+![The properties of InputIconConfiguration class resource](readme_media/input_icon_configuration_properties.png)
+
+`Icons Parent Folder` property is a path you can use nagivate to the root of all your input images, then, below that is the `File Pattern` property.
+
+The `File Pattern` will replace keywords inside square brackets to dynamically search fo the correct image, the keywords and they values are:
+
+* `[group]` 
+  * With values of `keyboard`, `mouse`, `mouse_motion`, `joy` and `joy_axis` (the same as the name of the arrays below, just in snake case and singular)
+* `[file_name]`
+  * With the name of the `KeyIcon` resource name in lowercase, if the resource is called `Spacebar` the file to look for will be `spacebar`, if it is called `Joy Stick Left` it will be `joy_stick_left` and so on (note that while the names are dictated by `InputIconScheme` various arrays of enums, and those are lifted straight from [Godot Itself](https://docs.godotengine.org/en/stable/classes/class_%40globalscope.html#enum-globalscope-key))
+  
+  * The name will be converted to snake case, using godot's `to_snake_case` function, which means that names like the keyboard `F1` will be `f_1`, any quirks the medhod has it will also be applied here.
+
+Thogether they transform into something like this: 
+* before: `assets/input icons/[group]/[file_name].png`
+* after: 
+  `assets/input icons/keyboard/kp_0.png`,
+
+  `assets/input icons/mouse/mouse_button_left.png`,
+
+  `assets/input icons/mouse_motion/mouse_motion_down.png`,
+
+  `assets/input icons/joy/joy_a.png` and
+
+  `assets/input icons/joy_axis/joy_axis_left_down.png`,
+
+so you can just put the images in the correct folders (or have them all in a single folder) with the correct names and they will be found, and added to the respective `KeyIcon` resource.
+
+Or you can hit the `Generate Presets` to populate the arrays and add them manually.
+
 ### Manually
 
 

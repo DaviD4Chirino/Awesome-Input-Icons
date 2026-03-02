@@ -339,9 +339,14 @@ func get_key_image(key_icon_name: String, type: KeyIcon.InputTypes) -> Texture2D
 	print(file_path)
 	var image_exist := ResourceLoader.exists(file_path)
 
-	if image_exist:
-		return ResourceLoader.load(file_path)
-	return null
+	if !image_exist:
+		return null
+
+	if !ResourceLoader.load(file_path).is_class("Texture2D"):
+		push_warning("The file exist %s but is not a Texture2D" % file_path)
+		return null
+
+	return ResourceLoader.load(file_path)
 
 
 func _replace_placeholders(string: String, file_name: String, type: String) -> String:
