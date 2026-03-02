@@ -85,16 +85,19 @@ It adds a handful of deferent classes to the editor, they are as follows:
 * `InputIconConfiguration`
   * As the name implies, is a resource that contains configuration data for the addon and the project, right now only has the `InputIconScheme` in the `scheme` variable
 * `InputIconScheme`
-  * Contains 3 exported arrays and 3 static arrays as well as an exported boolean called `generate_presets`
-    * `generate_presets` once activated inside the editor, will delete all the data of the arrays and populate them with all the necessary data for a fresh scheme *(Instead of adding 193 elements to the array, putting the correct index for each key of the keyboard, activate this and it will do that for you, and alo for the joystic and mouse; __WARNING:__ this destroys the previous changes)*
+  * Contains 3 exported arrays, 3 static arrays, a button called `generate_presets` and two text fields `icons_parent_folder` and `file_pattern` (see [Customization](#customization))
+    * `generate_presets` once activated inside the editor, will wipe out all the arrays and populate them with all the necessary data for a fresh scheme, also if it finds an image in the configured path (see [Customization](#customization)) it will automatically add that as the `KeyIcon` icon *(Instead of adding 193 elements to the array, putting the correct index for each key of the keyboard, activate this and it will do that for you, and alo for the joystic and mouse; __WARNING:__ this destroys the previous changes)*
   * The exported arrays `keys`, `mouse_buttons` and `joy_buttons`
     * all of them are the same, separated to be easier to edit and categorize. They only accept a custom class called `KeyIcon`
+  *  `icons_parent_folder` and `file_pattern`
+     *  look at the [Customization](#customization) section for a better explanation
 * `KeyIcon`
   * It exports three variables: `keycode`, `icon` and `InputType`
     * `keycode` is a integer that represents the index of the event, to be referenced again in the InputEvents enums
     * `icon` is a `Texure2D` to go along this `keycode`, in other words if the keycode and type corresponds to the left mouse button, you will get this value if your action is the left mouse button
     * `InputType`, since the keycode value changes depending of what type of input it is, you need to specify the type.
     * After you add a type and a keycode, the Resource will rename itself to the name of the key for better readability
+  
 
 ## Customization
 If you want to create your own input icons you can create a new `InputIconScheme`, there will be a button called generate and some properties to fill, like so:
@@ -129,19 +132,8 @@ so you can just put the images in the correct folders (or have them all in a sin
 
 Or you can hit the `Generate Presets` to populate the arrays and add them manually.
 
-### Manually
 
-
-  ![InputIconScheme with populated arrays](<readme_media/creating a scheme1.png>)
-
-Inside it will look like:
-
-![Inside the InputIconScheme are KeyIconResources with names representing the key](<readme_media/creating a scheme2.png>)
-
-and then you just open the key you want to add the icon, and put them in the icon parameter (do not mess with the other values) like so:
-![An Event with an icon](<readme_media/creating a scheme3.png>)
-
-finaly you reference the new scheme in the `input_icon_configuration.tres` resource located in the base of the addon: `addons/awesome_input_icons/input_icon_configuration.tres`
+finally you reference the new scheme in the `input_icon_configuration.tres` resource located in the base of the addon: `addons/awesome_input_icons/input_icon_configuration.tres`
 
 ___
 
