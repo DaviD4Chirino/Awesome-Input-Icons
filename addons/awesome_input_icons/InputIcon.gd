@@ -3,23 +3,29 @@ class_name InputIcon
 
 ## NOTE: Since for now the configuration only contains the scheme,
 ## in the future you can add more things to the configuration.
-static var configuration = load("res://addons/awesome_input_icons/input_icon_configuration.tres")
+static var configuration: InputIconConfiguration = \
+load("res://addons/awesome_input_icons/input_icon_configuration.tres")
 
 
 ## The main function, give it an action in your [param InputMap] and a optional
 ## event index, it returns you a [param Texture2D] that represents the icon
-static func get_icon(action: StringName, event_index: int = 0) -> Texture2D:
+static func get_icon(
+		action: StringName,
+		event_index: int = 0,
+	## If no icon is found, it will return this texture
+		fallback_texture: Texture2D = null,
+) -> Texture2D:
 	# To put it simply: we isolate the [class InputEvent]
 	# and call [function get_icon_by_event]
 
 	var events: Array[InputEvent] = _get_events(action)
 
-	if not events:
-		return null
+	if events.is_empty():
+		return fallback_texture
 
-	if event_index > events.size():
+	if event_index >= events.size():
 		push_warning("The action does not have index of " + str(event_index))
-		return null
+		return fallback_texture
 
 	var event: InputEvent = events[event_index]
 
@@ -31,7 +37,7 @@ static func get_all_icons(action: StringName) -> Array[Texture2D]:
 	var icons: Array[Texture2D] = []
 	var events: Array[InputEvent] = _get_events(action)
 
-	if not events:
+	if events.is_empty():
 		return []
 
 	for i in events.size():
@@ -44,7 +50,7 @@ static func get_all_icons(action: StringName) -> Array[Texture2D]:
 static func get_icon_by_event(event: InputEvent) -> Texture2D:
 	var icon: Texture2D = null
 
-	var scheme := (configuration as InputIconConfiguration).scheme
+	var scheme := configuration.scheme
 
 	# Since the [param key] value in the [param KeyIcon] depends on its type,
 	# we need to check the class of the event, once with the event class we

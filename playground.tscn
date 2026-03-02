@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cnhdm6f0aj0l0"]
 
 [ext_resource type="PackedScene" uid="uid://nueirsanvuqr" path="res://components/reactive_key_component.tscn" id="1_rupst"]
+[ext_resource type="Texture2D" uid="uid://csora5yub5jfm" path="res://icon.svg" id="2_m8u5f"]
 [ext_resource type="Script" uid="uid://konhgxcntcgi" path="res://addons/awesome_input_icons/classes/InputIconSprite2D.gd" id="2_wt17y"]
 
 [node name="playground" type="Node2D" unique_id=513566106]
@@ -13,7 +14,8 @@ texture_handler = NodePath("../Sprite2D")
 
 [node name="InputIconSprite2D" type="Sprite2D" parent="." unique_id=661803827]
 position = Vector2(206, 128)
+texture = ExtResource("2_m8u5f")
 script = ExtResource("2_wt17y")
 action_name = &"action"
-event_index = 2
+event_index = 5
 metadata/_custom_type_script = "uid://konhgxcntcgi"
