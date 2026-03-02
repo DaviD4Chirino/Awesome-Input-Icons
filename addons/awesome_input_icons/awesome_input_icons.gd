@@ -3,7 +3,7 @@ extends EditorPlugin
 
 var editor_feature_profile := EditorFeatureProfile.new()
 
-## All the classes this plugin adds to the editor, handy to have
+## All the classes this plugin adds to the editor
 var all_classes: Array[StringName] = [
 	&"InputIcon",
 	&"InputIconScheme",

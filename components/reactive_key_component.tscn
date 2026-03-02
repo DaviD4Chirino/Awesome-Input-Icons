@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://nueirsanvuqr"]
+
+[ext_resource type="Script" uid="uid://v8bvyktjbiwi" path="res://components/reactive_key_component.gd" id="1_65l07"]
+
+[node name="ReactiveKeyComponent" type="Node" unique_id=1530951098]
+script = ExtResource("1_65l07")

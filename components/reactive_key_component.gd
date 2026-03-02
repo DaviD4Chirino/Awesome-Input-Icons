@@ -1,6 +1,4 @@
 extends Node
-
-class_name ReactiveKeyComponent
 ## It reacts to any key godot emits, keboard, mouse, joy, etc.
 ## then it tries to call the [func InputIcon.get_icon] function to teh provided sprite
 ## no matter if its Sprite2D or TextureRect or whatever

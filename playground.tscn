@@ -1,13 +1,19 @@
 [gd_scene format=3 uid="uid://cnhdm6f0aj0l0"]
 
-[ext_resource type="Script" uid="uid://v8bvyktjbiwi" path="res://components/reactive_key_component.gd" id="1_rupst"]
+[ext_resource type="PackedScene" uid="uid://nueirsanvuqr" path="res://components/reactive_key_component.tscn" id="1_rupst"]
+[ext_resource type="Script" uid="uid://konhgxcntcgi" path="res://addons/awesome_input_icons/classes/InputIconSprite2D.gd" id="2_wt17y"]
 
 [node name="playground" type="Node2D" unique_id=513566106]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1945994657]
 centered = false
 
-[node name="ReactiveKeyComponent" type="Node" parent="." unique_id=403250525 node_paths=PackedStringArray("texture_handler")]
-script = ExtResource("1_rupst")
+[node name="ReactiveKeyComponent" parent="." unique_id=1530951098 node_paths=PackedStringArray("texture_handler") instance=ExtResource("1_rupst")]
 texture_handler = NodePath("../Sprite2D")
-metadata/_custom_type_script = "uid://v8bvyktjbiwi"
+
+[node name="InputIconSprite2D" type="Sprite2D" parent="." unique_id=661803827]
+position = Vector2(206, 128)
+script = ExtResource("2_wt17y")
+action_name = &"action"
+event_index = 2
+metadata/_custom_type_script = "uid://konhgxcntcgi"
