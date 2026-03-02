@@ -97,8 +97,10 @@ It adds a handful of deferent classes to the editor, they are as follows:
     * After you add a type and a keycode, the Resource will rename itself to the name of the key for better readability
 
 ## Customization
+If you want to create your own input icons you can create a new `InputIconScheme`, there will be a button called generate and some properties to fill, like so:
 
-If you want to create your own input icons you can create a new `InputIconScheme` and click `generate_presets`, that will give you something like this:
+### Manually
+
 
   ![InputIconScheme with populated arrays](<readme_media/creating a scheme1.png>)
 
