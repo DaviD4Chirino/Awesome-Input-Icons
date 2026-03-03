@@ -1,0 +1,38 @@
+{
+  "column_properties": {
+    "res://addons/awesome_input_icons/resources/": {
+      "metadata/_custom_type_script": {
+        "visibility": 0.0
+      },
+      "resource_local_to_scene": {
+        "visibility": 0.0
+      },
+      "resource_name": {
+        "visibility": 0.0
+      }
+    },
+    "res://addons/awesome_input_icons/resources/scripts/": {
+      "metadata/_custom_type_script": {
+        "visibility": 0.0
+      },
+      "resource_local_to_scene": {
+        "visibility": 0.0
+      },
+      "resource_name": {
+        "visibility": 0.0
+      }
+    }
+  },
+  "recent_paths": [
+    "res://addons/awesome_input_icons/resources/scripts/",
+    "res://addons/awesome_input_icons/resources/"
+  ],
+  "table_functions": {
+    "filter": [
+      "return true"
+    ],
+    "process": [
+      "return value"
+    ]
+  }
+}

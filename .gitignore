@@ -14,8 +14,6 @@ data_*/
 
 **/.vscode/*
 
-addons/*
-!addons/awesome_input_icons/*
 /.autosave
 /.tmp
 .godot/*
