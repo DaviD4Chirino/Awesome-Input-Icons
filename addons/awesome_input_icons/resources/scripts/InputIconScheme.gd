@@ -336,7 +336,6 @@ func get_key_image(key_icon_name: String, type: KeyIcon.InputTypes) -> Texture2D
 		icons_parent_folder,
 		_replace_placeholders(file_pattern, key_icon_name, type_name),
 	]
-	print(file_path)
 	var image_exist := ResourceLoader.exists(file_path)
 
 	if !image_exist:
